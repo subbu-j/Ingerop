@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statut__c</fullName>
+    <externalId>false</externalId>
+    <label>Statut</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>En cours</fullName>
+                <default>true</default>
+                <label>En cours</label>
+            </value>
+            <value>
+                <fullName>Gagnée</fullName>
+                <default>false</default>
+                <label>Gagnée</label>
+            </value>
+            <value>
+                <fullName>Perdue</fullName>
+                <default>false</default>
+                <label>Perdue</label>
+            </value>
+            <value>
+                <fullName>Abandonnée par le client</fullName>
+                <default>false</default>
+                <label>Abandonnée par le client</label>
+            </value>
+            <value>
+                <fullName>Abandonnée par Ingérop</fullName>
+                <default>false</default>
+                <label>Abandonnée par Ingérop</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

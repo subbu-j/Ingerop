@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GWT_Operation_Agence_de_Rennes</fullName>
+    <columns>NAME</columns>
+    <columns>Type_d_operation__c</columns>
+    <columns>Compte__c</columns>
+    <columns>Activite__c</columns>
+    <columns>Phase_commerciale__c</columns>
+    <columns>Statut__c</columns>
+    <columns>Budget_Travaux__c</columns>
+    <columns>Pays__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UFO__c</field>
+        <operation>equals</operation>
+        <value>GRAND OUEST</value>
+    </filters>
+    <filters>
+        <field>Pole__c</field>
+        <operation>equals</operation>
+        <value>GWT-Rennes</value>
+    </filters>
+    <label>GWT - Opération Agence de Rennes</label>
+    <language>fr</language>
+    <sharedTo>
+        <group>Activite_Batiment</group>
+        <group>Activite_Dept_Ville_Mobilite</group>
+        <group>Activite_Eau_Environnement</group>
+        <group>Activite_Energie_Industrie</group>
+        <role>Comex_Directeurs_UFO</role>
+        <roleAndSubordinates>GWT</roleAndSubordinates>
+    </sharedTo>
+</ListView>

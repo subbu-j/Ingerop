@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACE_Operation_ACE_Batiment_Industrie</fullName>
+    <columns>NAME</columns>
+    <columns>Type_d_operation__c</columns>
+    <columns>Compte__c</columns>
+    <columns>Activite__c</columns>
+    <columns>Phase_commerciale__c</columns>
+    <columns>Statut__c</columns>
+    <columns>Budget_Travaux__c</columns>
+    <columns>Pays__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Departement_du_Pole__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UFO__c</field>
+        <operation>equals</operation>
+        <value>ALPES CENTRE EST</value>
+    </filters>
+    <filters>
+        <field>Pole__c</field>
+        <operation>equals</operation>
+        <value>ACE-Bâtiment &amp; Industrie</value>
+    </filters>
+    <label>ACE - Opération ACE-B&amp;I</label>
+    <language>fr</language>
+    <sharedTo>
+        <group>Activite_Batiment</group>
+        <group>Activite_Dept_Ville_Mobilite</group>
+        <group>Activite_Eau_Environnement</group>
+        <group>Activite_Energie_Industrie</group>
+        <role>Comex_Directeurs_UFO</role>
+        <roleAndSubordinates>ACE</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pole__c</fullName>
+    <externalId>false</externalId>
+    <label>Pôle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UFO__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ACE-Bâtiment &amp; Industrie</fullName>
+                <default>false</default>
+                <label>ACE-Bâtiment &amp; Industrie</label>
+            </value>
+            <value>
+                <fullName>ACE-BU AMO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACE-BU AMO</label>
+            </value>
+            <value>
+                <fullName>ACE-BU Energie</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACE-BU Energie</label>
+            </value>
+            <value>
+                <fullName>ACE-BU Génie Civil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACE-BU Génie Civil</label>
+            </value>
+            <value>
+                <fullName>ACE-BU Grands Projets</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACE-BU Grands Projets</label>
+            </value>
+            <value>
+                <fullName>ACE-BU Nucléaire et Industrie</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACE-BU Nucléaire et Industrie</label>
+            </value>
+            <value>
+                <fullName>ACE-BU Villes et Transports</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACE-BU Villes et Transports</label>
+            </value>
+            <value>
+                <fullName>ACE-Energy &amp; Manufacturing 4.0</fullName>
+                <default>false</default>
+                <label>ACE-Energy &amp; Manufacturing 4.0</label>
+            </value>
+            <value>
+                <fullName>ACE-Infrastructures Ville et Mobilité</fullName>
+                <default>false</default>
+                <label>ACE-Infrastructures Ville et Mobilité</label>
+            </value>
+            <value>
+                <fullName>BAE-Arcora</fullName>
+                <default>false</default>
+                <label>BAE-Arcora</label>
+            </value>
+            <value>
+                <fullName>BAE-BAE</fullName>
+                <default>false</default>
+                <label>BAE-BAE</label>
+            </value>
+            <value>
+                <fullName>BAE-Cicad</fullName>
+                <default>false</default>
+                <label>BAE-Cicad</label>
+            </value>
+            <value>
+                <fullName>GEOS</fullName>
+                <default>false</default>
+                <label>GEOS</label>
+            </value>
+            <value>
+                <fullName>GWT-Biarritz</fullName>
+                <default>false</default>
+                <label>GWT-Biarritz</label>
+            </value>
+            <value>
+                <fullName>GWT-Bordeaux</fullName>
+                <default>false</default>
+                <label>GWT-Bordeaux</label>
+            </value>
+            <value>
+                <fullName>GWT-Nantes</fullName>
+                <default>false</default>
+                <label>GWT-Nantes</label>
+            </value>
+            <value>
+                <fullName>GWT-Rennes</fullName>
+                <default>false</default>
+                <label>GWT-Rennes</label>
+            </value>
+            <value>
+                <fullName>GWT-Toulouse</fullName>
+                <default>false</default>
+                <label>GWT-Toulouse</label>
+            </value>
+            <value>
+                <fullName>ICO</fullName>
+                <default>false</default>
+                <label>ICO</label>
+            </value>
+            <value>
+                <fullName>INT-Canada</fullName>
+                <default>false</default>
+                <label>INT-Canada</label>
+            </value>
+            <value>
+                <fullName>INT-Deutschland</fullName>
+                <default>false</default>
+                <label>INT-Deutschland</label>
+            </value>
+            <value>
+                <fullName>INT-East Africa</fullName>
+                <default>false</default>
+                <label>INT-East Africa</label>
+            </value>
+            <value>
+                <fullName>INT-Geos Suisse</fullName>
+                <default>false</default>
+                <label>INT-Geos Suisse</label>
+            </value>
+            <value>
+                <fullName>INT-International</fullName>
+                <default>false</default>
+                <label>INT-International</label>
+            </value>
+            <value>
+                <fullName>INT-Rendel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>INT-Rendel</label>
+            </value>
+            <value>
+                <fullName>INT-South Africa</fullName>
+                <default>false</default>
+                <label>INT-South Africa</label>
+            </value>
+            <value>
+                <fullName>INT-T3</fullName>
+                <default>false</default>
+                <label>INT-T3</label>
+            </value>
+            <value>
+                <fullName>INT-West Africa</fullName>
+                <default>false</default>
+                <label>INT-West Africa</label>
+            </value>
+            <value>
+                <fullName>IVT-AMO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVT-AMO</label>
+            </value>
+            <value>
+                <fullName>IVT-Infrastructures et Mobilités</fullName>
+                <default>false</default>
+                <label>IVT-Infrastructures et Mobilités</label>
+            </value>
+            <value>
+                <fullName>IVT-International</fullName>
+                <default>false</default>
+                <label>IVT-International</label>
+            </value>
+            <value>
+                <fullName>IVT-Inter urbain</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVT-Inter urbain</label>
+            </value>
+            <value>
+                <fullName>IVT-Mesure et Calcul Scientifique</fullName>
+                <default>false</default>
+                <label>IVT-Mesure et Calcul Scientifique</label>
+            </value>
+            <value>
+                <fullName>IVT-Mobilité durable</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVT-Mobilité durable</label>
+            </value>
+            <value>
+                <fullName>IVT-Ouvrages et structures</fullName>
+                <default>false</default>
+                <label>IVT-Ouvrages et structures</label>
+            </value>
+            <value>
+                <fullName>IVT-Transport</fullName>
+                <default>false</default>
+                <label>IVT-Transport</label>
+            </value>
+            <value>
+                <fullName>IVT-Urbain et Environnement</fullName>
+                <default>false</default>
+                <label>IVT-Urbain et Environnement</label>
+            </value>
+            <value>
+                <fullName>IVT-Urbain et Systèmes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVT-Urbain et Systèmes</label>
+            </value>
+            <value>
+                <fullName>MED-Bâtiment</fullName>
+                <default>false</default>
+                <label>MED-Bâtiment</label>
+            </value>
+            <value>
+                <fullName>MED-Infrastructure Ville &amp; Transport</fullName>
+                <default>false</default>
+                <label>MED-Infrastructure Ville &amp; Transport</label>
+            </value>
+            <value>
+                <fullName>NOE-Alsace Lorraine Franche Comté</fullName>
+                <default>false</default>
+                <label>NOE-Alsace Lorraine Franche Comté</label>
+            </value>
+            <value>
+                <fullName>NOE-Haut de France</fullName>
+                <default>false</default>
+                <label>NOE-Haut de France</label>
+            </value>
+            <value>
+                <fullName>RP-London</fullName>
+                <default>false</default>
+                <label>RP-London</label>
+            </value>
+            <value>
+                <fullName>RP-Sydney</fullName>
+                <default>false</default>
+                <label>RP-Sydney</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ALPES CENTRE EST</controllingFieldValue>
+            <valueName>ACE-Bâtiment &amp; Industrie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALPES CENTRE EST</controllingFieldValue>
+            <valueName>ACE-Energy &amp; Manufacturing 4.0</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALPES CENTRE EST</controllingFieldValue>
+            <valueName>ACE-Infrastructures Ville et Mobilité</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BATIMENT &amp; EQUIPEMENTS</controllingFieldValue>
+            <valueName>BAE-Arcora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BATIMENT &amp; EQUIPEMENTS</controllingFieldValue>
+            <valueName>BAE-BAE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BATIMENT &amp; EQUIPEMENTS</controllingFieldValue>
+            <valueName>BAE-Cicad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRAND OUEST</controllingFieldValue>
+            <valueName>GWT-Biarritz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRAND OUEST</controllingFieldValue>
+            <valueName>GWT-Bordeaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRAND OUEST</controllingFieldValue>
+            <valueName>GWT-Nantes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRAND OUEST</controllingFieldValue>
+            <valueName>GWT-Rennes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRAND OUEST</controllingFieldValue>
+            <valueName>GWT-Toulouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-Deutschland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-East Africa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-Geos Suisse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-South Africa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-T3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNATIONAL</controllingFieldValue>
+            <valueName>INT-West Africa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</controllingFieldValue>
+            <valueName>IVT-Infrastructures et Mobilités</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</controllingFieldValue>
+            <valueName>IVT-International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</controllingFieldValue>
+            <valueName>IVT-Mesure et Calcul Scientifique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</controllingFieldValue>
+            <valueName>IVT-Ouvrages et structures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</controllingFieldValue>
+            <valueName>IVT-Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</controllingFieldValue>
+            <valueName>IVT-Urbain et Environnement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEDITERRANEE</controllingFieldValue>
+            <valueName>MED-Bâtiment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MEDITERRANEE</controllingFieldValue>
+            <valueName>MED-Infrastructure Ville &amp; Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NORD-EST</controllingFieldValue>
+            <valueName>NOE-Alsace Lorraine Franche Comté</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NORD-EST</controllingFieldValue>
+            <valueName>NOE-Haut de France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS INGEROP CONTRACTING</controllingFieldValue>
+            <valueName>ICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GEOS</controllingFieldValue>
+            <valueName>GEOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENDEL PLUS</controllingFieldValue>
+            <valueName>RP-London</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENDEL PLUS</controllingFieldValue>
+            <valueName>RP-Sydney</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

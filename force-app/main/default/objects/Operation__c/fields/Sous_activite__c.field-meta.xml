@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sous_activite__c</fullName>
+    <externalId>false</externalId>
+    <label>Sous-activité</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Activite__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aéronautique - Transports</fullName>
+                <default>false</default>
+                <label>Aéronautique - Transports</label>
+            </value>
+            <value>
+                <fullName>Agroalimentaire</fullName>
+                <default>false</default>
+                <label>Agroalimentaire</label>
+            </value>
+            <value>
+                <fullName>Automobile - Industrie pneumatiques</fullName>
+                <default>false</default>
+                <label>Automobile - Industrie pneumatiques</label>
+            </value>
+            <value>
+                <fullName>Bâtiments industriels et tertiaire</fullName>
+                <default>false</default>
+                <label>Bâtiments industriels et tertiaire</label>
+            </value>
+            <value>
+                <fullName>Chimie</fullName>
+                <default>false</default>
+                <label>Chimie</label>
+            </value>
+            <value>
+                <fullName>Divers</fullName>
+                <default>false</default>
+                <label>Divers</label>
+            </value>
+            <value>
+                <fullName>Energie Renouvelables -Environnement</fullName>
+                <default>false</default>
+                <label>Energie Renouvelables -Environnement</label>
+            </value>
+            <value>
+                <fullName>Energie thermique</fullName>
+                <default>false</default>
+                <label>Energie thermique</label>
+            </value>
+            <value>
+                <fullName>Export</fullName>
+                <default>false</default>
+                <label>Export</label>
+            </value>
+            <value>
+                <fullName>Informatique- Datas Centers  - Telecom</fullName>
+                <default>false</default>
+                <label>Informatique- Datas Centers  - Telecom</label>
+            </value>
+            <value>
+                <fullName>Matériaux</fullName>
+                <default>false</default>
+                <label>Matériaux</label>
+            </value>
+            <value>
+                <fullName>Métallurgie - Sidérurgie</fullName>
+                <default>false</default>
+                <label>Métallurgie - Sidérurgie</label>
+            </value>
+            <value>
+                <fullName>Nucléaire civil</fullName>
+                <default>false</default>
+                <label>Nucléaire civil</label>
+            </value>
+            <value>
+                <fullName>Energie Nucléaire - Défense</fullName>
+                <default>false</default>
+                <label>Energie Nucléaire - Défense</label>
+            </value>
+            <value>
+                <fullName>Pharmacie - Cosméto</fullName>
+                <default>false</default>
+                <label>Pharmacie - Cosméto</label>
+            </value>
+            <value>
+                <fullName>Process et procédés</fullName>
+                <default>false</default>
+                <label>Process et procédés</label>
+            </value>
+            <value>
+                <fullName>Assainissement EU</fullName>
+                <default>false</default>
+                <label>Assainissement EU</label>
+            </value>
+            <value>
+                <fullName>ATEX</fullName>
+                <default>false</default>
+                <label>ATEX</label>
+            </value>
+            <value>
+                <fullName>Environnement</fullName>
+                <default>false</default>
+                <label>Environnement</label>
+            </value>
+            <value>
+                <fullName>Hydrologie-hydraulique fluviale 1D</fullName>
+                <default>false</default>
+                <label>Hydrologie-hydraulique fluviale 1D</label>
+            </value>
+            <value>
+                <fullName>Hydrologie-hydraulique fluviale 2D</fullName>
+                <default>false</default>
+                <label>Hydrologie-hydraulique fluviale 2D</label>
+            </value>
+            <value>
+                <fullName>Hydrologie-hydraulique autres</fullName>
+                <default>false</default>
+                <label>Hydrologie-hydraulique autres</label>
+            </value>
+            <value>
+                <fullName>Hydrogéomorphologie</fullName>
+                <default>false</default>
+                <label>Hydrogéomorphologie</label>
+            </value>
+            <value>
+                <fullName>Hydrologie-hydraulique routière</fullName>
+                <default>false</default>
+                <label>Hydrologie-hydraulique routière</label>
+            </value>
+            <value>
+                <fullName>Hydrologie-hydraulique urbaine</fullName>
+                <default>false</default>
+                <label>Hydrologie-hydraulique urbaine</label>
+            </value>
+            <value>
+                <fullName>ICPE</fullName>
+                <default>false</default>
+                <label>ICPE</label>
+            </value>
+            <value>
+                <fullName>MOE autres</fullName>
+                <default>false</default>
+                <label>MOE autres</label>
+            </value>
+            <value>
+                <fullName>MOE hydraulique fluviale</fullName>
+                <default>false</default>
+                <label>MOE hydraulique fluviale</label>
+            </value>
+            <value>
+                <fullName>MOE hydraulique routière</fullName>
+                <default>false</default>
+                <label>MOE hydraulique routière</label>
+            </value>
+            <value>
+                <fullName>MOE réseaux</fullName>
+                <default>false</default>
+                <label>MOE réseaux</label>
+            </value>
+            <value>
+                <fullName>Sanitaire</fullName>
+                <default>false</default>
+                <label>Sanitaire</label>
+            </value>
+            <value>
+                <fullName>À fournir à Bluetis</fullName>
+                <default>false</default>
+                <label>À fournir à Bluetis</label>
+            </value>
+            <value>
+                <fullName>Ferroviaire</fullName>
+                <default>false</default>
+                <label>Ferroviaire</label>
+            </value>
+            <value>
+                <fullName>Infrastructures</fullName>
+                <default>false</default>
+                <label>Infrastructures</label>
+            </value>
+            <value>
+                <fullName>Transport Urbain</fullName>
+                <default>false</default>
+                <label>Transport Urbain</label>
+            </value>
+            <value>
+                <fullName>Ville</fullName>
+                <default>false</default>
+                <label>Ville</label>
+            </value>
+            <value>
+                <fullName>Enseignement recherche</fullName>
+                <default>false</default>
+                <label>Enseignement recherche</label>
+            </value>
+            <value>
+                <fullName>Santé</fullName>
+                <default>false</default>
+                <label>Santé</label>
+            </value>
+            <value>
+                <fullName>Culture / loisir / sport</fullName>
+                <default>false</default>
+                <label>Culture / loisir / sport</label>
+            </value>
+            <value>
+                <fullName>Transport</fullName>
+                <default>false</default>
+                <label>Transport</label>
+            </value>
+            <value>
+                <fullName>Tertiaire</fullName>
+                <default>false</default>
+                <label>Tertiaire</label>
+            </value>
+            <value>
+                <fullName>Commerce</fullName>
+                <default>false</default>
+                <label>Commerce</label>
+            </value>
+            <value>
+                <fullName>Hébergement / résidentiel</fullName>
+                <default>false</default>
+                <label>Hébergement / résidentiel</label>
+            </value>
+            <value>
+                <fullName>Energie / industrie</fullName>
+                <default>false</default>
+                <label>Energie / industrie</label>
+            </value>
+            <value>
+                <fullName>Etudes amont</fullName>
+                <default>false</default>
+                <label>Etudes amont</label>
+            </value>
+            <value>
+                <fullName>Ouvrages fluviaux et portuaires</fullName>
+                <default>false</default>
+                <label>Ouvrages fluviaux et portuaires</label>
+            </value>
+            <value>
+                <fullName>Autres projets</fullName>
+                <default>false</default>
+                <label>Autres projets</label>
+            </value>
+            <value>
+                <fullName>Aménagements aéroportuaires</fullName>
+                <default>false</default>
+                <label>Aménagements aéroportuaires</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Enseignement recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Santé</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Culture / loisir / sport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Tertiaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Hébergement / résidentiel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <valueName>Energie / industrie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Export</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Assainissement EU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>ATEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Environnement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Hydrologie-hydraulique fluviale 1D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Hydrologie-hydraulique fluviale 2D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Hydrologie-hydraulique autres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Hydrogéomorphologie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Hydrologie-hydraulique routière</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Hydrologie-hydraulique urbaine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>ICPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>MOE autres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>MOE hydraulique fluviale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>MOE hydraulique routière</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>MOE réseaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Sanitaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Etudes amont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Ouvrages fluviaux et portuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Autres projets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Aéronautique - Transports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Agroalimentaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Automobile - Industrie pneumatiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Bâtiments industriels et tertiaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Chimie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Divers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Energie Renouvelables -Environnement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Energie thermique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Informatique- Datas Centers  - Telecom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Matériaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Métallurgie - Sidérurgie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Nucléaire civil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Energie Nucléaire - Défense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Pharmacie - Cosméto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Process et procédés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ferroviaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Infrastructures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Transport Urbain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ville</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

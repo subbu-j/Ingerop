@@ -1,0 +1,45 @@
+<aura:component description="Annonce - Operations related list" implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="LCCTRL_AnnonceRelatedOperations">
+    
+    <aura:attribute name="objectType" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="parentFieldName" type="String"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="tableSize" type="integer"/>
+    <aura:attribute name="data" type="sObject[]" access="global"/>
+    <aura:attribute name="page" type="integer"/>
+    <aura:attribute name="pages" type="integer"/>
+    <aura:attribute name="total" type="integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:handler event="force:showToast" action="{!c.handleApplicationEvent}"/>
+    
+    
+    <!-- OPERATIONS LIEES --> 
+    <lightning:card title="Opérations liées" class="slds-card_boundary my-card" iconName="custom:custom37">
+
+        <aura:set attribute="title">
+            <h2>
+                <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
+                    Opérations liées
+                </span>
+            </h2>
+        </aura:set>
+        <aura:set attribute="actions">
+
+        </aura:set>
+        
+        
+ 
+            <lightning:datatable data="{! v.data }"
+                                 columns="{! v.columns }"
+                                 keyField="Id"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.handleRowAction }"/>
+
+
+    </lightning:card>
+	<!-- OPERATIONS LIEES --> 
+    
+     
+    
+</aura:component>

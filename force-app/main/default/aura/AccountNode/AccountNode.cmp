@@ -1,0 +1,102 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:recordTab" access="GLOBAL">
+    <style>
+    	.slds .slds-icon {
+        	fill: #00396B!important;
+        }
+    </style>
+    <aura:attribute type="AccountNode" name="node" access="GLOBAL"/>
+    <aura:attribute type="Integer" name="level" access="GLOBAL"/>
+    <aura:attribute type="Boolean" name="isToggled" default="true" access="GLOBAL"/>
+    <aura:attribute type="Boolean" name="test" default="true" access="GLOBAL"/>
+    <aura:attribute type="Boolean" name="isToggledContacts" default="false" access="GLOBAL"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <li role="treeitem" aria-level="{!v.node.level}">
+        <div class="slds-tree__item">
+            <aura:if isTrue="{!v.node.listChildNodes != null}">
+                <button class="slds-button slds-m-right--x-small slds-toggle-visibility" onclick="{!c.toggle}">
+                    <aura:if isTrue="{!v.isToggled}">
+                        <c:svgIcon class="slds-button__icon slds-button__icon--small" svgPath="/resource/SLDS105/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" ariaHidden="true" />
+                        <aura:set attribute="else">
+                            <c:svgIcon class="slds-button__icon slds-button__icon--small" svgPath="/resource/SLDS105/assets/icons/utility-sprite/svg/symbols.svg#chevronright" ariaHidden="true" />
+                        </aura:set>
+                    </aura:if>
+                    <span class="slds-assistive-text">Toggle</span>
+                </button>                
+                
+                <aura:set attribute="else">
+                    <button class="slds-button slds-m-right--x-small">
+                        <c:svgIcon class="slds-button__icon slds-button__icon--small slds-is-disabled" svgPath="/resource/SLDS105/assets/icons/utility-sprite/svg/symbols.svg#forward" ariaHidden="true" />
+                        <span class="slds-assistive-text">Toggle</span>
+                    </button>    
+                </aura:set>
+            </aura:if>
+            
+            <a tabindex="-1" role="presentation" id="{!'link_' + v.node.a.Id}" onclick="{!c.gotoURL}">
+                <span>{!v.node.a.Name}</span>
+            </a>
+            
+            <aura:if isTrue="{!v.node.listChildContacts != null}">
+                <div class="slds-tree__item">
+                    <a tabindex="-1" role="presentation" onclick="{!c.toggleContacts}">
+                    	<c:svgIcon class="slds-button__icon slds-button__icon--medium accountTypeImg"
+                                   svgPath="/resource/SLDS105/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                                   ariaHidden="true" />
+                        <aura:if isTrue="{!v.isToggledContacts}">
+                            <span>Masquer les contacts</span>
+                            <aura:set attribute="else">
+                                <span>Afficher les contacts</span>
+                            </aura:set>
+                        </aura:if>
+                    </a>
+                </div>
+            </aura:if>
+        </div>
+        
+        <aura:if isTrue="{!v.node.listChildContacts != null}">
+            <aura:if isTrue="{!v.isToggledContacts}">
+                <li role="treeitem" aria-level="{!v.node.level}" id="{!'contacts_' + v.node.a.Id}">
+                    <div class="slds-tree__item" style="paddin-right: 15px;">
+                        <button class="slds-button slds-m-right--x-small">
+                            <c:svgIcon class="slds-button__icon slds-button__icon--small slds-is-disabled" svgPath="/resource/SLDS105/assets/icons/utility-sprite/svg/symbols.svg#forward" ariaHidden="true" />
+                        </button>
+                        
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked" style="width: 90%;">
+                            <thead>
+                                <tr class="slds-text-heading--label">
+                                    <th scope="col" title="Opportunity Name">
+                                        <div class="slds-truncate">Nom du contact</div>
+                                    </th>
+                                    <th scope="col" title="Account Name">
+                                        <div class="slds-truncate">Fonction</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.node.listChildContacts}" var="c">
+                                    <tr class="slds-hint-parent">
+                                        <td class="slds-truncate" data-label="Nom du contact">{!c.FirstName}&nbsp;{!c.LastName}</td>
+                                        <td class="slds-truncate" data-label="Fonction">{!c.Title}</td>
+                                    </tr>
+                                    
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </aura:if>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.node.listChildNodes != null}">
+            <aura:if isTrue="{!v.isToggled}">
+                <ul class="slds-is-expanded" role="group" aria-labelledby="tree0-node1__label" aura:id="{!'wrapper_' + v.node.a.Id}">
+                    <aura:iteration items="{!v.node.listChildNodes}" var="n">
+                        <c:AccountNode node="{!n}" />
+                    </aura:iteration>
+                </ul>
+            </aura:if>
+        </aura:if>
+    </li>
+    
+</aura:component>

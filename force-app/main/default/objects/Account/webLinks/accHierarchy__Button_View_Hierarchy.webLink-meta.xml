@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>accHierarchy__Button_View_Hierarchy</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>View Hierarchy</masterLabel>
+    <openType>sidebar</openType>
+    <page>accHierarchy__Account_Hierarchy_Page</page>
+    <protected>false</protected>
+</WebLink>

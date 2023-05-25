@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mes_operations</fullName>
+    <columns>NAME</columns>
+    <columns>Objet__c</columns>
+    <columns>Type_d_operation__c</columns>
+    <columns>Compte__c</columns>
+    <columns>Priorite__c</columns>
+    <columns>Phase_commerciale__c</columns>
+    <columns>Budget_Travaux__c</columns>
+    <columns>Famille_d_ouvrage__c</columns>
+    <columns>Zone_geographique__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Pays__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Statut__c</field>
+        <operation>equals</operation>
+        <value>En cours</value>
+    </filters>
+    <label>Mes opérations en cours</label>
+    <language>fr</language>
+</ListView>

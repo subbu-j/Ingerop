@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RENDEL_SYD_Energy_Industry_operations</fullName>
+    <columns>NAME</columns>
+    <columns>Type_d_operation__c</columns>
+    <columns>Compte__c</columns>
+    <columns>Activite__c</columns>
+    <columns>Phase_commerciale__c</columns>
+    <columns>Statut__c</columns>
+    <columns>Budget_Travaux__c</columns>
+    <columns>Pays__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UFO__c</field>
+        <operation>equals</operation>
+        <value>RENDEL PLUS</value>
+    </filters>
+    <filters>
+        <field>Departement_du_Pole__c</field>
+        <operation>equals</operation>
+        <value>RP-SYD-Energy and Industry</value>
+    </filters>
+    <label>RENDEL-SYD-Energy &amp; Industry operations</label>
+    <language>fr</language>
+    <sharedTo>
+        <role>Comex_Directeurs_UFO</role>
+        <roleAndSubordinates>RENDEL_PLUS</roleAndSubordinates>
+    </sharedTo>
+</ListView>

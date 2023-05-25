@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Famille_d_ouvrage__c</fullName>
+    <externalId>false</externalId>
+    <label>Famille d&apos;ouvrage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Activite__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aéronautique - Aéroportuaire</fullName>
+                <default>false</default>
+                <label>Aéronautique - Aéroportuaire</label>
+            </value>
+            <value>
+                <fullName>Agroalimentaire</fullName>
+                <default>false</default>
+                <label>Agroalimentaire</label>
+            </value>
+            <value>
+                <fullName>Aménagement du Territoire</fullName>
+                <default>false</default>
+                <label>Aménagement du Territoire</label>
+            </value>
+            <value>
+                <fullName>Aménagements aeroportuaires</fullName>
+                <default>false</default>
+                <label>Aménagements aeroportuaires</label>
+            </value>
+            <value>
+                <fullName>Aménagements HYdrauliques</fullName>
+                <default>false</default>
+                <label>Aménagements HYdrauliques</label>
+            </value>
+            <value>
+                <fullName>Automobile</fullName>
+                <default>false</default>
+                <label>Automobile</label>
+            </value>
+            <value>
+                <fullName>Chimie, petrole, gaz</fullName>
+                <default>false</default>
+                <label>Chimie, petrole, gaz</label>
+            </value>
+            <value>
+                <fullName>Commerce</fullName>
+                <default>false</default>
+                <label>Commerce</label>
+            </value>
+            <value>
+                <fullName>Culturel</fullName>
+                <default>false</default>
+                <label>Culturel</label>
+            </value>
+            <value>
+                <fullName>DEChets</fullName>
+                <default>false</default>
+                <label>DEChets</label>
+            </value>
+            <value>
+                <fullName>Divers</fullName>
+                <default>false</default>
+                <label>Divers</label>
+            </value>
+            <value>
+                <fullName>eau et INFrastructures</fullName>
+                <default>false</default>
+                <label>eau et INFrastructures</label>
+            </value>
+            <value>
+                <fullName>eaux URBaines</fullName>
+                <default>false</default>
+                <label>eaux URBaines</label>
+            </value>
+            <value>
+                <fullName>Electronique, hautes technologies</fullName>
+                <default>false</default>
+                <label>Electronique, hautes technologies</label>
+            </value>
+            <value>
+                <fullName>Energie, environnement</fullName>
+                <default>false</default>
+                <label>Energie, environnement</label>
+            </value>
+            <value>
+                <fullName>Enseignement</fullName>
+                <default>false</default>
+                <label>Enseignement</label>
+            </value>
+            <value>
+                <fullName>Environnement INdustriel</fullName>
+                <default>false</default>
+                <label>Environnement INdustriel</label>
+            </value>
+            <value>
+                <fullName>Equipements d&apos;Infrastructure</fullName>
+                <default>false</default>
+                <label>Equipements d&apos;Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Génie Urbain</fullName>
+                <default>false</default>
+                <label>Génie Urbain</label>
+            </value>
+            <value>
+                <fullName>GEOtechnique</fullName>
+                <default>false</default>
+                <label>GEOtechnique</label>
+            </value>
+            <value>
+                <fullName>hydraulique FLUviale</fullName>
+                <default>false</default>
+                <label>hydraulique FLUviale</label>
+            </value>
+            <value>
+                <fullName>Hydraulique - Qualité de l&apos;eau</fullName>
+                <default>false</default>
+                <label>Hydraulique - Qualité de l&apos;eau</label>
+            </value>
+            <value>
+                <fullName>Industrie des metaux</fullName>
+                <default>false</default>
+                <label>Industrie des metaux</label>
+            </value>
+            <value>
+                <fullName>Logement</fullName>
+                <default>false</default>
+                <label>Logement</label>
+            </value>
+            <value>
+                <fullName>Ouvrages d&apos;art et structures</fullName>
+                <default>false</default>
+                <label>Ouvrages d&apos;art et structures</label>
+            </value>
+            <value>
+                <fullName>Ouvrages Hydrauliques</fullName>
+                <default>false</default>
+                <label>Ouvrages Hydrauliques</label>
+            </value>
+            <value>
+                <fullName>Ouvrages souterrains</fullName>
+                <default>false</default>
+                <label>Ouvrages souterrains</label>
+            </value>
+            <value>
+                <fullName>Ouvrages spéciaux</fullName>
+                <default>false</default>
+                <label>Ouvrages spéciaux</label>
+            </value>
+            <value>
+                <fullName>Pharmacie, biotechnologie, cosmetique</fullName>
+                <default>false</default>
+                <label>Pharmacie, biotechnologie, cosmetique</label>
+            </value>
+            <value>
+                <fullName>Ports et littoral</fullName>
+                <default>false</default>
+                <label>Ports et littoral</label>
+            </value>
+            <value>
+                <fullName>Ports et Voies navigables</fullName>
+                <default>false</default>
+                <label>Ports et Voies navigables</label>
+            </value>
+            <value>
+                <fullName>Routes et Autoroutes</fullName>
+                <default>false</default>
+                <label>Routes et Autoroutes</label>
+            </value>
+            <value>
+                <fullName>Sante</fullName>
+                <default>false</default>
+                <label>Sante</label>
+            </value>
+            <value>
+                <fullName>Siderurgie, metallurgie</fullName>
+                <default>false</default>
+                <label>Siderurgie, metallurgie</label>
+            </value>
+            <value>
+                <fullName>Sport</fullName>
+                <default>false</default>
+                <label>Sport</label>
+            </value>
+            <value>
+                <fullName>Systèmes de Transport en commun</fullName>
+                <default>false</default>
+                <label>Systèmes de Transport en commun</label>
+            </value>
+            <value>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+                <label>Telecommunication</label>
+            </value>
+            <value>
+                <fullName>Tertiaire</fullName>
+                <default>false</default>
+                <label>Tertiaire</label>
+            </value>
+            <value>
+                <fullName>Tourisme et loisirs</fullName>
+                <default>false</default>
+                <label>Tourisme et loisirs</label>
+            </value>
+            <value>
+                <fullName>Transports (hors aeroportuaire)</fullName>
+                <default>false</default>
+                <label>Transports (hors aeroportuaire)</label>
+            </value>
+            <value>
+                <fullName>Transports en Commun</fullName>
+                <default>false</default>
+                <label>Transports en Commun</label>
+            </value>
+            <value>
+                <fullName>Voies Ferrées</fullName>
+                <default>false</default>
+                <label>Voies Ferrées</label>
+            </value>
+            <value>
+                <fullName>VRD et autres projets routiers</fullName>
+                <default>false</default>
+                <label>VRD et autres projets routiers</label>
+            </value>
+            <value>
+                <fullName>Autres Infrastructures</fullName>
+                <default>false</default>
+                <label>Autres Infrastructures</label>
+            </value>
+            <value>
+                <fullName>Aménagements Divers</fullName>
+                <default>false</default>
+                <label>Aménagements Divers</label>
+            </value>
+            <value>
+                <fullName>Transport Economie</fullName>
+                <default>false</default>
+                <label>Transport Economie</label>
+            </value>
+            <value>
+                <fullName>Ingénierie de l&apos;Eau (hors VN)</fullName>
+                <default>false</default>
+                <label>Ingénierie de l&apos;Eau (hors VN)</label>
+            </value>
+            <value>
+                <fullName>Voies Navigables</fullName>
+                <default>false</default>
+                <label>Voies Navigables</label>
+            </value>
+            <value>
+                <fullName>Circuits Automobiles</fullName>
+                <default>false</default>
+                <label>Circuits Automobiles</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Aéronautique - Aéroportuaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Agroalimentaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Automobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Chimie, petrole, gaz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Culturel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Divers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Electronique, hautes technologies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Energie, environnement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Enseignement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>GEOtechnique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Industrie des metaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Logement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Pharmacie, biotechnologie, cosmetique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Sante</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Siderurgie, metallurgie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Sport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Telecommunication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Tertiaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Tourisme et loisirs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bâtiment</controllingFieldValue>
+            <controllingFieldValue>Énergie &amp; Industrie</controllingFieldValue>
+            <valueName>Transports (hors aeroportuaire)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Aménagement du Territoire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Aménagements aeroportuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Aménagements HYdrauliques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>DEChets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>eau et INFrastructures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>eaux URBaines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Environnement INdustriel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Equipements d&apos;Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Hydraulique - Qualité de l&apos;eau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ouvrages d&apos;art et structures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ouvrages Hydrauliques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ouvrages souterrains</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ouvrages spéciaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <valueName>Ports et littoral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ports et Voies navigables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Routes et Autoroutes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Systèmes de Transport en commun</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Voies Ferrées</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eau &amp; Environnement</controllingFieldValue>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>VRD et autres projets routiers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Génie Urbain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Transports en Commun</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Autres Infrastructures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Aménagements Divers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Transport Economie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Ingénierie de l&apos;Eau (hors VN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Voies Navigables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ville &amp; Mobilité</controllingFieldValue>
+            <valueName>Circuits Automobiles</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

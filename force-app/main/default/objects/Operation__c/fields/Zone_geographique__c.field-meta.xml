@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zone_geographique__c</fullName>
+    <externalId>false</externalId>
+    <label>Zone géographique</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Afrique (hors Maghreb)</fullName>
+                <default>false</default>
+                <label>Afrique (hors Maghreb)</label>
+            </value>
+            <value>
+                <fullName>Amérique du Nord</fullName>
+                <default>false</default>
+                <label>Amérique du Nord</label>
+            </value>
+            <value>
+                <fullName>Amérique Latine et Caraïbes</fullName>
+                <default>false</default>
+                <label>Amérique Latine et Caraïbes</label>
+            </value>
+            <value>
+                <fullName>Asie Orientale et zone Pacifique</fullName>
+                <default>false</default>
+                <label>Asie Orientale et zone Pacifique</label>
+            </value>
+            <value>
+                <fullName>Europe de l&apos;Est et Asie Centrale</fullName>
+                <default>false</default>
+                <label>Europe de l&apos;Est et Asie Centrale</label>
+            </value>
+            <value>
+                <fullName>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</fullName>
+                <default>true</default>
+                <label>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</label>
+            </value>
+            <value>
+                <fullName>Moyen Orient et Maghreb</fullName>
+                <default>false</default>
+                <label>Moyen Orient et Maghreb</label>
+            </value>
+            <value>
+                <fullName>Sud Est Asiatique</fullName>
+                <default>false</default>
+                <label>Sud Est Asiatique</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

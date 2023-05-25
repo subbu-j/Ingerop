@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Appel d&apos;offre</fullName>
+                <default>false</default>
+                <label>Appel d&apos;offre</label>
+            </value>
+            <value>
+                <fullName>Appel à candidature</fullName>
+                <default>false</default>
+                <label>Appel à candidature</label>
+            </value>
+            <value>
+                <fullName>Concours</fullName>
+                <default>false</default>
+                <label>Concours</label>
+            </value>
+            <value>
+                <fullName>Conception réalisation</fullName>
+                <default>false</default>
+                <label>Conception réalisation</label>
+            </value>
+            <value>
+                <fullName>CREM</fullName>
+                <default>false</default>
+                <label>CREM</label>
+            </value>
+            <value>
+                <fullName>PPP</fullName>
+                <default>false</default>
+                <label>PPP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

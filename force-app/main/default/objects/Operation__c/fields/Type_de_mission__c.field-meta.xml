@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_de_mission__c</fullName>
+    <externalId>false</externalId>
+    <label>Type de mission</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Achats et approvisionnement</fullName>
+                <default>false</default>
+                <label>Achats et approvisionnement</label>
+            </value>
+            <value>
+                <fullName>AMO équipements (BEEM)</fullName>
+                <default>false</default>
+                <label>AMO équipements (BEEM)</label>
+            </value>
+            <value>
+                <fullName>Assistance à Maîtrise d&apos;Ouvrage - Consultan</fullName>
+                <default>false</default>
+                <label>Assistance à Maîtrise d&apos;Ouvrage - Consultan</label>
+            </value>
+            <value>
+                <fullName>Assistance et conseil en exploitation maint</fullName>
+                <default>false</default>
+                <label>Assistance et conseil en exploitation maint</label>
+            </value>
+            <value>
+                <fullName>BIM</fullName>
+                <default>false</default>
+                <label>BIM</label>
+            </value>
+            <value>
+                <fullName>Concessions- Assistance Concessions</fullName>
+                <default>false</default>
+                <label>Concessions- Assistance Concessions</label>
+            </value>
+            <value>
+                <fullName>Conseil PSI</fullName>
+                <default>false</default>
+                <label>Conseil PSI</label>
+            </value>
+            <value>
+                <fullName>Contractant général</fullName>
+                <default>false</default>
+                <label>Contractant général</label>
+            </value>
+            <value>
+                <fullName>Coordination SSI</fullName>
+                <default>false</default>
+                <label>Coordination SSI</label>
+            </value>
+            <value>
+                <fullName>Délégation d&apos;achats (BEEM)</fullName>
+                <default>false</default>
+                <label>Délégation d&apos;achats (BEEM)</label>
+            </value>
+            <value>
+                <fullName>Diagnostic-Audit</fullName>
+                <default>false</default>
+                <label>Diagnostic-Audit</label>
+            </value>
+            <value>
+                <fullName>Dossiers liés à l&apos;environnement et aux risq</fullName>
+                <default>false</default>
+                <label>Dossiers liés à l&apos;environnement et aux risq</label>
+            </value>
+            <value>
+                <fullName>Economie de la construction</fullName>
+                <default>false</default>
+                <label>Economie de la construction</label>
+            </value>
+            <value>
+                <fullName>Etudes Amont et Générales</fullName>
+                <default>false</default>
+                <label>Etudes Amont et Générales</label>
+            </value>
+            <value>
+                <fullName>Etudes d&apos;exécution</fullName>
+                <default>false</default>
+                <label>Etudes d&apos;exécution</label>
+            </value>
+            <value>
+                <fullName>Etudes économiques - Socio Economiques</fullName>
+                <default>false</default>
+                <label>Etudes économiques - Socio Economiques</label>
+            </value>
+            <value>
+                <fullName>Expertise</fullName>
+                <default>false</default>
+                <label>Expertise</label>
+            </value>
+            <value>
+                <fullName>Expertise (BEEM)</fullName>
+                <default>false</default>
+                <label>Expertise (BEEM)</label>
+            </value>
+            <value>
+                <fullName>Formation</fullName>
+                <default>false</default>
+                <label>Formation</label>
+            </value>
+            <value>
+                <fullName>Ingénierie générale projet</fullName>
+                <default>false</default>
+                <label>Ingénierie générale projet</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre de Base</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre de Base</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre de conception</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre de conception</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre de Réalisation</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre de Réalisation</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre partielle : Avant-Projet</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre partielle : Avant-Projet</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre partielle : Etudes prélémi</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre partielle : Etudes prélémi</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre partielle : Projet</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre partielle : Projet</label>
+            </value>
+            <value>
+                <fullName>Maitrise d&apos;oeuvre partielle : Visa</fullName>
+                <default>false</default>
+                <label>Maitrise d&apos;oeuvre partielle : Visa</label>
+            </value>
+            <value>
+                <fullName>Mission acoustique</fullName>
+                <default>false</default>
+                <label>Mission acoustique</label>
+            </value>
+            <value>
+                <fullName>Mission sécurité et protection de santé</fullName>
+                <default>false</default>
+                <label>Mission sécurité et protection de santé</label>
+            </value>
+            <value>
+                <fullName>Missions système de sécurité incendie</fullName>
+                <default>false</default>
+                <label>Missions système de sécurité incendie</label>
+            </value>
+            <value>
+                <fullName>Non Applicable (hors projets opérationnels)</fullName>
+                <default>false</default>
+                <label>Non Applicable (hors projets opérationnels)</label>
+            </value>
+            <value>
+                <fullName>Ordonnancement, pilotage, coordination</fullName>
+                <default>false</default>
+                <label>Ordonnancement, pilotage, coordination</label>
+            </value>
+            <value>
+                <fullName>Programmation - Plans Directeurs</fullName>
+                <default>false</default>
+                <label>Programmation - Plans Directeurs</label>
+            </value>
+            <value>
+                <fullName>Réalisations clés en main</fullName>
+                <default>false</default>
+                <label>Réalisations clés en main</label>
+            </value>
+            <value>
+                <fullName>Sous traitance détachement</fullName>
+                <default>false</default>
+                <label>Sous traitance détachement</label>
+            </value>
+            <value>
+                <fullName>Synthèse des études d&apos;exécution</fullName>
+                <default>false</default>
+                <label>Synthèse des études d&apos;exécution</label>
+            </value>
+            <value>
+                <fullName>Validation - Conformité réglementaire - Qua</fullName>
+                <default>false</default>
+                <label>Validation - Conformité réglementaire - Qua</label>
+            </value>
+            <value>
+                <fullName>Affaire fille cherche mère</fullName>
+                <default>false</default>
+                <label>Affaire fille cherche mère</label>
+            </value>
+            <value>
+                <fullName>ex 11 ancien code à revoir</fullName>
+                <default>false</default>
+                <label>ex 11 ancien code à revoir</label>
+            </value>
+            <value>
+                <fullName>ex 13 ancien code à revoir</fullName>
+                <default>false</default>
+                <label>ex 13 ancien code à revoir</label>
+            </value>
+            <value>
+                <fullName>ex 31 Marché de définition</fullName>
+                <default>false</default>
+                <label>ex 31 Marché de définition</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UFO__c</fullName>
+    <externalId>false</externalId>
+    <label>UFO</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALPES CENTRE EST</fullName>
+                <default>false</default>
+                <label>ALPES CENTRE EST</label>
+            </value>
+            <value>
+                <fullName>BATIMENT &amp; EQUIPEMENTS</fullName>
+                <default>false</default>
+                <label>BATIMENT &amp; EQUIPEMENTS</label>
+            </value>
+            <value>
+                <fullName>BUSINESS INGEROP CONTRACTING</fullName>
+                <default>false</default>
+                <label>BUSINESS INGEROP CONTRACTING</label>
+            </value>
+            <value>
+                <fullName>GEOS</fullName>
+                <default>false</default>
+                <label>GEOS</label>
+            </value>
+            <value>
+                <fullName>GRAND OUEST</fullName>
+                <default>false</default>
+                <label>GRAND OUEST</label>
+            </value>
+            <value>
+                <fullName>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</fullName>
+                <default>false</default>
+                <label>INFRASTRUCTURES, VILLE &amp; TRANSPORTS</label>
+            </value>
+            <value>
+                <fullName>INTERNATIONAL</fullName>
+                <default>false</default>
+                <label>INTERNATIONAL</label>
+            </value>
+            <value>
+                <fullName>MEDITERRANEE</fullName>
+                <default>false</default>
+                <label>MEDITERRANEE</label>
+            </value>
+            <value>
+                <fullName>NORD-EST</fullName>
+                <default>false</default>
+                <label>NORD-EST</label>
+            </value>
+            <value>
+                <fullName>RENDEL PLUS</fullName>
+                <default>false</default>
+                <label>RENDEL PLUS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

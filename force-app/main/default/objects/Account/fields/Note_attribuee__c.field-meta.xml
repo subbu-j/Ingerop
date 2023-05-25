@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Note_attribuee__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Moyenne_des_scores__c &gt;4.5,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_5_stars_T.png&quot;, &quot;5&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;4,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_4_and_a_half_stars_T.png&quot;, &quot;4.5&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;3.5,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_4_stars_T.png&quot;, &quot;4&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;3,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_3_and_a_half_stars_T.png&quot;, &quot;3.5&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;2.5,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_3_stars_T.png&quot;, &quot;3&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;2,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_2_and_a_half_stars_T.png&quot;, &quot;2.5&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;1.5,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_2_stars_T.png&quot;, &quot;2&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;1,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_1_and_a_half_stars_T.png&quot;, &quot;1.5&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;0.5,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_1_star_T.png&quot;, &quot;1&quot;, 15, 120), 
+IF(Moyenne_des_scores__c &gt;0,IMAGE(&quot;/resource/Stars/5_Star_Rating_System_0_and_half_star_T.png&quot;, &quot;0.5&quot;, 15, 120), 
+IMAGE(&quot;/resource/Stars/5_Star_Rating_System_0_stars_T.png&quot;, &quot;0&quot;, 15, 120)))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Note attribuée</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

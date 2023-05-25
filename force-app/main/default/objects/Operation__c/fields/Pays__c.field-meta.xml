@@ -1,0 +1,1710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pays__c</fullName>
+    <externalId>false</externalId>
+    <label>Pays</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Zone_geographique__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Afghanistan</fullName>
+                <default>false</default>
+                <label>Afghanistan</label>
+            </value>
+            <value>
+                <fullName>Afrique du sud</fullName>
+                <default>false</default>
+                <label>Afrique du sud</label>
+            </value>
+            <value>
+                <fullName>Albanie</fullName>
+                <default>false</default>
+                <label>Albanie</label>
+            </value>
+            <value>
+                <fullName>Algérie</fullName>
+                <default>false</default>
+                <label>Algérie</label>
+            </value>
+            <value>
+                <fullName>Allemagne</fullName>
+                <default>false</default>
+                <label>Allemagne</label>
+            </value>
+            <value>
+                <fullName>Andorre</fullName>
+                <default>false</default>
+                <label>Andorre</label>
+            </value>
+            <value>
+                <fullName>Angola</fullName>
+                <default>false</default>
+                <label>Angola</label>
+            </value>
+            <value>
+                <fullName>Antigua et Barbuda</fullName>
+                <default>false</default>
+                <label>Antigua et Barbuda</label>
+            </value>
+            <value>
+                <fullName>Arabie saoudite</fullName>
+                <default>false</default>
+                <label>Arabie saoudite</label>
+            </value>
+            <value>
+                <fullName>Argentine</fullName>
+                <default>false</default>
+                <label>Argentine</label>
+            </value>
+            <value>
+                <fullName>Arménie</fullName>
+                <default>false</default>
+                <label>Arménie</label>
+            </value>
+            <value>
+                <fullName>Australie</fullName>
+                <default>false</default>
+                <label>Australie</label>
+            </value>
+            <value>
+                <fullName>Autriche</fullName>
+                <default>false</default>
+                <label>Autriche</label>
+            </value>
+            <value>
+                <fullName>Azerbaïdjan</fullName>
+                <default>false</default>
+                <label>Azerbaïdjan</label>
+            </value>
+            <value>
+                <fullName>Bahamas</fullName>
+                <default>false</default>
+                <label>Bahamas</label>
+            </value>
+            <value>
+                <fullName>Bahreïn</fullName>
+                <default>false</default>
+                <label>Bahreïn</label>
+            </value>
+            <value>
+                <fullName>Bangladesh</fullName>
+                <default>false</default>
+                <label>Bangladesh</label>
+            </value>
+            <value>
+                <fullName>Barbade</fullName>
+                <default>false</default>
+                <label>Barbade</label>
+            </value>
+            <value>
+                <fullName>Belau</fullName>
+                <default>false</default>
+                <label>Belau</label>
+            </value>
+            <value>
+                <fullName>Belgique</fullName>
+                <default>false</default>
+                <label>Belgique</label>
+            </value>
+            <value>
+                <fullName>Belize</fullName>
+                <default>false</default>
+                <label>Belize</label>
+            </value>
+            <value>
+                <fullName>Bénin</fullName>
+                <default>false</default>
+                <label>Bénin</label>
+            </value>
+            <value>
+                <fullName>Bhoutan</fullName>
+                <default>false</default>
+                <label>Bhoutan</label>
+            </value>
+            <value>
+                <fullName>Biélorussie</fullName>
+                <default>false</default>
+                <label>Biélorussie</label>
+            </value>
+            <value>
+                <fullName>Birmanie</fullName>
+                <default>false</default>
+                <label>Birmanie</label>
+            </value>
+            <value>
+                <fullName>Bolivie</fullName>
+                <default>false</default>
+                <label>Bolivie</label>
+            </value>
+            <value>
+                <fullName>Bosnie-Herzégovine</fullName>
+                <default>false</default>
+                <label>Bosnie-Herzégovine</label>
+            </value>
+            <value>
+                <fullName>Botswana</fullName>
+                <default>false</default>
+                <label>Botswana</label>
+            </value>
+            <value>
+                <fullName>Brésil</fullName>
+                <default>false</default>
+                <label>Brésil</label>
+            </value>
+            <value>
+                <fullName>Brunei</fullName>
+                <default>false</default>
+                <label>Brunei</label>
+            </value>
+            <value>
+                <fullName>Bulgarie</fullName>
+                <default>false</default>
+                <label>Bulgarie</label>
+            </value>
+            <value>
+                <fullName>Burkina</fullName>
+                <default>false</default>
+                <label>Burkina</label>
+            </value>
+            <value>
+                <fullName>Burundi</fullName>
+                <default>false</default>
+                <label>Burundi</label>
+            </value>
+            <value>
+                <fullName>Cambodge</fullName>
+                <default>false</default>
+                <label>Cambodge</label>
+            </value>
+            <value>
+                <fullName>Cameroun</fullName>
+                <default>false</default>
+                <label>Cameroun</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>Cap vert</fullName>
+                <default>false</default>
+                <label>Cap vert</label>
+            </value>
+            <value>
+                <fullName>Centrafricaine (république)</fullName>
+                <default>false</default>
+                <label>Centrafricaine (république)</label>
+            </value>
+            <value>
+                <fullName>Chili</fullName>
+                <default>false</default>
+                <label>Chili</label>
+            </value>
+            <value>
+                <fullName>Chine</fullName>
+                <default>false</default>
+                <label>Chine</label>
+            </value>
+            <value>
+                <fullName>Chypre</fullName>
+                <default>false</default>
+                <label>Chypre</label>
+            </value>
+            <value>
+                <fullName>Colombie</fullName>
+                <default>false</default>
+                <label>Colombie</label>
+            </value>
+            <value>
+                <fullName>Comores</fullName>
+                <default>false</default>
+                <label>Comores</label>
+            </value>
+            <value>
+                <fullName>Congo</fullName>
+                <default>false</default>
+                <label>Congo</label>
+            </value>
+            <value>
+                <fullName>Congo (république démocratique)</fullName>
+                <default>false</default>
+                <label>Congo (république démocratique)</label>
+            </value>
+            <value>
+                <fullName>Cook (iles)</fullName>
+                <default>false</default>
+                <label>Cook (iles)</label>
+            </value>
+            <value>
+                <fullName>Corée du Nord</fullName>
+                <default>false</default>
+                <label>Corée du Nord</label>
+            </value>
+            <value>
+                <fullName>Corée du Sud</fullName>
+                <default>false</default>
+                <label>Corée du Sud</label>
+            </value>
+            <value>
+                <fullName>Costa Rica</fullName>
+                <default>false</default>
+                <label>Costa Rica</label>
+            </value>
+            <value>
+                <fullName>Côte d&apos;Ivoire</fullName>
+                <default>false</default>
+                <label>Côte d&apos;Ivoire</label>
+            </value>
+            <value>
+                <fullName>Croatie</fullName>
+                <default>false</default>
+                <label>Croatie</label>
+            </value>
+            <value>
+                <fullName>Cuba</fullName>
+                <default>false</default>
+                <label>Cuba</label>
+            </value>
+            <value>
+                <fullName>Danemark</fullName>
+                <default>false</default>
+                <label>Danemark</label>
+            </value>
+            <value>
+                <fullName>Djibouti</fullName>
+                <default>false</default>
+                <label>Djibouti</label>
+            </value>
+            <value>
+                <fullName>Dominicaine (république)</fullName>
+                <default>false</default>
+                <label>Dominicaine (république)</label>
+            </value>
+            <value>
+                <fullName>Dominique</fullName>
+                <default>false</default>
+                <label>Dominique</label>
+            </value>
+            <value>
+                <fullName>Egypte</fullName>
+                <default>false</default>
+                <label>Egypte</label>
+            </value>
+            <value>
+                <fullName>Emirats arabes unis</fullName>
+                <default>false</default>
+                <label>Emirats arabes unis</label>
+            </value>
+            <value>
+                <fullName>Equateur</fullName>
+                <default>false</default>
+                <label>Equateur</label>
+            </value>
+            <value>
+                <fullName>Erythrée</fullName>
+                <default>false</default>
+                <label>Erythrée</label>
+            </value>
+            <value>
+                <fullName>Espagne</fullName>
+                <default>false</default>
+                <label>Espagne</label>
+            </value>
+            <value>
+                <fullName>Estonie</fullName>
+                <default>false</default>
+                <label>Estonie</label>
+            </value>
+            <value>
+                <fullName>Etats-unis</fullName>
+                <default>false</default>
+                <label>Etats-unis</label>
+            </value>
+            <value>
+                <fullName>Ethiopie</fullName>
+                <default>false</default>
+                <label>Ethiopie</label>
+            </value>
+            <value>
+                <fullName>Fidji</fullName>
+                <default>false</default>
+                <label>Fidji</label>
+            </value>
+            <value>
+                <fullName>Finlande</fullName>
+                <default>false</default>
+                <label>Finlande</label>
+            </value>
+            <value>
+                <fullName>France</fullName>
+                <default>true</default>
+                <label>France</label>
+            </value>
+            <value>
+                <fullName>Gabon</fullName>
+                <default>false</default>
+                <label>Gabon</label>
+            </value>
+            <value>
+                <fullName>Gambie</fullName>
+                <default>false</default>
+                <label>Gambie</label>
+            </value>
+            <value>
+                <fullName>Géorgie</fullName>
+                <default>false</default>
+                <label>Géorgie</label>
+            </value>
+            <value>
+                <fullName>Ghana</fullName>
+                <default>false</default>
+                <label>Ghana</label>
+            </value>
+            <value>
+                <fullName>Grèce</fullName>
+                <default>false</default>
+                <label>Grèce</label>
+            </value>
+            <value>
+                <fullName>Grenade</fullName>
+                <default>false</default>
+                <label>Grenade</label>
+            </value>
+            <value>
+                <fullName>Guatemala</fullName>
+                <default>false</default>
+                <label>Guatemala</label>
+            </value>
+            <value>
+                <fullName>Guinée</fullName>
+                <default>false</default>
+                <label>Guinée</label>
+            </value>
+            <value>
+                <fullName>Guinée-Bissao</fullName>
+                <default>false</default>
+                <label>Guinée-Bissao</label>
+            </value>
+            <value>
+                <fullName>Guinée équatoriale</fullName>
+                <default>false</default>
+                <label>Guinée équatoriale</label>
+            </value>
+            <value>
+                <fullName>Guyane</fullName>
+                <default>false</default>
+                <label>Guyane</label>
+            </value>
+            <value>
+                <fullName>Haïti</fullName>
+                <default>false</default>
+                <label>Haïti</label>
+            </value>
+            <value>
+                <fullName>Honduras</fullName>
+                <default>false</default>
+                <label>Honduras</label>
+            </value>
+            <value>
+                <fullName>Hong kong</fullName>
+                <default>false</default>
+                <label>Hong kong</label>
+            </value>
+            <value>
+                <fullName>Hongrie</fullName>
+                <default>false</default>
+                <label>Hongrie</label>
+            </value>
+            <value>
+                <fullName>Inde</fullName>
+                <default>false</default>
+                <label>Inde</label>
+            </value>
+            <value>
+                <fullName>Indonésie</fullName>
+                <default>false</default>
+                <label>Indonésie</label>
+            </value>
+            <value>
+                <fullName>Iran</fullName>
+                <default>false</default>
+                <label>Iran</label>
+            </value>
+            <value>
+                <fullName>Iraq</fullName>
+                <default>false</default>
+                <label>Iraq</label>
+            </value>
+            <value>
+                <fullName>Irlande</fullName>
+                <default>false</default>
+                <label>Irlande</label>
+            </value>
+            <value>
+                <fullName>Islande</fullName>
+                <default>false</default>
+                <label>Islande</label>
+            </value>
+            <value>
+                <fullName>Israël - territoires palestiniens</fullName>
+                <default>false</default>
+                <label>Israël - territoires palestiniens</label>
+            </value>
+            <value>
+                <fullName>Italie</fullName>
+                <default>false</default>
+                <label>Italie</label>
+            </value>
+            <value>
+                <fullName>Jamaïque</fullName>
+                <default>false</default>
+                <label>Jamaïque</label>
+            </value>
+            <value>
+                <fullName>Japon</fullName>
+                <default>false</default>
+                <label>Japon</label>
+            </value>
+            <value>
+                <fullName>Jordanie</fullName>
+                <default>false</default>
+                <label>Jordanie</label>
+            </value>
+            <value>
+                <fullName>Kazakhstan</fullName>
+                <default>false</default>
+                <label>Kazakhstan</label>
+            </value>
+            <value>
+                <fullName>Kenya</fullName>
+                <default>false</default>
+                <label>Kenya</label>
+            </value>
+            <value>
+                <fullName>Kirghizistan</fullName>
+                <default>false</default>
+                <label>Kirghizistan</label>
+            </value>
+            <value>
+                <fullName>Koweït</fullName>
+                <default>false</default>
+                <label>Koweït</label>
+            </value>
+            <value>
+                <fullName>Laos</fullName>
+                <default>false</default>
+                <label>Laos</label>
+            </value>
+            <value>
+                <fullName>Lesotho</fullName>
+                <default>false</default>
+                <label>Lesotho</label>
+            </value>
+            <value>
+                <fullName>Lettonie</fullName>
+                <default>false</default>
+                <label>Lettonie</label>
+            </value>
+            <value>
+                <fullName>Liban</fullName>
+                <default>false</default>
+                <label>Liban</label>
+            </value>
+            <value>
+                <fullName>Libéria</fullName>
+                <default>false</default>
+                <label>Libéria</label>
+            </value>
+            <value>
+                <fullName>Libye</fullName>
+                <default>false</default>
+                <label>Libye</label>
+            </value>
+            <value>
+                <fullName>Lituanie</fullName>
+                <default>false</default>
+                <label>Lituanie</label>
+            </value>
+            <value>
+                <fullName>Luxembourg</fullName>
+                <default>false</default>
+                <label>Luxembourg</label>
+            </value>
+            <value>
+                <fullName>Macao</fullName>
+                <default>false</default>
+                <label>Macao</label>
+            </value>
+            <value>
+                <fullName>Macédoine</fullName>
+                <default>false</default>
+                <label>Macédoine</label>
+            </value>
+            <value>
+                <fullName>Madagascar</fullName>
+                <default>false</default>
+                <label>Madagascar</label>
+            </value>
+            <value>
+                <fullName>Malaisie</fullName>
+                <default>false</default>
+                <label>Malaisie</label>
+            </value>
+            <value>
+                <fullName>Malawi</fullName>
+                <default>false</default>
+                <label>Malawi</label>
+            </value>
+            <value>
+                <fullName>Maldives</fullName>
+                <default>false</default>
+                <label>Maldives</label>
+            </value>
+            <value>
+                <fullName>Mali</fullName>
+                <default>false</default>
+                <label>Mali</label>
+            </value>
+            <value>
+                <fullName>Malte</fullName>
+                <default>false</default>
+                <label>Malte</label>
+            </value>
+            <value>
+                <fullName>Maroc</fullName>
+                <default>false</default>
+                <label>Maroc</label>
+            </value>
+            <value>
+                <fullName>Maurice</fullName>
+                <default>false</default>
+                <label>Maurice</label>
+            </value>
+            <value>
+                <fullName>Mauritanie</fullName>
+                <default>false</default>
+                <label>Mauritanie</label>
+            </value>
+            <value>
+                <fullName>Mexique</fullName>
+                <default>false</default>
+                <label>Mexique</label>
+            </value>
+            <value>
+                <fullName>Moldavie</fullName>
+                <default>false</default>
+                <label>Moldavie</label>
+            </value>
+            <value>
+                <fullName>Monaco</fullName>
+                <default>false</default>
+                <label>Monaco</label>
+            </value>
+            <value>
+                <fullName>Mongolie</fullName>
+                <default>false</default>
+                <label>Mongolie</label>
+            </value>
+            <value>
+                <fullName>Monténégro</fullName>
+                <default>false</default>
+                <label>Monténégro</label>
+            </value>
+            <value>
+                <fullName>Mozambique</fullName>
+                <default>false</default>
+                <label>Mozambique</label>
+            </value>
+            <value>
+                <fullName>Namibie</fullName>
+                <default>false</default>
+                <label>Namibie</label>
+            </value>
+            <value>
+                <fullName>Népal</fullName>
+                <default>false</default>
+                <label>Népal</label>
+            </value>
+            <value>
+                <fullName>Nicaragua</fullName>
+                <default>false</default>
+                <label>Nicaragua</label>
+            </value>
+            <value>
+                <fullName>Niger</fullName>
+                <default>false</default>
+                <label>Niger</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>Norvège</fullName>
+                <default>false</default>
+                <label>Norvège</label>
+            </value>
+            <value>
+                <fullName>Nouvelle-Zélande</fullName>
+                <default>false</default>
+                <label>Nouvelle-Zélande</label>
+            </value>
+            <value>
+                <fullName>Oman</fullName>
+                <default>false</default>
+                <label>Oman</label>
+            </value>
+            <value>
+                <fullName>Ouganda</fullName>
+                <default>false</default>
+                <label>Ouganda</label>
+            </value>
+            <value>
+                <fullName>Ouzbekistan</fullName>
+                <default>false</default>
+                <label>Ouzbekistan</label>
+            </value>
+            <value>
+                <fullName>Pakistan</fullName>
+                <default>false</default>
+                <label>Pakistan</label>
+            </value>
+            <value>
+                <fullName>Panama</fullName>
+                <default>false</default>
+                <label>Panama</label>
+            </value>
+            <value>
+                <fullName>Papouasie-Nouvelle-Guinée</fullName>
+                <default>false</default>
+                <label>Papouasie-Nouvelle-Guinée</label>
+            </value>
+            <value>
+                <fullName>Paraguay</fullName>
+                <default>false</default>
+                <label>Paraguay</label>
+            </value>
+            <value>
+                <fullName>Pays-bas</fullName>
+                <default>false</default>
+                <label>Pays-bas</label>
+            </value>
+            <value>
+                <fullName>Pérou</fullName>
+                <default>false</default>
+                <label>Pérou</label>
+            </value>
+            <value>
+                <fullName>Philippines</fullName>
+                <default>false</default>
+                <label>Philippines</label>
+            </value>
+            <value>
+                <fullName>Pologne</fullName>
+                <default>false</default>
+                <label>Pologne</label>
+            </value>
+            <value>
+                <fullName>Portugal</fullName>
+                <default>false</default>
+                <label>Portugal</label>
+            </value>
+            <value>
+                <fullName>Qatar</fullName>
+                <default>false</default>
+                <label>Qatar</label>
+            </value>
+            <value>
+                <fullName>Roumanie</fullName>
+                <default>false</default>
+                <label>Roumanie</label>
+            </value>
+            <value>
+                <fullName>Royaume-uni</fullName>
+                <default>false</default>
+                <label>Royaume-uni</label>
+            </value>
+            <value>
+                <fullName>Russie</fullName>
+                <default>false</default>
+                <label>Russie</label>
+            </value>
+            <value>
+                <fullName>Rwanda</fullName>
+                <default>false</default>
+                <label>Rwanda</label>
+            </value>
+            <value>
+                <fullName>Saint-Christophe-et-Nieves</fullName>
+                <default>false</default>
+                <label>Saint-Christophe-et-Nieves</label>
+            </value>
+            <value>
+                <fullName>Sainte-lucie</fullName>
+                <default>false</default>
+                <label>Sainte-lucie</label>
+            </value>
+            <value>
+                <fullName>Saint-Vincent-et-Les-Grenadines</fullName>
+                <default>false</default>
+                <label>Saint-Vincent-et-Les-Grenadines</label>
+            </value>
+            <value>
+                <fullName>Salomon (iles)</fullName>
+                <default>false</default>
+                <label>Salomon (iles)</label>
+            </value>
+            <value>
+                <fullName>Salvador</fullName>
+                <default>false</default>
+                <label>Salvador</label>
+            </value>
+            <value>
+                <fullName>Samoa</fullName>
+                <default>false</default>
+                <label>Samoa</label>
+            </value>
+            <value>
+                <fullName>São Tomé-et-Príncipe</fullName>
+                <default>false</default>
+                <label>São Tomé-et-Príncipe</label>
+            </value>
+            <value>
+                <fullName>Sénégal</fullName>
+                <default>false</default>
+                <label>Sénégal</label>
+            </value>
+            <value>
+                <fullName>Serbie</fullName>
+                <default>false</default>
+                <label>Serbie</label>
+            </value>
+            <value>
+                <fullName>Seychelles</fullName>
+                <default>false</default>
+                <label>Seychelles</label>
+            </value>
+            <value>
+                <fullName>Sierra Leone</fullName>
+                <default>false</default>
+                <label>Sierra Leone</label>
+            </value>
+            <value>
+                <fullName>Singapour</fullName>
+                <default>false</default>
+                <label>Singapour</label>
+            </value>
+            <value>
+                <fullName>Slovaquie</fullName>
+                <default>false</default>
+                <label>Slovaquie</label>
+            </value>
+            <value>
+                <fullName>Slovénie</fullName>
+                <default>false</default>
+                <label>Slovénie</label>
+            </value>
+            <value>
+                <fullName>Somalie</fullName>
+                <default>false</default>
+                <label>Somalie</label>
+            </value>
+            <value>
+                <fullName>Soudan</fullName>
+                <default>false</default>
+                <label>Soudan</label>
+            </value>
+            <value>
+                <fullName>Sri lanka</fullName>
+                <default>false</default>
+                <label>Sri lanka</label>
+            </value>
+            <value>
+                <fullName>Suède</fullName>
+                <default>false</default>
+                <label>Suède</label>
+            </value>
+            <value>
+                <fullName>Suisse</fullName>
+                <default>false</default>
+                <label>Suisse</label>
+            </value>
+            <value>
+                <fullName>Surinam</fullName>
+                <default>false</default>
+                <label>Surinam</label>
+            </value>
+            <value>
+                <fullName>Swaziland</fullName>
+                <default>false</default>
+                <label>Swaziland</label>
+            </value>
+            <value>
+                <fullName>Syrie</fullName>
+                <default>false</default>
+                <label>Syrie</label>
+            </value>
+            <value>
+                <fullName>Tadjikistan</fullName>
+                <default>false</default>
+                <label>Tadjikistan</label>
+            </value>
+            <value>
+                <fullName>Taïwan</fullName>
+                <default>false</default>
+                <label>Taïwan</label>
+            </value>
+            <value>
+                <fullName>Tanzanie</fullName>
+                <default>false</default>
+                <label>Tanzanie</label>
+            </value>
+            <value>
+                <fullName>Tchad</fullName>
+                <default>false</default>
+                <label>Tchad</label>
+            </value>
+            <value>
+                <fullName>Tchèque (république)</fullName>
+                <default>false</default>
+                <label>Tchèque (république)</label>
+            </value>
+            <value>
+                <fullName>Thaïlande</fullName>
+                <default>false</default>
+                <label>Thaïlande</label>
+            </value>
+            <value>
+                <fullName>Togo</fullName>
+                <default>false</default>
+                <label>Togo</label>
+            </value>
+            <value>
+                <fullName>Trinité et Tobago</fullName>
+                <default>false</default>
+                <label>Trinité et Tobago</label>
+            </value>
+            <value>
+                <fullName>Tunisie</fullName>
+                <default>false</default>
+                <label>Tunisie</label>
+            </value>
+            <value>
+                <fullName>Turkmenistan</fullName>
+                <default>false</default>
+                <label>Turkmenistan</label>
+            </value>
+            <value>
+                <fullName>Turquie</fullName>
+                <default>false</default>
+                <label>Turquie</label>
+            </value>
+            <value>
+                <fullName>Ukraine</fullName>
+                <default>false</default>
+                <label>Ukraine</label>
+            </value>
+            <value>
+                <fullName>Uruguay</fullName>
+                <default>false</default>
+                <label>Uruguay</label>
+            </value>
+            <value>
+                <fullName>Vanuatu</fullName>
+                <default>false</default>
+                <label>Vanuatu</label>
+            </value>
+            <value>
+                <fullName>Venezuela</fullName>
+                <default>false</default>
+                <label>Venezuela</label>
+            </value>
+            <value>
+                <fullName>Vietnam</fullName>
+                <default>false</default>
+                <label>Vietnam</label>
+            </value>
+            <value>
+                <fullName>Yémen</fullName>
+                <default>false</default>
+                <label>Yémen</label>
+            </value>
+            <value>
+                <fullName>Yougoslavie</fullName>
+                <default>false</default>
+                <label>Yougoslavie</label>
+            </value>
+            <value>
+                <fullName>Zambie</fullName>
+                <default>false</default>
+                <label>Zambie</label>
+            </value>
+            <value>
+                <fullName>Zimbabwe</fullName>
+                <default>false</default>
+                <label>Zimbabwe</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Afrique du sud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Angola</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Bénin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Botswana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Burkina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Burundi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Cameroun</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Cap vert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Centrafricaine (république)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Comores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Congo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Congo (république démocratique)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Côte d&apos;Ivoire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Djibouti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Erythrée</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Ethiopie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Gabon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Gambie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Ghana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Guinée</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Guinée-Bissao</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Guinée équatoriale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Kenya</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Lesotho</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Libéria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Madagascar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Malawi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Mali</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Maurice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Mauritanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Mozambique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Namibie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Niger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Nigeria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Ouganda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Rwanda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>São Tomé-et-Príncipe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Sénégal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Seychelles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Sierra Leone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Somalie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Soudan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Swaziland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Tanzanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Tchad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Togo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Zambie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afrique (hors Maghreb)</controllingFieldValue>
+            <valueName>Zimbabwe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique du Nord</controllingFieldValue>
+            <valueName>Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique du Nord</controllingFieldValue>
+            <valueName>Etats-unis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Antigua et Barbuda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Argentine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Bahamas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Barbade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Belize</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Bolivie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Brésil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Chili</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Colombie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Costa Rica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Cuba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Dominicaine (république)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Dominique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Equateur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Grenade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Guatemala</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Guyane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Haïti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Honduras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Jamaïque</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Mexique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Nicaragua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Panama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Paraguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Pérou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Saint-Christophe-et-Nieves</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Sainte-lucie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Saint-Vincent-et-Les-Grenadines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Salvador</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Surinam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Trinité et Tobago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Uruguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amérique Latine et Caraïbes</controllingFieldValue>
+            <valueName>Venezuela</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Australie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Chine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Cook (iles)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Corée du Nord</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Corée du Sud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Fidji</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Hong kong</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Japon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Macao</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Mongolie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Nouvelle-Zélande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Salomon (iles)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Samoa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Taïwan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asie Orientale et zone Pacifique</controllingFieldValue>
+            <valueName>Vanuatu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Afghanistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Albanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Arménie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Azerbaïdjan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Biélorussie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Bosnie-Herzégovine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Bulgarie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Croatie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Estonie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Géorgie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Hongrie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Kazakhstan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Kirghizistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Lettonie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Lituanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Macédoine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Moldavie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Monténégro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Ouzbekistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Pakistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Pologne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Roumanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Russie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Serbie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Slovaquie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Slovénie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Tadjikistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Tchèque (république)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Turkmenistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Turquie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Ukraine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Est et Asie Centrale</controllingFieldValue>
+            <valueName>Yougoslavie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Allemagne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Andorre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Autriche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Belgique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Danemark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Espagne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Finlande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Grèce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Irlande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Islande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Italie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Luxembourg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Monaco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Norvège</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Pays-bas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Portugal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Royaume-uni</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Suède</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe de l&apos;Ouest (zone &quot;Euro&quot;)</controllingFieldValue>
+            <valueName>Suisse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Algérie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Arabie saoudite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Bahreïn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Chypre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Egypte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Emirats arabes unis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Iran</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Iraq</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Israël - territoires palestiniens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Jordanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Koweït</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Liban</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Libye</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Malte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Maroc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Oman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Qatar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Syrie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Tunisie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moyen Orient et Maghreb</controllingFieldValue>
+            <valueName>Yémen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Bangladesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Belau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Bhoutan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Birmanie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Brunei</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Cambodge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Inde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Indonésie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Laos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Malaisie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Maldives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Népal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Papouasie-Nouvelle-Guinée</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Philippines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Singapour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Sri lanka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Thaïlande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sud Est Asiatique</controllingFieldValue>
+            <valueName>Vietnam</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

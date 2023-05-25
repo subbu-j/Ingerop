@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIRET__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Le numéro SIRET (Système Informatique pour le Répertoire des Entreprises sur le Territoire) est un identifiant composé de 14 chiffres attribué par l&apos;INSEE à chaque entreprise. Il se compose d&apos;une première série de chiffres qui correspond au numéro SIREN , la deuxième partie de quatre chiffres est appelée NIC (Numéro Interne de Classement). Dans ce système, une entreprise disposant de plusieurs établissements se voit attribuer plusieurs numéros SIRET.</description>
+    <externalId>true</externalId>
+    <label>SIRET</label>
+    <length>14</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

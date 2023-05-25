@@ -1,0 +1,2082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sous_famille__c</fullName>
+    <externalId>false</externalId>
+    <label>Sous famille</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Famille_d_ouvrage__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>aciéries</fullName>
+                <default>false</default>
+                <label>aciéries</label>
+            </value>
+            <value>
+                <fullName>aciers - laminoirs</fullName>
+                <default>false</default>
+                <label>aciers - laminoirs</label>
+            </value>
+            <value>
+                <fullName>aciers - parachèvement - stockage</fullName>
+                <default>false</default>
+                <label>aciers - parachèvement - stockage</label>
+            </value>
+            <value>
+                <fullName>aciers spéciaux</fullName>
+                <default>false</default>
+                <label>aciers spéciaux</label>
+            </value>
+            <value>
+                <fullName>aéronautique, aéroportuaire - installations aéronautiques</fullName>
+                <default>false</default>
+                <label>aéronautique, aéroportuaire - installations aéronautiques</label>
+            </value>
+            <value>
+                <fullName>aéronautique, aéroportuaire - installations aéroportuaires</fullName>
+                <default>false</default>
+                <label>aéronautique, aéroportuaire - installations aéroportuaires</label>
+            </value>
+            <value>
+                <fullName>aéronautique, aéroportuaire - produits / pièces aéronautiques</fullName>
+                <default>false</default>
+                <label>aéronautique, aéroportuaire - produits / pièces aéronautiques</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - alcools-fermentations</fullName>
+                <default>false</default>
+                <label>agroalimentaire - alcools-fermentations</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - conditionnement</fullName>
+                <default>false</default>
+                <label>agroalimentaire - conditionnement</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - embouteillage</fullName>
+                <default>false</default>
+                <label>agroalimentaire - embouteillage</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - farines panification</fullName>
+                <default>false</default>
+                <label>agroalimentaire - farines panification</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - huiles-corps gras</fullName>
+                <default>false</default>
+                <label>agroalimentaire - huiles-corps gras</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - préparation-cuisson</fullName>
+                <default>false</default>
+                <label>agroalimentaire - préparation-cuisson</label>
+            </value>
+            <value>
+                <fullName>agroalimentaire - produits lactés</fullName>
+                <default>false</default>
+                <label>agroalimentaire - produits lactés</label>
+            </value>
+            <value>
+                <fullName>alcools-fermentations</fullName>
+                <default>false</default>
+                <label>alcools-fermentations</label>
+            </value>
+            <value>
+                <fullName>aluminium</fullName>
+                <default>false</default>
+                <label>aluminium</label>
+            </value>
+            <value>
+                <fullName>Aménagement Aéroportuaires</fullName>
+                <default>false</default>
+                <label>Aménagement Aéroportuaires</label>
+            </value>
+            <value>
+                <fullName>Aménagement du Territoire</fullName>
+                <default>false</default>
+                <label>Aménagement du Territoire</label>
+            </value>
+            <value>
+                <fullName>armement</fullName>
+                <default>false</default>
+                <label>armement</label>
+            </value>
+            <value>
+                <fullName>automobile - carrosserie</fullName>
+                <default>false</default>
+                <label>automobile - carrosserie</label>
+            </value>
+            <value>
+                <fullName>automobile - emboutissge</fullName>
+                <default>false</default>
+                <label>automobile - emboutissge</label>
+            </value>
+            <value>
+                <fullName>automobile - Equipementiers / intégrateurs</fullName>
+                <default>false</default>
+                <label>automobile - Equipementiers / intégrateurs</label>
+            </value>
+            <value>
+                <fullName>automobile - essais - moyens de mesure</fullName>
+                <default>false</default>
+                <label>automobile - essais - moyens de mesure</label>
+            </value>
+            <value>
+                <fullName>automobile - ferrage</fullName>
+                <default>false</default>
+                <label>automobile - ferrage</label>
+            </value>
+            <value>
+                <fullName>automobile - liaisons au sol</fullName>
+                <default>false</default>
+                <label>automobile - liaisons au sol</label>
+            </value>
+            <value>
+                <fullName>automobile - manutention</fullName>
+                <default>false</default>
+                <label>automobile - manutention</label>
+            </value>
+            <value>
+                <fullName>automobile - montage</fullName>
+                <default>false</default>
+                <label>automobile - montage</label>
+            </value>
+            <value>
+                <fullName>automobile - organes moteurs</fullName>
+                <default>false</default>
+                <label>automobile - organes moteurs</label>
+            </value>
+            <value>
+                <fullName>automobile - peinture</fullName>
+                <default>false</default>
+                <label>automobile - peinture</label>
+            </value>
+            <value>
+                <fullName>automobile - Produit, pièces automobiles</fullName>
+                <default>false</default>
+                <label>automobile - Produit, pièces automobiles</label>
+            </value>
+            <value>
+                <fullName>Autres Ouvrages d&apos;Infrastructures Hydraulique</fullName>
+                <default>false</default>
+                <label>Autres Ouvrages d&apos;Infrastructures Hydraulique</label>
+            </value>
+            <value>
+                <fullName>Autres ouvrages spéciaux</fullName>
+                <default>false</default>
+                <label>Autres ouvrages spéciaux</label>
+            </value>
+            <value>
+                <fullName>Autres Projets Routiers</fullName>
+                <default>false</default>
+                <label>Autres Projets Routiers</label>
+            </value>
+            <value>
+                <fullName>biotechnologies</fullName>
+                <default>false</default>
+                <label>biotechnologies</label>
+            </value>
+            <value>
+                <fullName>caoutchouc</fullName>
+                <default>false</default>
+                <label>caoutchouc</label>
+            </value>
+            <value>
+                <fullName>carrosserie</fullName>
+                <default>false</default>
+                <label>carrosserie</label>
+            </value>
+            <value>
+                <fullName>centrales thermiques et cogénération (sauf n</fullName>
+                <default>false</default>
+                <label>centrales thermiques et cogénération (sauf n</label>
+            </value>
+            <value>
+                <fullName>Centre de Vacances, de loisirs, parcs d&apos;attr</fullName>
+                <default>false</default>
+                <label>Centre de Vacances, de loisirs, parcs d&apos;attr</label>
+            </value>
+            <value>
+                <fullName>Centre informatique ou Service</fullName>
+                <default>false</default>
+                <label>Centre informatique ou Service</label>
+            </value>
+            <value>
+                <fullName>centres de recherche</fullName>
+                <default>false</default>
+                <label>centres de recherche</label>
+            </value>
+            <value>
+                <fullName>centres informatiques</fullName>
+                <default>false</default>
+                <label>centres informatiques</label>
+            </value>
+            <value>
+                <fullName>Centres Médicalisés (moyen et long séjour)</fullName>
+                <default>false</default>
+                <label>Centres Médicalisés (moyen et long séjour)</label>
+            </value>
+            <value>
+                <fullName>céramiques</fullName>
+                <default>false</default>
+                <label>céramiques</label>
+            </value>
+            <value>
+                <fullName>chimie, pétrole, gaz - distribution</fullName>
+                <default>false</default>
+                <label>chimie, pétrole, gaz - distribution</label>
+            </value>
+            <value>
+                <fullName>chimie, pétrole, gaz - production</fullName>
+                <default>false</default>
+                <label>chimie, pétrole, gaz - production</label>
+            </value>
+            <value>
+                <fullName>chimie, pétrole, gaz - raffinage</fullName>
+                <default>false</default>
+                <label>chimie, pétrole, gaz - raffinage</label>
+            </value>
+            <value>
+                <fullName>chimie, pétrole, gaz - Recherche</fullName>
+                <default>false</default>
+                <label>chimie, pétrole, gaz - Recherche</label>
+            </value>
+            <value>
+                <fullName>chimie, pétrole, gaz - stockage</fullName>
+                <default>false</default>
+                <label>chimie, pétrole, gaz - stockage</label>
+            </value>
+            <value>
+                <fullName>ciment</fullName>
+                <default>false</default>
+                <label>ciment</label>
+            </value>
+            <value>
+                <fullName>Cinémas, studios de cinéma, complexes cinéma</fullName>
+                <default>false</default>
+                <label>Cinémas, studios de cinéma, complexes cinéma</label>
+            </value>
+            <value>
+                <fullName>commerce / distribution</fullName>
+                <default>false</default>
+                <label>commerce / distribution</label>
+            </value>
+            <value>
+                <fullName>commerce - installations diverses</fullName>
+                <default>false</default>
+                <label>commerce - installations diverses</label>
+            </value>
+            <value>
+                <fullName>conditionnement</fullName>
+                <default>false</default>
+                <label>conditionnement</label>
+            </value>
+            <value>
+                <fullName>conditionnement - emballage</fullName>
+                <default>false</default>
+                <label>conditionnement - emballage</label>
+            </value>
+            <value>
+                <fullName>construction électrique</fullName>
+                <default>false</default>
+                <label>construction électrique</label>
+            </value>
+            <value>
+                <fullName>construction ferroviaire</fullName>
+                <default>false</default>
+                <label>construction ferroviaire</label>
+            </value>
+            <value>
+                <fullName>construction navale</fullName>
+                <default>false</default>
+                <label>construction navale</label>
+            </value>
+            <value>
+                <fullName>cosmétologie</fullName>
+                <default>false</default>
+                <label>cosmétologie</label>
+            </value>
+            <value>
+                <fullName>culturel - installations diverses</fullName>
+                <default>false</default>
+                <label>culturel - installations diverses</label>
+            </value>
+            <value>
+                <fullName>distribution</fullName>
+                <default>false</default>
+                <label>distribution</label>
+            </value>
+            <value>
+                <fullName>divers</fullName>
+                <default>false</default>
+                <label>divers</label>
+            </value>
+            <value>
+                <fullName>divers - armement</fullName>
+                <default>false</default>
+                <label>divers - armement</label>
+            </value>
+            <value>
+                <fullName>divers - commerce / distribution</fullName>
+                <default>false</default>
+                <label>divers - commerce / distribution</label>
+            </value>
+            <value>
+                <fullName>divers - conditionnement - emballage</fullName>
+                <default>false</default>
+                <label>divers - conditionnement - emballage</label>
+            </value>
+            <value>
+                <fullName>divers - construction électrique</fullName>
+                <default>false</default>
+                <label>divers - construction électrique</label>
+            </value>
+            <value>
+                <fullName>divers - construction ferroviaire</fullName>
+                <default>false</default>
+                <label>divers - construction ferroviaire</label>
+            </value>
+            <value>
+                <fullName>divers - construction navale</fullName>
+                <default>false</default>
+                <label>divers - construction navale</label>
+            </value>
+            <value>
+                <fullName>divers - industrie du bâtiment et du génie civil</fullName>
+                <default>false</default>
+                <label>divers - industrie du bâtiment et du génie civil</label>
+            </value>
+            <value>
+                <fullName>divers - installations portuaires</fullName>
+                <default>false</default>
+                <label>divers - installations portuaires</label>
+            </value>
+            <value>
+                <fullName>divers - manufactures diverses</fullName>
+                <default>false</default>
+                <label>divers - manufactures diverses</label>
+            </value>
+            <value>
+                <fullName>divers - voies ferrées, gares, ..</fullName>
+                <default>false</default>
+                <label>divers - voies ferrées, gares, ..</label>
+            </value>
+            <value>
+                <fullName>électronique, hautes technologies - centres informatiques</fullName>
+                <default>false</default>
+                <label>électronique, hautes technologies - centres informatiques</label>
+            </value>
+            <value>
+                <fullName>électronique, hautes technologies - fabrication électronique</fullName>
+                <default>false</default>
+                <label>électronique, hautes technologies - fabrication électronique</label>
+            </value>
+            <value>
+                <fullName>électronique, hautes technologies - hautes technologies, nanotechnologies,.</fullName>
+                <default>false</default>
+                <label>électronique, hautes technologies - hautes technologies, nanotechnologies,.</label>
+            </value>
+            <value>
+                <fullName>embouteillage</fullName>
+                <default>false</default>
+                <label>embouteillage</label>
+            </value>
+            <value>
+                <fullName>emboutissge</fullName>
+                <default>false</default>
+                <label>emboutissge</label>
+            </value>
+            <value>
+                <fullName>énergie, environnement - centrales thermiques et cogénération (sauf nucléaire)</fullName>
+                <default>false</default>
+                <label>énergie, environnement - centrales thermiques et cogénération (sauf nucléaire)</label>
+            </value>
+            <value>
+                <fullName>énergie, environnement - éoliennes</fullName>
+                <default>false</default>
+                <label>énergie, environnement - éoliennes</label>
+            </value>
+            <value>
+                <fullName>énergie, environnement - installations hydrauliques et traitement d&apos;eau</fullName>
+                <default>false</default>
+                <label>énergie, environnement - installations hydrauliques et traitement d&apos;eau</label>
+            </value>
+            <value>
+                <fullName>énergie, environnement - installations nucléaires</fullName>
+                <default>false</default>
+                <label>énergie, environnement - installations nucléaires</label>
+            </value>
+            <value>
+                <fullName>énergie, environnement - stockage des déchets (sauf nucléaires)</fullName>
+                <default>false</default>
+                <label>énergie, environnement - stockage des déchets (sauf nucléaires)</label>
+            </value>
+            <value>
+                <fullName>énergie, environnement - traitement des déchets (sauf nucléaires)</fullName>
+                <default>false</default>
+                <label>énergie, environnement - traitement des déchets (sauf nucléaires)</label>
+            </value>
+            <value>
+                <fullName>enseignement - installations diverses</fullName>
+                <default>false</default>
+                <label>enseignement - installations diverses</label>
+            </value>
+            <value>
+                <fullName>éoliennes</fullName>
+                <default>false</default>
+                <label>éoliennes</label>
+            </value>
+            <value>
+                <fullName>Equipementiers / intégrateurs</fullName>
+                <default>false</default>
+                <label>Equipementiers / intégrateurs</label>
+            </value>
+            <value>
+                <fullName>Equipements &quot;Indoor&quot;</fullName>
+                <default>false</default>
+                <label>Equipements &quot;Indoor&quot;</label>
+            </value>
+            <value>
+                <fullName>Equipements &quot;Outdoor&quot;</fullName>
+                <default>false</default>
+                <label>Equipements &quot;Outdoor&quot;</label>
+            </value>
+            <value>
+                <fullName>Equipements d&apos;Infrastructures</fullName>
+                <default>false</default>
+                <label>Equipements d&apos;Infrastructures</label>
+            </value>
+            <value>
+                <fullName>essais - moyens de mesure</fullName>
+                <default>false</default>
+                <label>essais - moyens de mesure</label>
+            </value>
+            <value>
+                <fullName>Fabrication de composants de télécommunication</fullName>
+                <default>false</default>
+                <label>Fabrication de composants de télécommunication</label>
+            </value>
+            <value>
+                <fullName>fabrication électronique</fullName>
+                <default>false</default>
+                <label>fabrication électronique</label>
+            </value>
+            <value>
+                <fullName>farines panification</fullName>
+                <default>false</default>
+                <label>farines panification</label>
+            </value>
+            <value>
+                <fullName>ferrage</fullName>
+                <default>false</default>
+                <label>ferrage</label>
+            </value>
+            <value>
+                <fullName>fonderies - forges</fullName>
+                <default>false</default>
+                <label>fonderies - forges</label>
+            </value>
+            <value>
+                <fullName>formes sèches</fullName>
+                <default>false</default>
+                <label>formes sèches</label>
+            </value>
+            <value>
+                <fullName>hautes technologies, nanotechnologies</fullName>
+                <default>false</default>
+                <label>hautes technologies, nanotechnologies</label>
+            </value>
+            <value>
+                <fullName>Hébergement</fullName>
+                <default>false</default>
+                <label>Hébergement</label>
+            </value>
+            <value>
+                <fullName>Hôtels</fullName>
+                <default>false</default>
+                <label>Hôtels</label>
+            </value>
+            <value>
+                <fullName>huiles-corps gras</fullName>
+                <default>false</default>
+                <label>huiles-corps gras</label>
+            </value>
+            <value>
+                <fullName>Hydraulique fluviale et réseaux</fullName>
+                <default>false</default>
+                <label>Hydraulique fluviale et réseaux</label>
+            </value>
+            <value>
+                <fullName>Industrie des MAtériaux</fullName>
+                <default>false</default>
+                <label>Industrie des MAtériaux</label>
+            </value>
+            <value>
+                <fullName>industrie du bâtiment et du génie civil</fullName>
+                <default>false</default>
+                <label>industrie du bâtiment et du génie civil</label>
+            </value>
+            <value>
+                <fullName>industrie du bois</fullName>
+                <default>false</default>
+                <label>industrie du bois</label>
+            </value>
+            <value>
+                <fullName>industrie du papier - cartons - imprimeries</fullName>
+                <default>false</default>
+                <label>industrie du papier - cartons - imprimeries</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - caoutchouc</fullName>
+                <default>false</default>
+                <label>industries des matériaux - caoutchouc</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - céramiques</fullName>
+                <default>false</default>
+                <label>industries des matériaux - céramiques</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - ciment</fullName>
+                <default>false</default>
+                <label>industries des matériaux - ciment</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - industrie du bois</fullName>
+                <default>false</default>
+                <label>industries des matériaux - industrie du bois</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - industrie du papier, cartons, imprimeries</fullName>
+                <default>false</default>
+                <label>industries des matériaux - industrie du papier, cartons, imprimeries</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - matières plastiques</fullName>
+                <default>false</default>
+                <label>industries des matériaux - matières plastiques</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - matières premières, extractions minières, carrières</fullName>
+                <default>false</default>
+                <label>industries des matériaux - matières premières, extractions minières, carrières</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - textiles</fullName>
+                <default>false</default>
+                <label>industries des matériaux - textiles</label>
+            </value>
+            <value>
+                <fullName>industries des matériaux - verre</fullName>
+                <default>false</default>
+                <label>industries des matériaux - verre</label>
+            </value>
+            <value>
+                <fullName>Installations de télécommunications</fullName>
+                <default>false</default>
+                <label>Installations de télécommunications</label>
+            </value>
+            <value>
+                <fullName>installations hydrauliques et traitement d&apos;e</fullName>
+                <default>false</default>
+                <label>installations hydrauliques et traitement d&apos;e</label>
+            </value>
+            <value>
+                <fullName>installations nucléaires</fullName>
+                <default>false</default>
+                <label>installations nucléaires</label>
+            </value>
+            <value>
+                <fullName>installations portuaires</fullName>
+                <default>false</default>
+                <label>installations portuaires</label>
+            </value>
+            <value>
+                <fullName>Les Cliniques (soins - court séjour)</fullName>
+                <default>false</default>
+                <label>Les Cliniques (soins - court séjour)</label>
+            </value>
+            <value>
+                <fullName>Les établissements de Recherche</fullName>
+                <default>false</default>
+                <label>Les établissements de Recherche</label>
+            </value>
+            <value>
+                <fullName>Les Hôpitaux (soins - court séjour)</fullName>
+                <default>false</default>
+                <label>Les Hôpitaux (soins - court séjour)</label>
+            </value>
+            <value>
+                <fullName>Les installations de Stockage (entrepôts, pl</fullName>
+                <default>false</default>
+                <label>Les installations de Stockage (entrepôts, pl</label>
+            </value>
+            <value>
+                <fullName>Les surfaces de Vente (magasins, super et hy</fullName>
+                <default>false</default>
+                <label>Les surfaces de Vente (magasins, super et hy</label>
+            </value>
+            <value>
+                <fullName>liaisons au sol</fullName>
+                <default>false</default>
+                <label>liaisons au sol</label>
+            </value>
+            <value>
+                <fullName>lignes de galvanisation et  traitement de su</fullName>
+                <default>false</default>
+                <label>lignes de galvanisation et  traitement de su</label>
+            </value>
+            <value>
+                <fullName>liquides et crêmes</fullName>
+                <default>false</default>
+                <label>liquides et crêmes</label>
+            </value>
+            <value>
+                <fullName>Locaux d&apos;enSeignement</fullName>
+                <default>false</default>
+                <label>Locaux d&apos;enSeignement</label>
+            </value>
+            <value>
+                <fullName>Locaux de Recherche</fullName>
+                <default>false</default>
+                <label>Locaux de Recherche</label>
+            </value>
+            <value>
+                <fullName>logement - installations diverses</fullName>
+                <default>false</default>
+                <label>logement - installations diverses</label>
+            </value>
+            <value>
+                <fullName>LOgements Collectifs</fullName>
+                <default>false</default>
+                <label>LOgements Collectifs</label>
+            </value>
+            <value>
+                <fullName>LOgements Individuels</fullName>
+                <default>false</default>
+                <label>LOgements Individuels</label>
+            </value>
+            <value>
+                <fullName>manufactures diverses</fullName>
+                <default>false</default>
+                <label>manufactures diverses</label>
+            </value>
+            <value>
+                <fullName>manutention</fullName>
+                <default>false</default>
+                <label>manutention</label>
+            </value>
+            <value>
+                <fullName>matières plastiques</fullName>
+                <default>false</default>
+                <label>matières plastiques</label>
+            </value>
+            <value>
+                <fullName>matières premières - extractions minières -</fullName>
+                <default>false</default>
+                <label>matières premières - extractions minières -</label>
+            </value>
+            <value>
+                <fullName>montage</fullName>
+                <default>false</default>
+                <label>montage</label>
+            </value>
+            <value>
+                <fullName>Musées, galeries, centres d&apos;expositions</fullName>
+                <default>false</default>
+                <label>Musées, galeries, centres d&apos;expositions</label>
+            </value>
+            <value>
+                <fullName>organes moteurs</fullName>
+                <default>false</default>
+                <label>organes moteurs</label>
+            </value>
+            <value>
+                <fullName>Ouvrages d&apos;alimentation et d&apos;assainissement</fullName>
+                <default>false</default>
+                <label>Ouvrages d&apos;alimentation et d&apos;assainissement</label>
+            </value>
+            <value>
+                <fullName>Ouvrages d&apos;Art</fullName>
+                <default>false</default>
+                <label>Ouvrages d&apos;Art</label>
+            </value>
+            <value>
+                <fullName>Ouvrages d&apos;infrastructure Réseaux</fullName>
+                <default>false</default>
+                <label>Ouvrages d&apos;infrastructure Réseaux</label>
+            </value>
+            <value>
+                <fullName>Ouvrages d&apos;Infrastructures Batiment ou site</fullName>
+                <default>false</default>
+                <label>Ouvrages d&apos;Infrastructures Batiment ou site</label>
+            </value>
+            <value>
+                <fullName>Ouvrages de traitement</fullName>
+                <default>false</default>
+                <label>Ouvrages de traitement</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés à l&apos;éNergie</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés à l&apos;éNergie</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés à l&apos;enVironneme</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés à l&apos;enVironneme</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés à la ChImie</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés à la ChImie</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés à la PhArmacie</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés à la PhArmacie</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés au Gaz</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés au Gaz</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés au Vitivinicole</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés au Vitivinicole</label>
+            </value>
+            <value>
+                <fullName>Ouvrages et équipements liés aux Embouteilleurs</fullName>
+                <default>false</default>
+                <label>Ouvrages et équipements liés aux Embouteilleurs</label>
+            </value>
+            <value>
+                <fullName>ouvrages et installations aéronautiques</fullName>
+                <default>false</default>
+                <label>ouvrages et installations aéronautiques</label>
+            </value>
+            <value>
+                <fullName>ouvrages et installations aéroportuaires</fullName>
+                <default>false</default>
+                <label>ouvrages et installations aéroportuaires</label>
+            </value>
+            <value>
+                <fullName>Ouvrages liés au TRansport Maritime</fullName>
+                <default>false</default>
+                <label>Ouvrages liés au TRansport Maritime</label>
+            </value>
+            <value>
+                <fullName>Ouvrages liés au TRansport Terrestre</fullName>
+                <default>false</default>
+                <label>Ouvrages liés au TRansport Terrestre</label>
+            </value>
+            <value>
+                <fullName>Ouvrages Portuaires</fullName>
+                <default>false</default>
+                <label>Ouvrages Portuaires</label>
+            </value>
+            <value>
+                <fullName>Ouvrages Souterrains exécutés à ciel ouvert</fullName>
+                <default>false</default>
+                <label>Ouvrages Souterrains exécutés à ciel ouvert</label>
+            </value>
+            <value>
+                <fullName>Parkings</fullName>
+                <default>false</default>
+                <label>Parkings</label>
+            </value>
+            <value>
+                <fullName>peinture</fullName>
+                <default>false</default>
+                <label>peinture</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - biotechnologies</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - biotechnologies</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - centres de recherche</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - centres de recherche</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - cosmétologie</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - cosmétologie</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - formes sèches</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - formes sèches</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - liquides et crêmes</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - liquides et crêmes</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - produits injectables</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - produits injectables</label>
+            </value>
+            <value>
+                <fullName>pharmacie, biotechnologie, cosmétiques - vaccins</fullName>
+                <default>false</default>
+                <label>pharmacie, biotechnologie, cosmétiques - vaccins</label>
+            </value>
+            <value>
+                <fullName>préparation-cuisson</fullName>
+                <default>false</default>
+                <label>préparation-cuisson</label>
+            </value>
+            <value>
+                <fullName>production</fullName>
+                <default>false</default>
+                <label>production</label>
+            </value>
+            <value>
+                <fullName>Produit, pièces automobiles</fullName>
+                <default>false</default>
+                <label>Produit, pièces automobiles</label>
+            </value>
+            <value>
+                <fullName>produits/ pièces aéronautiques</fullName>
+                <default>false</default>
+                <label>produits/ pièces aéronautiques</label>
+            </value>
+            <value>
+                <fullName>produits injectables</fullName>
+                <default>false</default>
+                <label>produits injectables</label>
+            </value>
+            <value>
+                <fullName>produits lactés</fullName>
+                <default>false</default>
+                <label>produits lactés</label>
+            </value>
+            <value>
+                <fullName>Qualité de l&apos;eau</fullName>
+                <default>false</default>
+                <label>Qualité de l&apos;eau</label>
+            </value>
+            <value>
+                <fullName>raFinage</fullName>
+                <default>false</default>
+                <label>raFinage</label>
+            </value>
+            <value>
+                <fullName>Recherche</fullName>
+                <default>false</default>
+                <label>Recherche</label>
+            </value>
+            <value>
+                <fullName>Restauration</fullName>
+                <default>false</default>
+                <label>Restauration</label>
+            </value>
+            <value>
+                <fullName>Routes et Autoroutes</fullName>
+                <default>false</default>
+                <label>Routes et Autoroutes</label>
+            </value>
+            <value>
+                <fullName>Salles de spectacles, théâtres, centres de c</fullName>
+                <default>false</default>
+                <label>Salles de spectacles, théâtres, centres de c</label>
+            </value>
+            <value>
+                <fullName>santé - installations diverses</fullName>
+                <default>false</default>
+                <label>santé - installations diverses</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - aciéries</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - aciéries</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - aciers - laminoirs</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - aciers - laminoirs</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - aciers - parachèvement - stockage</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - aciers - parachèvement - stockage</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - aciers spéciaux</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - aciers spéciaux</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - aluminium</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - aluminium</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - fonderies - forges</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - fonderies - forges</label>
+            </value>
+            <value>
+                <fullName>sidérurgie, métallurgie - lignes de galvanisation et  traitement de surface</fullName>
+                <default>false</default>
+                <label>sidérurgie, métallurgie - lignes de galvanisation et  traitement de surface</label>
+            </value>
+            <value>
+                <fullName>Sidérurgie, MEtalurgie</fullName>
+                <default>false</default>
+                <label>Sidérurgie, MEtalurgie</label>
+            </value>
+            <value>
+                <fullName>sport - installations diverses</fullName>
+                <default>false</default>
+                <label>sport - installations diverses</label>
+            </value>
+            <value>
+                <fullName>Stockage</fullName>
+                <default>false</default>
+                <label>Stockage</label>
+            </value>
+            <value>
+                <fullName>stockage des déchets (sauf nucléaires)</fullName>
+                <default>false</default>
+                <label>stockage des déchets (sauf nucléaires)</label>
+            </value>
+            <value>
+                <fullName>Structures</fullName>
+                <default>false</default>
+                <label>Structures</label>
+            </value>
+            <value>
+                <fullName>Systèmes de transport en commun</fullName>
+                <default>false</default>
+                <label>Systèmes de transport en commun</label>
+            </value>
+            <value>
+                <fullName>télécommunications - fabrication de composants de télécommunication</fullName>
+                <default>false</default>
+                <label>télécommunications - fabrication de composants de télécommunication</label>
+            </value>
+            <value>
+                <fullName>télécommunications - installations de télécommunications</fullName>
+                <default>false</default>
+                <label>télécommunications - installations de télécommunications</label>
+            </value>
+            <value>
+                <fullName>tertiaire - installations diverses</fullName>
+                <default>false</default>
+                <label>tertiaire - installations diverses</label>
+            </value>
+            <value>
+                <fullName>TErtiaire Privé (bureaux, banque)</fullName>
+                <default>false</default>
+                <label>TErtiaire Privé (bureaux, banque)</label>
+            </value>
+            <value>
+                <fullName>TErtiaire pUblic (bâtiment socioadministrati</fullName>
+                <default>false</default>
+                <label>TErtiaire pUblic (bâtiment socioadministrati</label>
+            </value>
+            <value>
+                <fullName>textiles</fullName>
+                <default>false</default>
+                <label>textiles</label>
+            </value>
+            <value>
+                <fullName>tourisme et loisirs - installations diverses</fullName>
+                <default>false</default>
+                <label>tourisme et loisirs - installations diverses</label>
+            </value>
+            <value>
+                <fullName>traitement des déchets (sauf nucléaires)</fullName>
+                <default>false</default>
+                <label>traitement des déchets (sauf nucléaires)</label>
+            </value>
+            <value>
+                <fullName>transports (hors aéronautique) - installations diverses</fullName>
+                <default>false</default>
+                <label>transports (hors aéronautique) - installations diverses</label>
+            </value>
+            <value>
+                <fullName>Tunnels</fullName>
+                <default>false</default>
+                <label>Tunnels</label>
+            </value>
+            <value>
+                <fullName>vaccins</fullName>
+                <default>false</default>
+                <label>vaccins</label>
+            </value>
+            <value>
+                <fullName>verre</fullName>
+                <default>false</default>
+                <label>verre</label>
+            </value>
+            <value>
+                <fullName>Voies Ferrées</fullName>
+                <default>false</default>
+                <label>Voies Ferrées</label>
+            </value>
+            <value>
+                <fullName>voies ferrées, gares, ..</fullName>
+                <default>false</default>
+                <label>voies ferrées, gares, ..</label>
+            </value>
+            <value>
+                <fullName>VRD</fullName>
+                <default>false</default>
+                <label>VRD</label>
+            </value>
+            <value>
+                <fullName>AC EEF 1 - Etudes ferroviaires</fullName>
+                <default>false</default>
+                <label>AC EEF 1 - Etudes ferroviaires</label>
+            </value>
+            <value>
+                <fullName>AC EEF 2 - PN</fullName>
+                <default>false</default>
+                <label>AC EEF 2 - PN</label>
+            </value>
+            <value>
+                <fullName>AC ENV 1 - Etudes en phases conception</fullName>
+                <default>false</default>
+                <label>AC ENV 1 - Etudes en phases conception</label>
+            </value>
+            <value>
+                <fullName>AC ENV 2 - Etudes en phases réalisation</fullName>
+                <default>false</default>
+                <label>AC ENV 2 - Etudes en phases réalisation</label>
+            </value>
+            <value>
+                <fullName>AC EST 1 - Etudes et suivi travaux infra ferroviaires</fullName>
+                <default>false</default>
+                <label>AC EST 1 - Etudes et suivi travaux infra ferroviaires</label>
+            </value>
+            <value>
+                <fullName>AC EST 2 - Etudes et suivi travaux hydro sur infra ferroviaires</fullName>
+                <default>false</default>
+                <label>AC EST 2 - Etudes et suivi travaux hydro sur infra ferroviaires</label>
+            </value>
+            <value>
+                <fullName>AC EST 3 - Etudes et travaux ouvrages en terre</fullName>
+                <default>false</default>
+                <label>AC EST 3 - Etudes et travaux ouvrages en terre</label>
+            </value>
+            <value>
+                <fullName>AC EST 4 - Etudes et suivi travaux tracé et géométrie ferro</fullName>
+                <default>false</default>
+                <label>AC EST 4 - Etudes et suivi travaux tracé et géométrie ferro</label>
+            </value>
+            <value>
+                <fullName>AC EST 5 - Etudes et suivi travaux hydrogéologiques</fullName>
+                <default>false</default>
+                <label>AC EST 5 - Etudes et suivi travaux hydrogéologiques</label>
+            </value>
+            <value>
+                <fullName>AC EST 6 - Etudes et suivi travaux infra routières</fullName>
+                <default>false</default>
+                <label>AC EST 6 - Etudes et suivi travaux infra routières</label>
+            </value>
+            <value>
+                <fullName>AC EST 7 - Etudes et suivi travaux OA</fullName>
+                <default>false</default>
+                <label>AC EST 7 - Etudes et suivi travaux OA</label>
+            </value>
+            <value>
+                <fullName>AC EST 8 - Missions géotechniques</fullName>
+                <default>false</default>
+                <label>AC EST 8 - Missions géotechniques</label>
+            </value>
+            <value>
+                <fullName>AC EST 9 - Etudes et suivi travaux structures béton</fullName>
+                <default>false</default>
+                <label>AC EST 9 - Etudes et suivi travaux structures béton</label>
+            </value>
+            <value>
+                <fullName>AC EST 10 - Etudes et suivi travaux structures métalliques</fullName>
+                <default>false</default>
+                <label>AC EST 10 - Etudes et suivi travaux structures métalliques</label>
+            </value>
+            <value>
+                <fullName>AC EST 11 - Etudes et suivi travaux ouvrages souterrains hors lignes exploitées</fullName>
+                <default>false</default>
+                <label>AC EST 11 - Etudes et suivi travaux ouvrages souterrains hors lignes exploitées</label>
+            </value>
+            <value>
+                <fullName>AC EST 13 - Etudes et suivi travaux conception simple de voies ferrées</fullName>
+                <default>false</default>
+                <label>AC EST 13 - Etudes et suivi travaux conception simple de voies ferrées</label>
+            </value>
+            <value>
+                <fullName>AC EXP - Etudes d&apos;exploitation</fullName>
+                <default>false</default>
+                <label>AC EXP - Etudes d&apos;exploitation</label>
+            </value>
+            <value>
+                <fullName>AC MOE 1 - MOE hors lignes exploitées</fullName>
+                <default>false</default>
+                <label>AC MOE 1 - MOE hors lignes exploitées</label>
+            </value>
+            <value>
+                <fullName>AC MP 1 - Appui production</fullName>
+                <default>false</default>
+                <label>AC MP 1 - Appui production</label>
+            </value>
+            <value>
+                <fullName>AC MP 2 - Gestion de projets</fullName>
+                <default>false</default>
+                <label>AC MP 2 - Gestion de projets</label>
+            </value>
+            <value>
+                <fullName>AC MP 3 - Assistance conduite opérations</fullName>
+                <default>false</default>
+                <label>AC MP 3 - Assistance conduite opérations</label>
+            </value>
+            <value>
+                <fullName>MOSO DPF 2 - Analyse de la valeur</fullName>
+                <default>false</default>
+                <label>MOSO DPF 2 - Analyse de la valeur</label>
+            </value>
+            <value>
+                <fullName>MOSO Hydro MED</fullName>
+                <default>false</default>
+                <label>MOSO Hydro MED</label>
+            </value>
+            <value>
+                <fullName>MOSO MOE-OPC 1 - Bretagne</fullName>
+                <default>false</default>
+                <label>MOSO MOE-OPC 1 - Bretagne</label>
+            </value>
+            <value>
+                <fullName>MOSO MOE-OPC 3 - Pays de la Loire</fullName>
+                <default>false</default>
+                <label>MOSO MOE-OPC 3 - Pays de la Loire</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>armement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>commerce / distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>conditionnement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>construction électrique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>construction ferroviaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>construction navale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - armement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - commerce / distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - conditionnement - emballage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - construction électrique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - construction ferroviaire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - construction navale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - industrie du bâtiment et du génie civil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - installations portuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - manufactures diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>divers - voies ferrées, gares, ..</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>industrie du bâtiment et du génie civil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>installations portuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>manufactures diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Divers</controllingFieldValue>
+            <valueName>voies ferrées, gares, ..</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electronique, hautes technologies</controllingFieldValue>
+            <valueName>centres informatiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electronique, hautes technologies</controllingFieldValue>
+            <valueName>électronique, hautes technologies - centres informatiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electronique, hautes technologies</controllingFieldValue>
+            <valueName>électronique, hautes technologies - fabrication électronique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electronique, hautes technologies</controllingFieldValue>
+            <valueName>électronique, hautes technologies - hautes technologies, nanotechnologies,.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electronique, hautes technologies</controllingFieldValue>
+            <valueName>fabrication électronique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electronique, hautes technologies</controllingFieldValue>
+            <valueName>hautes technologies, nanotechnologies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>centrales thermiques et cogénération (sauf n</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>énergie, environnement - centrales thermiques et cogénération (sauf nucléaire)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>énergie, environnement - éoliennes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>énergie, environnement - installations hydrauliques et traitement d&apos;eau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>énergie, environnement - installations nucléaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>énergie, environnement - stockage des déchets (sauf nucléaires)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>énergie, environnement - traitement des déchets (sauf nucléaires)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>éoliennes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>installations hydrauliques et traitement d&apos;e</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <controllingFieldValue>Ouvrages spéciaux</controllingFieldValue>
+            <valueName>installations nucléaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés à l&apos;éNergie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés à l&apos;enVironneme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>stockage des déchets (sauf nucléaires)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energie, environnement</controllingFieldValue>
+            <valueName>traitement des déchets (sauf nucléaires)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enseignement</controllingFieldValue>
+            <valueName>enseignement - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enseignement</controllingFieldValue>
+            <valueName>Locaux d&apos;enSeignement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enseignement</controllingFieldValue>
+            <valueName>Locaux de Recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equipements d&apos;Infrastructure</controllingFieldValue>
+            <valueName>Equipements d&apos;Infrastructures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aéronautique - Aéroportuaire</controllingFieldValue>
+            <valueName>aéronautique, aéroportuaire - installations aéronautiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aéronautique - Aéroportuaire</controllingFieldValue>
+            <valueName>aéronautique, aéroportuaire - installations aéroportuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aéronautique - Aéroportuaire</controllingFieldValue>
+            <valueName>aéronautique, aéroportuaire - produits / pièces aéronautiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aéronautique - Aéroportuaire</controllingFieldValue>
+            <valueName>ouvrages et installations aéronautiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aéronautique - Aéroportuaire</controllingFieldValue>
+            <valueName>produits/ pièces aéronautiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - alcools-fermentations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - conditionnement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - embouteillage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - farines panification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - huiles-corps gras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - préparation-cuisson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>agroalimentaire - produits lactés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>alcools-fermentations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>embouteillage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>farines panification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>huiles-corps gras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés au Vitivinicole</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés aux Embouteilleurs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>préparation-cuisson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agroalimentaire</controllingFieldValue>
+            <valueName>produits lactés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aménagement du Territoire</controllingFieldValue>
+            <valueName>Aménagement du Territoire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aménagements aeroportuaires</controllingFieldValue>
+            <valueName>Aménagement Aéroportuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aménagements aeroportuaires</controllingFieldValue>
+            <valueName>ouvrages et installations aéroportuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - carrosserie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - emboutissge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - Equipementiers / intégrateurs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - essais - moyens de mesure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - ferrage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - liaisons au sol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - manutention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - montage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - organes moteurs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - peinture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>automobile - Produit, pièces automobiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>carrosserie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>emboutissge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>Equipementiers / intégrateurs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>essais - moyens de mesure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>ferrage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>liaisons au sol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>manutention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>montage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>organes moteurs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>peinture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobile</controllingFieldValue>
+            <valueName>Produit, pièces automobiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>chimie, pétrole, gaz - distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>chimie, pétrole, gaz - production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>chimie, pétrole, gaz - raffinage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>chimie, pétrole, gaz - Recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>chimie, pétrole, gaz - stockage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés à la ChImie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés au Gaz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>raFinage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>Recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chimie, petrole, gaz</controllingFieldValue>
+            <valueName>Stockage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commerce</controllingFieldValue>
+            <valueName>commerce - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commerce</controllingFieldValue>
+            <valueName>Les installations de Stockage (entrepôts, pl</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commerce</controllingFieldValue>
+            <valueName>Les surfaces de Vente (magasins, super et hy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Culturel</controllingFieldValue>
+            <valueName>Cinémas, studios de cinéma, complexes cinéma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Culturel</controllingFieldValue>
+            <valueName>culturel - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Culturel</controllingFieldValue>
+            <valueName>Musées, galeries, centres d&apos;expositions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Culturel</controllingFieldValue>
+            <valueName>Salles de spectacles, théâtres, centres de c</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hydraulique - Qualité de l&apos;eau</controllingFieldValue>
+            <valueName>Hydraulique fluviale et réseaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hydraulique - Qualité de l&apos;eau</controllingFieldValue>
+            <valueName>Qualité de l&apos;eau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>caoutchouc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>céramiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>ciment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>Industrie des MAtériaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industrie du bois</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industrie du papier - cartons - imprimeries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - caoutchouc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - céramiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - ciment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - industrie du bois</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - industrie du papier, cartons, imprimeries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - matières plastiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - matières premières, extractions minières, carrières</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - textiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>industries des matériaux - verre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>matières plastiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>matières premières - extractions minières -</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>textiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrie des metaux</controllingFieldValue>
+            <valueName>verre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logement</controllingFieldValue>
+            <valueName>logement - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logement</controllingFieldValue>
+            <valueName>LOgements Collectifs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logement</controllingFieldValue>
+            <valueName>LOgements Individuels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages d&apos;art et structures</controllingFieldValue>
+            <valueName>Ouvrages d&apos;Art</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages d&apos;art et structures</controllingFieldValue>
+            <valueName>Structures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages Hydrauliques</controllingFieldValue>
+            <valueName>Ouvrages d&apos;alimentation et d&apos;assainissement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages Hydrauliques</controllingFieldValue>
+            <valueName>Ouvrages de traitement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages souterrains</controllingFieldValue>
+            <valueName>Ouvrages Souterrains exécutés à ciel ouvert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages souterrains</controllingFieldValue>
+            <valueName>Tunnels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ouvrages spéciaux</controllingFieldValue>
+            <valueName>Autres ouvrages spéciaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>biotechnologies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>centres de recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>cosmétologie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>formes sèches</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>liquides et crêmes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>Ouvrages et équipements liés à la PhArmacie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - biotechnologies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - centres de recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - cosmétologie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - formes sèches</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - liquides et crêmes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - produits injectables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>pharmacie, biotechnologie, cosmétiques - vaccins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>produits injectables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmacie, biotechnologie, cosmetique</controllingFieldValue>
+            <valueName>vaccins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ports et Voies navigables</controllingFieldValue>
+            <valueName>Autres Ouvrages d&apos;Infrastructures Hydraulique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ports et Voies navigables</controllingFieldValue>
+            <valueName>Ouvrages Portuaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Routes et Autoroutes</controllingFieldValue>
+            <valueName>Routes et Autoroutes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sante</controllingFieldValue>
+            <valueName>Centres Médicalisés (moyen et long séjour)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sante</controllingFieldValue>
+            <valueName>Les Cliniques (soins - court séjour)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sante</controllingFieldValue>
+            <valueName>Les établissements de Recherche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sante</controllingFieldValue>
+            <valueName>Les Hôpitaux (soins - court séjour)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sante</controllingFieldValue>
+            <valueName>santé - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>aciéries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>aciers - laminoirs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>aciers - parachèvement - stockage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>aciers spéciaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>aluminium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>fonderies - forges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>lignes de galvanisation et  traitement de su</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - aciéries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - aciers - laminoirs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - aciers - parachèvement - stockage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - aciers spéciaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - aluminium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - fonderies - forges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>sidérurgie, métallurgie - lignes de galvanisation et  traitement de surface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Siderurgie, metallurgie</controllingFieldValue>
+            <valueName>Sidérurgie, MEtalurgie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sport</controllingFieldValue>
+            <valueName>Equipements &quot;Indoor&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sport</controllingFieldValue>
+            <valueName>Equipements &quot;Outdoor&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sport</controllingFieldValue>
+            <valueName>sport - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Systèmes de Transport en commun</controllingFieldValue>
+            <valueName>Systèmes de transport en commun</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>Centre informatique ou Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>Fabrication de composants de télécommunication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>Hébergement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>Installations de télécommunications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>Ouvrages d&apos;infrastructure Réseaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>Ouvrages d&apos;Infrastructures Batiment ou site</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>télécommunications - fabrication de composants de télécommunication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication</controllingFieldValue>
+            <valueName>télécommunications - installations de télécommunications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tertiaire</controllingFieldValue>
+            <valueName>tertiaire - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tertiaire</controllingFieldValue>
+            <valueName>TErtiaire Privé (bureaux, banque)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tertiaire</controllingFieldValue>
+            <valueName>TErtiaire pUblic (bâtiment socioadministrati</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tourisme et loisirs</controllingFieldValue>
+            <valueName>Centre de Vacances, de loisirs, parcs d&apos;attr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tourisme et loisirs</controllingFieldValue>
+            <valueName>Hôtels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tourisme et loisirs</controllingFieldValue>
+            <valueName>Restauration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tourisme et loisirs</controllingFieldValue>
+            <valueName>tourisme et loisirs - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transports (hors aeroportuaire)</controllingFieldValue>
+            <valueName>Ouvrages liés au TRansport Maritime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transports (hors aeroportuaire)</controllingFieldValue>
+            <valueName>Ouvrages liés au TRansport Terrestre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transports (hors aeroportuaire)</controllingFieldValue>
+            <valueName>Parkings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transports (hors aeroportuaire)</controllingFieldValue>
+            <valueName>transports (hors aéronautique) - installations diverses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EEF 1 - Etudes ferroviaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EEF 2 - PN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC ENV 1 - Etudes en phases conception</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC ENV 2 - Etudes en phases réalisation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 1 - Etudes et suivi travaux infra ferroviaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 2 - Etudes et suivi travaux hydro sur infra ferroviaires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 3 - Etudes et travaux ouvrages en terre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 4 - Etudes et suivi travaux tracé et géométrie ferro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 5 - Etudes et suivi travaux hydrogéologiques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 6 - Etudes et suivi travaux infra routières</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 7 - Etudes et suivi travaux OA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 8 - Missions géotechniques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 9 - Etudes et suivi travaux structures béton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 10 - Etudes et suivi travaux structures métalliques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 11 - Etudes et suivi travaux ouvrages souterrains hors lignes exploitées</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EST 13 - Etudes et suivi travaux conception simple de voies ferrées</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC EXP - Etudes d&apos;exploitation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC MOE 1 - MOE hors lignes exploitées</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC MP 1 - Appui production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC MP 2 - Gestion de projets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>AC MP 3 - Assistance conduite opérations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>MOSO DPF 2 - Analyse de la valeur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>MOSO Hydro MED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>MOSO MOE-OPC 1 - Bretagne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voies Ferrées</controllingFieldValue>
+            <valueName>MOSO MOE-OPC 3 - Pays de la Loire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VRD et autres projets routiers</controllingFieldValue>
+            <valueName>Autres Projets Routiers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VRD et autres projets routiers</controllingFieldValue>
+            <valueName>VRD</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

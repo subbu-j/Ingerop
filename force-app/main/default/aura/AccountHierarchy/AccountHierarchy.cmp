@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:recordTab" controller="AccountHierarchyController" access="GLOBAL">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <ltng:require styles="/resource/SLDS105/assets/styles/salesforce-lightning-design-system-ltng.css"
+                  scripts="/resource/JQueryJS" />
+    
+    <aura:attribute type="Boolean" name="isSF1" default="false" access="GLOBAL" />
+    <aura:attribute type="AccountNode" name="node" default="" access="GLOBAL" />
+    
+    <div class="slds">
+        <div role="application">
+            <ul class="slds-tree" role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node1">
+                <h4 class="slds-text-heading--label" id="treeheading">&nbsp;</h4>
+                <c:AccountNode node="{!v.node}" level="1" />
+            </ul>
+        </div>
+    </div>
+	
+</aura:component>

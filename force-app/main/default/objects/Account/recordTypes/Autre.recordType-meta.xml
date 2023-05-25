@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Autre</fullName>
+    <active>true</active>
+    <label>Autre</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Activite__c</picklist>
+        <values>
+            <fullName>Bâtiment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eau %26 Environnement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ville %26 Mobilité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Énergie %26 Industrie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Categorie__c</picklist>
+        <values>
+            <fullName>AMO%2C programmiste%2C MOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conseils juridique%2C financier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exploitant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financeurs%2C Investisseurs%2C Crédit bailleurs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Bâtiment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eau %26 Environnement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ville %26 Mobilité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Énergie %26 Industrie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prive_public__c</picklist>
+        <values>
+            <fullName>Privé</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Autre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entreprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financeur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partenaire</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_de_suivi__c</picklist>
+        <values>
+            <fullName>Grand compte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suivi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Zone_geographique__c</picklist>
+        <values>
+            <fullName>Afrique %28hors Maghreb%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amérique Latine et Caraïbes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amérique du Nord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asie Orientale et zone Pacifique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe de l%27Est et Asie Centrale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe de l%27Ouest %28zone %22Euro%22%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moyen Orient et Maghreb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sud Est Asiatique</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

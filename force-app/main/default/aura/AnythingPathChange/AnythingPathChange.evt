@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template">
+	<aura:attribute name="recordId" type="string" required="true"/>
+	<aura:attribute name="newValue" type="string" required="true"/>
+	<aura:attribute name="picklistField" type="string" required="true"/>
+</aura:event>

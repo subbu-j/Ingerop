@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Echeance__c</fullName>
+    <externalId>false</externalId>
+    <formula>Annonce__r.Date_d_echeance__c</formula>
+    <label>Date d&apos;échéance</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

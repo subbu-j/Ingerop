@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categorie__c</fullName>
+    <externalId>false</externalId>
+    <label>Catégorie</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMO, programmiste, MOD</fullName>
+                <default>false</default>
+                <label>AMO, programmiste, MOD</label>
+            </value>
+            <value>
+                <fullName>Architecte</fullName>
+                <default>false</default>
+                <label>Architecte</label>
+            </value>
+            <value>
+                <fullName>Autre</fullName>
+                <default>false</default>
+                <label>Autre</label>
+            </value>
+            <value>
+                <fullName>Autre partenaire</fullName>
+                <default>false</default>
+                <label>Autre partenaire</label>
+            </value>
+            <value>
+                <fullName>BE Spécialisé</fullName>
+                <default>false</default>
+                <label>BE Spécialisé</label>
+            </value>
+            <value>
+                <fullName>Conseils juridique, financier</fullName>
+                <default>false</default>
+                <label>Conseils juridique, financier</label>
+            </value>
+            <value>
+                <fullName>Exploitant</fullName>
+                <default>false</default>
+                <label>Exploitant</label>
+            </value>
+            <value>
+                <fullName>Financeurs, Investisseurs, Crédit bailleurs</fullName>
+                <default>false</default>
+                <label>Financeurs, Investisseurs, Crédit bailleurs</label>
+            </value>
+            <value>
+                <fullName>Ingénierie</fullName>
+                <default>false</default>
+                <label>Ingénierie</label>
+            </value>
+            <value>
+                <fullName>Paysagiste</fullName>
+                <default>false</default>
+                <label>Paysagiste</label>
+            </value>
+            <value>
+                <fullName>Urbaniste</fullName>
+                <default>false</default>
+                <label>Urbaniste</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

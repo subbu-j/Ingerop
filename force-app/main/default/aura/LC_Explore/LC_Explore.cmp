@@ -1,0 +1,257 @@
+<aura:component implements="lightning:isUrlAddressable" controller="LCCTRL_Explore">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.onPageReferenceChanged}" />
+    
+    <aura:attribute name="pageReference" type="Object"/>
+    
+    <!-- attributs paramètres Explore -->
+    <aura:attribute name="idExplore" type="String" />
+    <aura:attribute name="typeMarcheExplore" type="String" />
+    <aura:attribute name="typeMarcheLabel" type="String" />
+    <aura:attribute name="nomExplore" type="String" />
+    <aura:attribute name="siretExplore" type="String" />
+    <aura:attribute name="exploreUrl" type="String" />
+
+    <aura:attribute name="annonceMarchePublicData" type="Object" default="" />
+    <aura:attribute name="annonceMaitreOuvrageData" type="Object" default="" />
+    <aura:attribute name="idDonneurOrdre" type="String" default="" />
+    
+    <!-- attributs liste 'Opérations liées' (related operations) -->
+    <aura:attribute name="relatedOperationsColumns" type="List" default="[]"/>
+    <aura:attribute name="relatedOperationsData" type="Object" default="[]"/>
+    <aura:attribute name="relatedOperationsMinColumnWidth" type="Integer" default="50"/>
+    <aura:attribute name="relatedOperationsMaxColumnWidth" type="Integer"/>
+    <aura:attribute name="relatedOperationsSortedBy" type="String"/>
+    <aura:attribute name="relatedOperationsSortedDirection" type="String"/>
+    <aura:attribute name="relatedOperationsDefaultSortDirection" type="String"/>
+    <aura:attribute name="linkedOperationIds" type="String[]"/>
+    
+    <!-- attributs liste 'Autres opérations liées aux comptes' (others related operations) -->
+    <aura:attribute name="otherOperationsColumns" type="List"/>
+    <aura:attribute name="otherOperationsData" type="Object" />
+    <aura:attribute name="otherOperationsMinColumnWidth" type="Integer" default="50"/>
+    <aura:attribute name="otherOperationsMaxColumnWidth" type="Integer"/>
+    <aura:attribute name="otherOperationsSortedBy" type="String"/>
+    <aura:attribute name="otherOperationsSortedDirection" type="String"/>
+    <aura:attribute name="otherOperationsDefaultSortDirection" type="String"/>
+    
+    <!-- attributs liste 'Résultats d'opérations trouvées' (search operations) -->
+    <aura:attribute name="searchOperationsColumns" type="List"/>
+    <aura:attribute name="searchOperationsData" type="Object" />
+    <aura:attribute name="searchOperationsMinColumnWidth" type="Integer" default="50"/>
+    <aura:attribute name="searchOperationsMaxColumnWidth" type="Integer"/>
+    <aura:attribute name="searchOperationsSortedBy" type="String"/>
+    <aura:attribute name="searchOperationsSortedDirection" type="String"/>
+    <aura:attribute name="searchOperationsDefaultSortDirection" type="String"/>
+    
+    
+    <!-- attributs 'Créer une nouvelle opération' -->
+    <aura:dependency resource="markup://c:ModalWindow" />
+    <aura:attribute name="modalMessage" type="String" default="Default Message"/>
+    <aura:attribute name="modalTitle" type="String" default="Header Message"/>
+    
+    
+    <lightning:notificationsLibrary aura:id="notificationsLibrary"/>
+    
+    <aura:attribute name="isLoading" type="Boolean" default="false" />
+    <aura:if isTrue="{! v.isLoading }">
+        <lightning:spinner alternativeText="Loading"/>
+    </aura:if>
+    
+
+	<!-- ENTETE --> 
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
+                            <lightning:icon iconName="custom:custom68" size="small" alternativeText="" />
+                            <span class="slds-assistive-text">Annonce Explore </span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span class="slds-page-header__title slds-truncate" title="{!v.idExplore}">Annonce Explore : {!v.idExplore} - {!v.nomExplore}</span>
+                                </h1>
+                            </div>
+                        </div>
+                        
+                        <div><br/></div>
+                        <p class="slds-page-header__name-meta"><b>ID Explore : </b>{!v.idExplore}</p>
+                        <p class="slds-page-header__name-meta"><b>Type de marché : </b>{!v.typeMarcheLabel}</p>
+                        <p class="slds-page-header__name-meta"><b>Nom annonce : </b>{!v.nomExplore}</p>
+                        <p class="slds-page-header__name-meta"><b>SIRET : </b>{!v.siretExplore}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div>
+        <br/>
+    </div>
+    <!-- ENTETE --> 
+
+    
+    
+    <!-- OPERATIONS LIEES --> 
+    <lightning:card title="Opérations liées" class="slds-card_boundary my-card" iconName="custom:custom37">
+
+        <aura:set attribute="title">
+            <h2>
+                <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
+                    Opérations liées
+                </span>
+            </h2>
+        </aura:set>
+        <aura:set attribute="actions">
+            <!--<lightning:button label="reset" onclick="{! c.relatedOperationsResetColumns }"/>-->
+            <lightning:buttonIcon iconName="utility:refresh" variant="border-filled" alternativeText="Réinitialiser la taille des colonnes" onclick="{! c.relatedOperationsResetColumns }"/>
+        </aura:set>
+        
+        
+
+        <lightning:datatable keyField="Id" 
+                             columns="{! v.relatedOperationsColumns }"
+                             data="{! v.relatedOperationsData }"
+                             hideCheckboxColumn="true"
+                             resizeColumnDisabled="false"
+                             resizeStep="20"
+                             minColumnWidth="{! v.relatedOperationsMinColumnWidth }"
+                             maxColumnWidth="{! v.relatedOperationsMaxColumnWidth }"
+                             
+                             sortedBy="{! v.relatedOperationsSortedBy }"
+                             sortedDirection="{! v.relatedOperationsSortedDirection }"
+                             defaultSortDirection="{! v.relatedOperationsDefaultSortDirection }"
+                             showRowNumberColumn="false"
+                              
+                             onrowaction="{! c.relatedOperationsHandleRowAction }" 
+                             onresize="{! c.relatedOperationsStoreColumnWidths }" 
+                             onsort="{! c.relatedOperationsUpdateColumnSorting }"
+                             
+                             />
+
+    </lightning:card>
+	<!-- OPERATIONS LIEES --> 
+    
+    
+    
+    
+    <!-- AUTRES OPERATIONS LIEES AU COMPTE --> 
+    <lightning:card title="Autres opérations liées au compte" class="slds-card_boundary my-card" iconName="custom:custom37">
+
+        <aura:set attribute="title">
+            <h2>
+                <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
+                    Autres opérations liées au compte
+                </span>
+            </h2>
+        </aura:set>
+
+        <aura:set attribute="actions">
+            <!--<lightning:button label="reset" onclick="{! c.otherOperationsResetColumns }"/>-->
+            <lightning:buttonIcon iconName="utility:refresh" variant="border-filled" alternativeText="Réinitialiser la taille des colonnes" onclick="{! c.otherOperationsResetColumns }"/>
+        </aura:set>
+        
+        <lightning:datatable keyField="Id" 
+                             columns="{! v.otherOperationsColumns }"
+                             data="{! v.otherOperationsData }"
+                             hideCheckboxColumn="true"
+                             resizeColumnDisabled="false"
+                             resizeStep="20"
+                             minColumnWidth="{! v.otherOperationsMinColumnWidth }"
+                             maxColumnWidth="{! v.otherOperationsMaxColumnWidth }"
+                             
+                             sortedBy="{! v.otherOperationsSortedBy }"
+                             sortedDirection="{! v.otherOperationsSortedDirection }"
+                             defaultSortDirection="{! v.otherOperationsDefaultSortDirection }"
+                             showRowNumberColumn="false"
+                              
+                             onrowaction="{! c.otherOperationsHandleRowAction }" 
+                             onresize="{! c.otherOperationsStoreColumnWidths }"
+                             onsort="{! c.otherOperationsUpdateColumnSorting }"
+                             
+                             />
+        
+    </lightning:card>
+	<!-- AUTRES OPERATIONS LIEES AU COMPTE --> 
+
+
+    
+
+
+
+
+
+    <!-- LISTE DE RESULTATS OPERATIONS --> 
+    <lightning:card title="Autres opérations liées au(x) compte(s)" class="slds-card_boundary my-card" iconName="custom:custom37">
+
+        <aura:set attribute="title">
+            <h2>
+                <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
+                    Résultats d'opération(s) trouvée(s)
+                </span>
+            </h2>
+        </aura:set>
+
+        <aura:set attribute="actions">
+            <!--<lightning:button label="reset" onclick="{! c.searchOperationsResetColumns }"/>-->
+            <lightning:buttonIcon iconName="utility:refresh" variant="border-filled" alternativeText="Réinitialiser la taille des colonnes" onclick="{! c.searchOperationsResetColumns }"/>
+        </aura:set>
+    
+                    <!--<lightning:input name="search_input" id="" label="" placeholder="Recherche d'une opération par son nom..."/>-->
+        			<input type="text" id="searchtext" placeholder="Recherche d'une opération par son nom..." class="input uiInput uiInputText uiInput--default uiInput--input"/>
+                    <lightning:button label="Rechercher"  iconName="utility:search" iconPosition="left" onclick="{!c.search}" />
+   
+
+        <lightning:datatable keyField="Id" 
+                             columns="{! v.searchOperationsColumns }"
+                             data="{! v.searchOperationsData }"
+                             hideCheckboxColumn="true"
+                             resizeColumnDisabled="false"
+                             resizeStep="20"
+                             minColumnWidth="{! v.searchOperationsMinColumnWidth }"
+                             maxColumnWidth="{! v.searchOperationsMaxColumnWidth }"
+                             
+                             sortedBy="{! v.searchOperationsSortedBy }"
+                             sortedDirection="{! v.searchOperationsSortedDirection }"
+                             defaultSortDirection="{! v.searchOperationsDefaultSortDirection }"
+                             showRowNumberColumn="false"
+                              
+                             onrowaction="{! c.searchOperationsHandleRowAction }" 
+                             onresize="{! c.searchOperationsStoreColumnWidths }"
+                             onsort="{! c.searchOperationsUpdateColumnSorting }"
+                             
+                             />
+        
+    </lightning:card>
+	<!-- LISTE DE RESULTATS OPERATIONS --> 
+
+
+
+    <!-- CREER UNE NOUVELLE OPERATION --> 
+    <lightning:card title="Créer une nouvelle opération" class="slds-card_boundary my-card" iconName="custom:custom83">
+        
+        <aura:set attribute="title">
+            <h2>
+                <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
+                    Créer une nouvelle opération
+                </span>
+            </h2>
+        </aura:set>
+    
+        <aura:set attribute="actions">
+            <lightning:button label="Nouveau" onclick="{! c.openModalNewOperation }"/>
+        </aura:set>
+
+        <div aura:id="modalNewOperationPlaceholder" />
+
+    </lightning:card>
+    <!-- CREER UNE NOUVELLE OPERATION --> 
+    
+    <br/>
+    <br/>
+</aura:component>

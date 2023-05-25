@@ -1,0 +1,173 @@
+<aura:component controller="LCCTRL_Explore">
+    
+    <aura:attribute name="disabled" type="Boolean" default="false" />
+    <aura:attribute name="saved" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    
+    
+    <aura:attribute name="idExplore" type="String" required="true"/>
+    <aura:attribute name="typeMarcheExplore" type="String" required="false"/>
+    <aura:attribute name="nomExplore" type="String" required="false"/>
+    <aura:attribute name="siretExplore" type="String" required="false"/>
+    
+    <aura:attribute name="annonceMarchePublicData" type="Object" default="" />
+    <aura:attribute name="annonceMaitreOuvrageData" type="Object" default="" />
+    <aura:attribute name="idDonneurOrdre" type="String" default="" />
+    
+    <!-- attributs création nouvelle opération -->
+    <aura:attribute name="sObjectName" type="String" default="Operation__c" />
+    <aura:attribute name="fields"
+                    type="String[]"
+                    default="['Name',  
+                             'Objet__c', 
+                             'Observation__c', 
+                             'Type_d_operation__c', 
+                             'Activite__c', 
+                             'Sous_activite__c', 
+                             'Statut__c', 
+                             'Phase_commerciale__c', 
+                             'Compte__c', 
+                             'Compte_reprise__c', 
+                             'UFO__c', 
+                             'Pole__c', 
+                             'Departement_du_Pole__c', 
+                             'Service__c',
+                             'Date_previsionnelle_de_candidature__c', 
+                             'Concurrents__c',
+                             'Famille_d_ouvrage__c', 
+                             'Sous_famille__c', 
+                             'Type_de_mission__c', 
+                             'Type_de_procedure__c', 
+                             'Privee_public__c', 
+                             'Priorite__c', 
+                             'Budget_Travaux__c', 
+                             'Budget_Honoraires__c', 
+                             'CurrencyIsoCode',
+                             'Adresse__c',
+                             'Zone_geographique__c',
+                             'Code_postal__c',
+                             'Ville__c',
+                             'Pays__c']"/>
+    
+    <!-- gestion erreurs -->
+	<lightning:notificationsLibrary aura:id="notificationsLibrary"/>
+    
+    <aura:attribute name="hasSpinner" type="Boolean" default="false" />
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner />
+    </aura:if>
+    
+    
+    <div style="height:100%;">
+        
+        <section  class="slds-modal slds-fade-in-open">
+            
+            <div class="slds-modal__container">
+                
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-modal__close" title="Close" onclick="{!c.closeModal}">
+                        <lightning:icon class="white slds-icon_small" iconName="utility:close"/> 
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Créer une nouvelle opération liée à l'annonce : </h2>
+                    <h3><b>{!v.idExplore} - {!v.nomExplore}</b></h3>
+                </header>
+                
+                <div class="slds-modal__content slds-p-around_medium" > 
+                    <div class="slds-clearfix slds-card forceDetailPanelDesktop inlineEditEnabled">
+                        <lightning:recordEditForm aura:id="createOperationForm"
+                                                  objectApiName="{!v.sObjectName}"
+                                                  onsuccess="{!c.handleSuccess}" 
+                                                  onsubmit="{!c.handleSubmit}" 
+                                                  onerror="{!c.handleError}"
+                                                  onload="{!c.handleLoad}">
+                            
+                            <lightning:messages/>
+                            
+                            
+                            <div class="slds-section slds-is-open">
+                                <h3 class="slds-section__title slds-theme_shade">
+                                    <span class="slds-truncate slds-p-horizontal_small" title="Informations">Informations</span>
+                                </h3>
+                                <div aria-hidden="false" class="slds-section__content">
+                                    <lightning:inputField class="slds-form--inline is-required" aura:id="nomOperation" fieldName="Name"  required="true" value="" />
+                                    
+                                    <lightning:inputField aura:id="objet" fieldName="Objet__c" required="false" value="" />
+                                    <lightning:inputField aura:id="observations" fieldName="Observation__c" required="false" />
+                                    <lightning:inputField class="slds-form--inline is-required" aura:id="required-field" fieldName="Type_d_operation__c" required="true" />
+                                    
+                                    <lightning:inputField class="slds-form--inline is-required" aura:id="required-field" fieldName="Activite__c" required="true" />
+                                    <lightning:inputField aura:id="sousActivite" fieldName="Sous_activite__c" required="false" />
+                                    
+                                    <lightning:inputField aura:id="statut" fieldName="Statut__c" required="false" />
+                                    <lightning:inputField aura:id="phaseCommerciale" fieldName="Phase_commerciale__c" required="false" />
+                                    
+                                    <lightning:inputField class="slds-form--inline is-required" aura:id="required-field" fieldName="Compte__c" required="true" value="{!v.idDonneurOrdre}" />
+                                    <!--<lightning:button class="slds-m-top_small" variant="neutral" label="Créer : Compte" onclick="{!c.createAccountRecord}" />-->
+                                    <lightning:inputField aura:id="compteReprise" fieldName="Compte_reprise__c" required="false" />
+                                    
+                                    <lightning:inputField class="slds-form--inline is-required" aura:id="required-field" fieldName="UFO__c" required="true" />
+                                    
+                                    
+                                    <lightning:inputField aura:id="pole" fieldName="Pole__c" required="false" />
+                                    <lightning:inputField aura:id="departementPole" fieldName="Departement_du_Pole__c" required="false" />
+                                    
+                                    <lightning:inputField aura:id="service" fieldName="Service__c" required="false" />
+                                    
+                                        <lightning:inputField aura:id="datePrevisionnelleCandidature" fieldName="Date_previsionnelle_de_candidature__c" required="false" />
+                                    <!--<ui:inputDate value="{!v.datePrevisionnelleCandidature}" label="Date prévisionnelle de candidature" displayDatePicker="true" format="dd/MM/yyyy" />-->
+                                    
+                                    <lightning:inputField aura:id="concurrents" fieldName="Concurrents__c" required="false" />
+                                </div>
+                            </div>
+                            
+                            <div class="slds-section slds-is-open">
+                                <h3 class="slds-section__title slds-theme_shade">
+                                    <span class="slds-truncate slds-p-horizontal_small" title="Informations complémentaires">Informations complémentaires</span>
+                                </h3>
+                                <div aria-hidden="false" class="slds-section__content">
+                                    <lightning:inputField aura:id="familleOuvrage" fieldName="Famille_d_ouvrage__c" required="false" />
+                                    <lightning:inputField aura:id="sousFamille" fieldName="Sous_famille__c" required="false" />
+                                    <lightning:inputField aura:id="typeMission" fieldName="Type_de_mission__c" required="false" />
+                                    <lightning:inputField aura:id="typeProcedure" fieldName="Type_de_procedure__c" required="false" />
+                                    <lightning:inputField aura:id="privePublic" fieldName="Privee_public__c" required="true" value="{!v.typeMarcheExplore =='MP' ? 'Public' : 'Privée'}" />
+                                    <lightning:inputField aura:id="priorite" fieldName="Priorite__c" required="false" />
+                                    <lightning:inputField aura:id="budgetTravaux" fieldName="Budget_Travaux__c" required="false" />
+                                    <lightning:inputField aura:id="budgetHonoraires" fieldName="Budget_Honoraires__c" required="false" />
+                                    <lightning:inputField aura:id="devise" fieldName="CurrencyIsoCode" required="false" />
+                                </div>
+                            </div> 
+                            
+                            <div class="slds-section slds-is-open">
+                                <h3 class="slds-section__title slds-theme_shade">
+                                    <span class="slds-truncate slds-p-horizontal_small" title="Adresse">Adresse</span>
+                                </h3>
+                                <div aria-hidden="false" class="slds-section__content">
+                                    <lightning:inputField aura:id="adresse" fieldName="Adresse__c" required="false" value="" />
+                                    <lightning:inputField aura:id="zoneGeographique" fieldName="Zone_geographique__c" required="false" value="" />
+                                    <lightning:inputField aura:id="codePostal" fieldName="Code_postal__c" required="false" value="" />
+                                    <lightning:inputField aura:id="ville" fieldName="Ville__c" required="false" value="" />
+                                    <lightning:inputField aura:id="pays" fieldName="Pays__c" required="false" value="" />
+                                </div>
+                            </div>
+                            
+                            <!-- ACTIONS -->
+                            <lightning:button class="slds-m-top_small" variant="neutral" label="Annuler" onclick="{!c.closeModal}" />
+                            <lightning:button class="slds-m-top_small" variant="brand" type="submit" label="Créer" disabled="{!v.disabled}" />
+                            
+                        </lightning:recordEditForm>
+                        
+                    </div>
+                </div>
+      
+                
+            </div>
+            
+        </section>
+        
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        
+    </div>
+    
+</aura:component>

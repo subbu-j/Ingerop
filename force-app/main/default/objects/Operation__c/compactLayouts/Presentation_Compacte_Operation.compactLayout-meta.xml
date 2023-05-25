@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Presentation_Compacte_Operation</fullName>
+    <fields>Name</fields>
+    <fields>Activite__c</fields>
+    <fields>Statut__c</fields>
+    <fields>Compte__c</fields>
+    <fields>Budget_Travaux__c</fields>
+    <fields>OwnerId</fields>
+    <label>Présentation Compacte Opération</label>
+</CompactLayout>
