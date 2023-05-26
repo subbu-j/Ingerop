@@ -45,30 +45,30 @@ public with sharing class LCCTRL_ExploreAccount {
         return returnList;
     }
     
-    /* récupération des donneés pour la liste 'Résultats d'opérations trouvées' */
+    /* récupération des données pour la liste 'Résultats du compte trouvé' */
     @AuraEnabled
-    public static List<Operation__c> getOperationsDataSearch (String idExplore, String searchText) {
+    public static List<Account> getAccountsDataSearch (String searchText) {
         
-        List<Operation__c> returnList = new List<Operation__c>();
-        List<Operation__c> linkedOperations = getRelatedOperationsData(idExplore);
+        List<Account> returnList = new List<Account>();
+        /*List<Account> linkedOperations = getRelatedOperationsData(idExplore);
  
         set<Id> linkedOpeIds = new set<Id>();
         for(Operation__c ope : linkedOperations){
             linkedOpeIds.add(ope.Id);
-        }
+        }*/
 
-        searchText = (searchText != null && searchText != '') ? '' + searchText + '*' : ''; 
-        List<List<SObject>> searchList = [FIND :searchText IN ALL FIELDS RETURNING Operation__c(Id, Name, Compte__c, Compte__r.Name, Departement__c,link__c, estDansMonDepartement__c, estDansMonPole__c, estDansMonService__c, estDansMonUFO__c, Nom_du_r_f_rent__c, Nombre_d_offres__c, Owner.FirstName, Owner.LastName)];
+        //searchText = (searchText != null && searchText != '') ? '' + searchText + '*' : ''; 
+        //List<List<SObject>> searchList = [FIND :searchText IN NAME FIELDS RETURNING Account(Id, Name, Alias__c, ParentId, Parent.Name, SIRET__c, ShippingCity, Type)];
+        searchText = (searchText != null && searchText != '') ? '%' + searchText + '%' : ''; 
+        List<Account> searchList = [SELECT Id, Name, Alias__c, ParentId, Parent.Name, SIRET__c, ShippingCity, Type FROM Account WHERE Name LIKE :searchText OR Alias__c LIKE :searchText];
 
         // On filtre les résultats de la recherche et 
         // on construit une liste d'opérations ne contenant pas celles qui sont affichées dans la 1ère liste 'Opérations liées'
-        for(Operation__c ope : (List<Operation__c>)searchList[0]){
-            if(!linkedOpeIds.contains(ope.Id)){
-                returnList.add(ope);
-            }
+        for(Account acc : searchList){
+            returnList.add(acc);
         }
 
-        return(returnList);
+        return returnList;
     }
 
     /* fonction pour lier l'Annonce Explore à la fiche Opération */
@@ -202,12 +202,14 @@ public with sharing class LCCTRL_ExploreAccount {
         return result;
     }
     
-    /* récupération de l'id du compte à partir de son SIRET */ 
+    /* Retrive Account Id if SIRET corresponds to only one Account record */ 
     @AuraEnabled
     public static String getAccountIdBySiret (String siret){
-        List<Account> lstAccount = [SELECT Id, Name FROM Account WHERE SIRET__c =:siret AND SIRET__c != null];
+        List<Account> lstAccount = [SELECT Id, Name FROM Account WHERE SIRET__c =:siret];
         if(!lstAccount.IsEmpty()){
-            return lstAccount.get(0).Id;
+            if(lstAccount.size() == 1){
+                return lstAccount[0].Id;
+            }
         }
         return null;
     }
