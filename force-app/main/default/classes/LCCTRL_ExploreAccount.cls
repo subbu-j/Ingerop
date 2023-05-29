@@ -1,69 +1,16 @@
 public with sharing class LCCTRL_ExploreAccount {
-
-    /* récupération des donneés pour la liste 'Opérations liées' */
-    @AuraEnabled
-    public static List<Operation__c> getRelatedOperationsData (String idExplore) {
-        
-        set<string> setIdExplore = new set<String>();
-        setIdExplore.add(idExplore);
-        setIdExplore.add(idExplore.replace('-', '#'));
-    
-        List<Operation__c> returnList = new List<Operation__c>();
-        set<Id> opIds = new set<Id>();
-        
-        for(AnnonceOperations__c ao : [SELECT Operation__c FROM AnnonceOperations__c WHERE Annonce__r.IdExplore__c IN :setIdExplore]){
-            opIds.add(ao.Operation__c);
-        }
-        
-        List<Operation__c> lstOperations = [SELECT Id, Name, Compte__c, Compte__r.Name, Departement__c, estDansMonDepartement__c, estDansMonPole__c, link__c,estDansMonService__c, estDansMonUFO__c, Nom_du_r_f_rent__c, Nombre_d_offres__c, Owner.FirstName, Owner.LastName FROM Operation__c WHERE Id IN :opIds ORDER BY CreatedDate DESC];
-        
-        for (Operation__c ope : lstOperations) {
-            returnList.add(ope);
-        }
-
-        return returnList;
-    }
-    
-    /* récupération des donneés pour la liste 'Autres opérations liées au compte' */
-    @AuraEnabled
-    public static List<Operation__c> getOtherOperationsData (String idExplore, String siret) {
-
-        List<Operation__c> linkedOperations = getRelatedOperationsData(idExplore);
-
-        set<Id> linkedOpeIds = new set<Id>();
-        for(Operation__c ope : linkedOperations){
-            linkedOpeIds.add(ope.Id);
-        }
-        
-        List<Operation__c> returnList = new List<Operation__c>();
-        List<Operation__c> lstOperations = [SELECT Id, Name, Compte__c, Compte__r.Name, Departement__c,link__c, estDansMonDepartement__c, estDansMonPole__c, estDansMonService__c, estDansMonUFO__c, Nom_du_r_f_rent__c, Nombre_d_offres__c, Owner.FirstName, Owner.LastName FROM Operation__c WHERE Id NOT IN :linkedOpeIds AND Compte__r.SIRET__c =: siret AND Compte__r.SIRET__c != NULL ORDER BY CreatedDate DESC];
-        
-        for (Operation__c ope : lstOperations) {
-            returnList.add(ope);
-        }
-
-        return returnList;
-    }
     
     /* récupération des données pour la liste 'Résultats du compte trouvé' */
     @AuraEnabled
     public static List<Account> getAccountsDataSearch (String searchText) {
         
         List<Account> returnList = new List<Account>();
-        /*List<Account> linkedOperations = getRelatedOperationsData(idExplore);
- 
-        set<Id> linkedOpeIds = new set<Id>();
-        for(Operation__c ope : linkedOperations){
-            linkedOpeIds.add(ope.Id);
-        }*/
 
         //searchText = (searchText != null && searchText != '') ? '' + searchText + '*' : ''; 
         //List<List<SObject>> searchList = [FIND :searchText IN NAME FIELDS RETURNING Account(Id, Name, Alias__c, ParentId, Parent.Name, SIRET__c, ShippingCity, Type)];
         searchText = (searchText != null && searchText != '') ? '%' + searchText + '%' : ''; 
-        List<Account> searchList = [SELECT Id, Name, Alias__c, ParentId, Parent.Name, SIRET__c, ShippingCity, Type FROM Account WHERE Name LIKE :searchText OR Alias__c LIKE :searchText];
-
-        // On filtre les résultats de la recherche et 
-        // on construit une liste d'opérations ne contenant pas celles qui sont affichées dans la 1ère liste 'Opérations liées'
+        List<Account> searchList = [SELECT Id, Name, Alias__c, ParentId, Parent.Name, SIRET__c, ShippingCity, RecordType.Name FROM Account WHERE Name LIKE :searchText OR Alias__c LIKE :searchText];
+        
         for(Account acc : searchList){
             returnList.add(acc);
         }
@@ -71,136 +18,6 @@ public with sharing class LCCTRL_ExploreAccount {
         return returnList;
     }
 
-    /* fonction pour lier l'Annonce Explore à la fiche Opération */
-    @AuraEnabled
-    public static String linkAnnonceToOperation (String recordId, String idExplore){
-
-        String result;
-        
-        Boolean isMarchePublic = false;        
-        if(idExplore.contains('MP')){
-            isMarchePublic = true;
-        }
-        
-        String idExploreNum = (idExplore == null) ? '' : idExplore;
-        
-        // marché public
-        idExploreNum = idExploreNum.replace('MP#','');
-        idExploreNum = idExploreNum.replace('MP-','');
-        
-        // autres
-        idExploreNum = idExploreNum.replace('FL#','');
-        idExploreNum = idExploreNum.replace('FP#','');
-        
-        //System.debug('# linkAnnonceToOperation - idExploreNum : ' + idExploreNum);
-        
-        if(isMarchePublic){
-            result = WS_Explore.getAnnonceData(idExploreNum, 'MP');
-        } else {
-            result = WS_Explore.getAnnonceData(idExploreNum, 'FL');
-        }          
-        //System.debug('# linkAnnonceToOperation - WS_Explore.getAnnonceData : ' + result);
-        
-        if(result != null){
-
-            if(isMarchePublic){
-                List <Operation__c> lstOperations = [SELECT Id, Name, Compte__c FROM Operation__c WHERE Id =: recordId];
-                Explore_MarchePublic data = Explore_MarchePublic.parse(result);
-                //System.debug('# linkAnnonceToOperation - Explore_MarchePublic.parse : ' + data);
-                
-                // création de la fiche AnnonceOperation__c
-                AnnonceOperations__c annonceOpe = new AnnonceOperations__c();
-                annonceOpe.Operation__c = recordId;
-                if(lstOperations.size() > 0) {
-                    annonceOpe.Compte__c = lstOperations[0].Compte__c;
-                }
-                
-                // recherche d'une fiche annonce existante
-                List<Annonce__c> lstAnnonce = [SELECT Id, Operation__c FROM Annonce__c WHERE IdExplore__c =:data.MARCHE_PUBLIC.IDENTIFIANT_EXPLORE];
-                
-                // Si une fiche existe, on la lie à la fiche AnnonceOperations__c
-                if(!lstAnnonce.isEmpty()){
-                    annonceOpe.Annonce__c = lstAnnonce[0].Id;
-                }
-                // sinon, on crée une fiche annonce puis on la lie à la fiche AnnonceOperations__c
-                else{
-                    String annonceId = createAnnonce(idExplore);
-                    annonceOpe.Annonce__c = annonceId;
-                }
-                
-                // insertion de la fiche AnnonceOperations__c
-                insert annonceOpe;
-                
-                String currentOperationName;
-
-                if(lstOperations.size() > 0){
-                    currentOperationName = lstOperations[0].Name;
-                }
-
-                // création des feeds Chatter pour annoncer la liaison annonce/opération
-                for(Operation__c ope : getRelatedOperationsData(idExplore)){
-                    if(ope.Id != recordId){
-                        postChatterFeedElement(recordId, currentOperationName, ope.OwnerId, data.MARCHE_PUBLIC.OBJET, ope.Id);
-                    }
-                }
-                
-            } else {
-                // TODO MAITRE OUVRAGE
-            }
-
-        }
-        return result;
-    }
-    
-    /* fonction pour délier l'opération à l'annonce */
-    @AuraEnabled
-    public static String unlinkOperation (String recordId, String idExplore){
-        
-        List <Operation__c> lstOperations = [SELECT Id FROM Operation__c WHERE Id =: recordId];
-        List<Annonce__c> lstAnnonces = [SELECT Id FROM Annonce__c WHERE IdExplore__c =: idExplore];
-        
-        if(lstOperations.size() > 0 && lstAnnonces.size() > 0){
-            List<AnnonceOperations__c> lstAnnonceOperation = [SELECT Id, Operation__c FROM AnnonceOperations__c WHERE Annonce__c=: lstAnnonces[0].Id AND Operation__c=: lstOperations[0].Id];
-            if(lstAnnonceOperation.size() > 0){
-                delete lstAnnonceOperation;
-            }
-        }
-        
-        return null;
-    }
-    
-    /* récupération des donneés Annonce Explore de type 'Marché public' (MP) à partir du WS Explore */    
-    @AuraEnabled
-    public static String getAnnonceMarchePublicData (String idExplore){
-
-        String result;
-
-        String[] arrParams = idExplore.split('-');
-		String type = arrParams[0]; 
-		String identifier = arrParams[1];
-        //System.debug('type: ' + type);
-        //System.debug('identifier: ' + identifier);
-        
-        if(test.isRunningTest()){
-            result='{"MARCHE_PUBLIC":{"IDENTIFIANT":7714374,"IDENTIFIANT_EXPLORE":"MP#7714374","CLE_MARCHE_PUBLIC_EXPLORE":"0299bd0b-2648-45f5-8851-96ee0f57e174","OBJET":"Complexe intercommunal sportif et culturel","DATE_LIMITE_RECEPTION":"2019-07-08T12:00:00","DATE_DETECTION":"2019-06-19T00:00:00","DATE_PARUTION":"2019-06-19T00:00:00","SOURCE":2481,"SOURCE_LIB":"Plate-forme dématérialisée","TYPE_AVIS":"Informations complémentaires","MPC_NATURE_CONTRAT":"","MPC_NATURE_CONTRAT_LIB":"","MPC_ALLOTISSEMENT":true,"MPC_MONTANT_REEL":0.0,"MPC_MONTANT_MIN":0.0,"MPC_MONTANT_MAX":0.0,"MPC_RENOUVELLEMENT":false,"MPC_DUREE":0,"MPC_DT_ECHEANCE":"0001-01-01T00:00:00","MPC_DT_LIM_CANDIDAT":"0001-01-01T00:00:00","MPC_DT_LIM_DEM_DOC":"0001-01-01T00:00:00","MSG_CR":"","MSG_CR_LIB":"","URL_DETAIL":"https://extranet.explore.fr/dotnet/AccessBywebservice.aspx?page=AffichageMarchePublic.aspx&projet=7714374&CleClient=36AD1727-0961-44E9-A295-7A090F4D68A7","URL_AVIS_ORIGINAL":"","TEXTE_ANNONCE":"Commune de Reignier-ÉseryM. Jean-François CICLETMaireMairie de Reignier74930 Reignier-ÉseryTél : 0450434003DOSSIER : 19FT-0091-WConsultation :Complexe intercommunal sportif et culturelRemise limite :08/07/2019 à 12h00COURRIERDestinataire :dce@explore.frdate denvoi :19/06/2019 à 09h36Sujet :Le DCE a été modifié19FT-0091-W : Complexe intercommunal sportif et culturelModification du DCE : Veuillez prendre en compte les modifications apportées au DCE et listées ci-dessousTélécharger le nouveau DCEAWS-AchatAWS - 97 rue du général Mangin - 38100 Grenoble","MPC_MISSION":[{"MPC_MISSION":"","MPC_MISSION_LIB":""}],"MPC_PROCEDURE":[{"MPC_PROCEDURE":"AOO","MPC_PROCEDURE_LIB":"Appel doffre ouvert"}],"MPC_FORME_MARCHE":[{"MPC_FORME_MARCHE":"MSIMP","MPC_FORME_MARCHE_LIB":"Marché simple"}],"MPC_TYPE_PRESTATION":[{"MPC_TYPE_PRESTATION":"PDFO","MPC_TYPE_PRESTATION_LIB":"Fourniture"},{"MPC_TYPE_PRESTATION":"PDTR","MPC_TYPE_PRESTATION_LIB":"Travaux"}],"MPC_TYPE_CONTRAT":[{"MPC_TYPE_CONTRAT":"MAPU","MPC_TYPE_CONTRAT_LIB":"Marché public"}],"SOCIETES":[{"ROLE":"DONNEUR ORDRE","RAISON_SOCIALE":"COMMUNE DE REIGNIER ESERY","SIRET":"21740220500017","SIREN":"217402205","IDENTIFIANT_SOCIETE_EXPLORE":109388,"ADRESSE_1":"197 GRANDE RUE","ADRESSE_2":"","CODE_POSTAL":"74930","VILLE":"Reignier-Ésery","CODE_NAF":"8411Z","NATURE_ETS":"EP","TELEPHONE":"0450434003","TEFEN":"31","TEFEN_LIB":"200 à 249 salariés"}],"LOCALISATIONS":[{"DEPARTEMENT":"74","DEPARTEMENT_LIB":"Haute-Savoie (74)","CODE_COMMUNE":"74220","ADRESSE1":"","ADRESSE2":"","CODE_POSTAL":"74930","COMMUNE":"Reignier-Ésery"}],"DCES":[]}}';
-        }
-        else {
-            
-            result = WS_Explore.getAnnonceData(identifier, type);
-            //System.debug('result' + result);
-            if(result != null){
-                Explore_MarchePublic data = Explore_MarchePublic.parse(result);
-                //System.debug('data' + data);
-                result = Json.serialize(data.MARCHE_PUBLIC) + '¤' + Json.serialize(data.MARCHE_PUBLIC.SOCIETES) + '¤' + Json.serialize(data.MARCHE_PUBLIC.LOCALISATIONS);
-            } else {
-                System.debug('getAnnonceMarchePublicData result NULL');
-            }
-
-            //System.debug('JSON' + result);
-        }
-        
-        return result;
-    }
     
     /* Retrive Account Id if SIRET corresponds to only one Account record */ 
     @AuraEnabled
@@ -212,33 +29,6 @@ public with sharing class LCCTRL_ExploreAccount {
             }
         }
         return null;
-    }
-    
-    /* récupération des donneés Annonce Explore de type 'Maître d'ouvrage' (FL/FP) à partir du WS Explore */ 
-    @AuraEnabled
-    public static String getAnnonceMaitreOuvrageData (String idExplore){
-        
-        String result;
-        /*
-        String[] arrParams = idExplore.split('-');
-		String type = arrParams[0];
-		String identifier = arrParams[1];
-        
-        if(test.isRunningTest()){
-
-        }
-        else {
-            result = WS_Explore.getAnnonceData(identifier, type);
-            Explore_MaitreOuvrage data = Explore_MaitreOuvrage.parse(result);
-            //System.debug('data' + data);
-            
-            // TODO : concaténation des données JSON
-            //result = Json.serialize(data.MARCHE_PUBLIC) + '¤' + Json.serialize(data.MARCHE_PUBLIC.SOCIETES) + '¤' + Json.serialize(data.MARCHE_PUBLIC.LOCALISATIONS);
-        }
-
-        System.debug('JSON' + result);
-        */
-        return result;
     }
     
     /* création de la fiche Annonce partir du WS Explore */ 
@@ -337,73 +127,84 @@ public with sharing class LCCTRL_ExploreAccount {
         return null;
     }
 
-    @AuraEnabled
-    public static String postChatterFeedElement(String operationId, String operationName, String ownerId, String annonceObject, String subjectId ){
+    @AuraEnabled        
+    public static List<String> fetchRecordTypeValues(){
+        /* List<Schema.RecordTypeInfo> recordTypes = Account.SObjectType.getDescribe().getRecordTypeInfos();    
+        Map<String, Id> recordTypeMap = new Map<String, Id>();
+        for(RecordTypeInfo rt : recordTypes){
+            if(rt.getName() != 'Master'){
+                recordTypeMap.put(rt.getName(), rt.getRecordTypeId());
+            }
+        }        
+        system.debug('recordTypeMap'+ recordTypeMap);
+        return recordTypeMap; */
 
-        String urlOperation = URL.getSalesforceBaseUrl().toExternalForm() + '/' + operationId;
+        List<Schema.RecordTypeInfo> recordTypes = Account.SObjectType.getDescribe().getRecordTypeInfos();    
+        Map<Id, String> recordTypeMap = new Map<Id, String>();
+        for(RecordTypeInfo rt : recordTypes){
+            if(rt.getName() != 'Master'){
+                recordTypeMap.put(rt.getRecordTypeId(), rt.getName());
+            }
+        }        
+        system.debug('recordTypeMap'+ recordTypeMap);
+        return recordTypeMap.values();
 
-        ConnectApi.FeedItemInput feedItemInput = new ConnectApi.FeedItemInput();
-        ConnectApi.MentionSegmentInput mentionSegmentInput = new ConnectApi.MentionSegmentInput();
-        ConnectApi.MessageBodyInput messageBodyInput = new ConnectApi.MessageBodyInput();
-        ConnectApi.TextSegmentInput textSegmentInput = new ConnectApi.TextSegmentInput();
-        ConnectApi.MarkupBeginSegmentInput markupBeginSegment;
-        ConnectApi.MarkupEndSegmentInput markupEndSegment;
-        ConnectApi.LinkSegmentInput linkSegment = new ConnectApi.LinkSegmentInput();
-
-        messageBodyInput.messageSegments = new List<ConnectApi.MessageSegmentInput>();
-
-        textSegmentInput = new ConnectApi.TextSegmentInput();
-        textSegmentInput.text = 'Bonjour ';
-        messageBodyInput.messageSegments.add(textSegmentInput);
-
-        // ID Propriétaire de la fiche Opération
-        mentionSegmentInput = new ConnectApi.MentionSegmentInput();
-        mentionSegmentInput.id = ownerId;
-        messageBodyInput.messageSegments.add(mentionSegmentInput);
-
-        textSegmentInput = new ConnectApi.TextSegmentInput();
-        textSegmentInput.text = ', Une nouvelle opération ';
-        messageBodyInput.messageSegments.add(textSegmentInput);
-
-        markupBeginSegment = new ConnectApi.MarkupBeginSegmentInput();
-        markupBeginSegment.markupType = ConnectApi.MarkupType.Bold;
-        messageBodyInput.messageSegments.add(markupBeginSegment);
-
-        textSegmentInput = new ConnectApi.TextSegmentInput();
-        textSegmentInput.text = operationName + ' (';
-        messageBodyInput.messageSegments.add(textSegmentInput);
-
-        linkSegment.url = urlOperation;
-        messageBodyInput.messageSegments.add(linkSegment);
-
-        markupEndSegment = new ConnectApi.MarkupEndSegmentInput();
-        markupEndSegment.markupType = ConnectApi.MarkupType.Bold;
-        messageBodyInput.messageSegments.add(markupEndSegment);
-
-        textSegmentInput = new ConnectApi.TextSegmentInput();
-        textSegmentInput.text = ') a été liée à l’annonce ';
-        messageBodyInput.messageSegments.add(textSegmentInput);
-
-        markupBeginSegment = new ConnectApi.MarkupBeginSegmentInput();
-        markupBeginSegment.markupType = ConnectApi.MarkupType.Bold;
-        messageBodyInput.messageSegments.add(markupBeginSegment);
-
-        textSegmentInput = new ConnectApi.TextSegmentInput();
-        textSegmentInput.text = annonceObject;
-        messageBodyInput.messageSegments.add(textSegmentInput);
-
-        markupEndSegment = new ConnectApi.MarkupEndSegmentInput();
-        markupEndSegment.markupType = ConnectApi.MarkupType.Bold;
-        messageBodyInput.messageSegments.add(markupEndSegment);
-
-        feedItemInput.body = messageBodyInput;
-        feedItemInput.feedElementType = ConnectApi.FeedElementType.FeedItem;
-    
-        feedItemInput.subjectId = subjectId;
-
-        ConnectApi.FeedElement feedElement = ConnectApi.ChatterFeeds.postFeedElement(Network.getNetworkId(), feedItemInput);
-        
-        return null;
     }
+    
+    @AuraEnabled
+    public static Id getRecTypeId(String recordTypeLabel){
+        Id recid = Schema.SObjectType.Account.getRecordTypeInfosByName().get(recordTypeLabel).getRecordTypeId();        
+        return recid;
+    }      
+
+    @AuraEnabled
+    public static ExploreAccountWrapper createAccount(String siret, String recordTypeLabel){
+        if (String.isBlank(siret)){
+            throw new AuraHandledException(Label.AP_CustRecCompCtrl_Ex_EmptySIRET);
+        }
+        Id recid = Schema.SObjectType.Account.getRecordTypeInfosByName().get(recordTypeLabel).getRecordTypeId();        
+SYSTEM.DEBUG('recid'+ recid);
+        try{
+            String jsonExplore = Test.isRunningTest() ? TestDataFactory.JSON_RESULT_CRCC : WS_Explore.getSiretData(siret);
+            Explore_Siret data = Explore_Siret.parse(jsonExplore);
+            ExploreAccountWrapper acc = new ExploreAccountWrapper();
+            System.debug('dataSize:' + data);
+
+            if (data != null){
+                acc.Name = data.NOTICE80.L1_NOMEN;
+                acc.Siret = data.NOTICE80.SIRET;
+                acc.Description = data.NOTICE80.LIBNJ;
+                acc.ShippingStreet = data.NOTICE80.L4_VOIE;
+                acc.ShippingPostalCode = data.NOTICE80.CODPOS;
+                acc.ShippingCity = data.NOTICE80.LIBCOM;
+                acc.ShippingCountry = data.NOTICE80.L7_ETRG;
+                acc.ShippingLatitude = data.COMPLEMENTS.LATITUDE;
+                acc.ShippingLongitude = data.COMPLEMENTS.LONGITUDE;
+                acc.Phone = data.COMPLEMENTS.TELEPHONE;
+                acc.Website = data.COMPLEMENTS.SITE_WEB;
+                acc.RecordTypeId = recid;
+            }
+            return acc;
+        } 
+        catch (Exception e){
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+            
+    public class ExploreAccountWrapper{
+        @AuraEnabled public String Name;
+        @AuraEnabled public String Siret;
+        @AuraEnabled public String Description;
+        @AuraEnabled public String ShippingStreet;
+        @AuraEnabled public String ShippingPostalCode;
+        @AuraEnabled public String ShippingCity;
+        @AuraEnabled public String ShippingCountry;
+        @AuraEnabled public Double ShippingLongitude;
+        @AuraEnabled public Double ShippingLatitude;
+        @AuraEnabled public String Phone;
+        @AuraEnabled public String Website;
+        @AuraEnabled public String RecordTypeId;
+    }
+
 
 }

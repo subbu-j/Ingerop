@@ -17,7 +17,7 @@
     <aura:attribute name="annonceMaitreOuvrageData" type="Object" default="" />
     <aura:attribute name="idDonneurOrdre" type="String" default="" />
     
-    
+
     <!-- attributs liste 'Résultats des comptes trouvés' (search accounts) -->
     <aura:attribute name="searchAccountsColumns" type="List"/>
     <aura:attribute name="searchAccountsData" type="Object" />
@@ -26,6 +26,7 @@
     <aura:attribute name="searchAccountsSortedBy" type="String"/>
     <aura:attribute name="searchAccountsSortedDirection" type="String"/>
     <aura:attribute name="searchAccountsDefaultSortDirection" type="String"/>
+    <aura:attribute name="searchInputText" type="String"/>
     
     
     <!-- attributs 'Créer une nouvelle opération' -->
@@ -33,7 +34,16 @@
     <aura:attribute name="modalMessage" type="String" default="Default Message"/>
     <aura:attribute name="modalTitle" type="String" default="Header Message"/>
     
+    <!-- For Custom record comparison modal -->
+    <aura:attribute name="showCustomRecordComparisonModal" type="Boolean" default="false" />
+	<aura:attribute name="accountId" type="Id" />
+    <aura:handler name="closeModalEventParent" event="c:LC_EV_ExploreAccountCloseModal" action="{!c.closeCustomRecordComparisonModal}"/>
     
+    <!-- For new account record type selection modal -->
+    <aura:attribute name="accountRecordTypes" type="String[]" />
+    <aura:attribute name="showCreateAccountModal" type="boolean" default="false" />
+
+
     <lightning:notificationsLibrary aura:id="notificationsLibrary"/>
     
     <aura:attribute name="isLoading" type="Boolean" default="false" />
@@ -94,7 +104,8 @@
         </aura:set>
     
         <!--<lightning:input name="search_input" id="" label="" placeholder="Recherche d'une opération par son nom..."/>-->
-        <input type="text" id="searchtext" placeholder="Recherche d'une compte par son nom..." class="input uiInput uiInputText uiInput--default uiInput--input"/>
+        <!-- <input type="text" id="searchtext" placeholder="Recherche d'une compte par son nom..." class="input uiInput uiInputText uiInput- default uiInput- input"/> -->
+        <lightning:input type="text" aura:id="searchtext" value="{!v.searchInputText}" placeholder="Recherche d'une compte par son nom..."/>
         <lightning:button label="Rechercher"  iconName="utility:search" iconPosition="left" onclick="{!c.search}" />
 
 
@@ -112,7 +123,7 @@
                              defaultSortDirection="{! v.searchAccountsDefaultSortDirection }"
                              showRowNumberColumn="false"
                               
-                             onrowaction="{! c.searchAccountsHandleRowAction }" 
+                             onrowaction="{! c.openCustomRecordComparisonModal }" 
                              onresize="{! c.searchAccountsStoreColumnWidths }"
                              onsort="{! c.searchAccountsUpdateColumnSorting }"
                              
@@ -130,6 +141,7 @@
                 </span>
             </h2>
         </aura:set>
+        <lightning:button label="Créer un compte" onclick="{!c.openAccountModal}" />
     	<lightning:button label="Créer un compte Autre" onclick="{!c.openAccountModal}" />
         <lightning:button label="Créer un compte Client" onclick="{!c.openAccountModal}" />
         <lightning:button label="Créer un compte Entreprise" onclick="{!c.openAccountModal}" />
@@ -137,6 +149,55 @@
     </lightning:card>
     <!-- CREER UNE NOUVELLE OPERATION --> 
     
+
+
+
+    <!-- ACCOUNT RECORD TYPE SELECTION MODAL -->
+<!-- Model Box Start -->    
+    <aura:if isTrue="{!v.showCreateAccountModal}">
+        <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeAccountModal}">
+                        X<span class="slds-assistive-text">Cancel</span>
+                    </button>
+                    <h2 id="header43" class="slds-text-heading--medium">New Account</h2>
+                </div>
+                
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size--1-of-2 slds-large-size--1-of-2">
+                             <div class="slds-align--absolute-center">Select a Record Type</div>                            
+                        </div>
+                        <div class="slds-size--1-of-2 slds-large-size--1-of-2">
+                            <lightning:select name="select" aura:id="selectid">
+                                <aura:iteration items="{!v.accountRecordTypes}" var="account">
+                                        <option text="{!account}" value="{!account}"></option>
+                                    </aura:iteration>
+                            </lightning:select>
+                        </div>&nbsp; &nbsp;
+                    </div>                   
+                </div>
+                
+                <div class="slds-modal__footer">
+                    <lightning:button class="slds-button slds-button--neutral" onclick="{!c.closeAccountModal}">Cancel</lightning:button>
+                    <lightning:button class="slds-button slds-button--brand" onclick="{!c.createAccountModal}">Next</lightning:button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+
+    <!-- ACCOUNT RECORD TYPE SELECTION MODAL -->
+
+
+
+
+    <!-- Custom Record Comparison modal -->
+    <aura:if isTrue="{!v.showCustomRecordComparisonModal}">
+        <c:LC_ExploreAccountRecordCompModal recordId="{!v.accountId}" />
+    </aura:if>
+    <!-- Custom Record Comparison modal -->
     <br/>
     <br/>
 </aura:component>

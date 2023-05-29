@@ -9,9 +9,15 @@
             $A.getCallback(function(result) {
 
                 //redirect to standard account page corresponding to the SIRET
-                helper.redirectToAccountRecord(component, event, helper);
-                //component.set('v.isLoading', false);
-                
+                //helper.redirectToAccountRecord(component, event, helper);
+
+                //Search the account name passed in the URL on loading th page
+                console.log('search1:',component.get("v.searchInputText"));
+                if(component.get("v.searchInputText") != null){
+                    var action = component.get("c.search");
+                    $A.enqueueAction(action);
+                }
+
                 // datatable 'Résultats d'opérations trouvées
                 component.set('v.searchAccountsColumns', helper.getsearchAccountsColumns());
                 
@@ -25,12 +31,16 @@
     // gestion de mise à jour des paramètres URL GET Explore
     onPageReferenceChanged: function(component, event, helper) {
         var pageReference = component.get("v.pageReference");
-        
         var titreExplore = pageReference.state.c__Titre;
         var siretExplore = pageReference.state.c__Siret;
         component.set("v.titreExplore", titreExplore);
         component.set("v.siretExplore", siretExplore);
-        helper.redirectToAccountRecord(component, event, helper);
+        //helper.redirectToAccountRecord(component, event, helper);
+        if(titreExplore != null){
+            component.set("v.searchInputText", titreExplore);
+            var action = component.get("c.search");
+            $A.enqueueAction(action);
+        }
     },
     
     
@@ -41,12 +51,13 @@
     
     // recherche du texte saisi sur tous les champs de l'objet Account
     search : function(component, event, helper) {
-        
-        //console.log('# search - START');
-        
-        //var idExplore = component.get("v.idExplore");
-        var searchElement = document.getElementById("searchtext");
-        var searchValue = (searchElement) ? searchElement.value : '';
+
+        console.log('search2:',searchElement);
+        //var searchElement = document.getElementById("searchtext");
+        var searchElement = component.get("v.searchInputText");
+        console.log('search3:',searchElement);
+
+        var searchValue = (searchElement) ? searchElement : '';
         
         var action = component.get("c.getAccountsDataSearch");
         action.setParams({
@@ -59,24 +70,29 @@
                 for (var i = 0; i < rows.length; i++) {
                     var row = rows[i];
                     
-                    console.log('row',row);
-                    console.log('ParentId',row.ParentId);
-                    console.log('Parent',row.Parent);
-                    // gestion du nom du compte associé
+                    // Name of the Parent Account
                     if (row.Parent){
-                        //console.log(row.Compte__r.Name);
                         row.ParentName = row.Parent.Name;
                     }
-                    // gestion du nom/prénom du référent associé
+                    //Link to Parent account 
                     if(row.ParentId){
                         row.ParentUrl = '/' + row.ParentId;
-                    }  
+                    }
+                    //Link to the account record
+                    if(row.Id){
+                        row.AccountUrl = '/' + row.Id;
+                    }
+                    //Set the account type value from record type
+                    if(row.RecordType){
+                        row.AccountType = row.RecordType.Name;
+                    }
                 }
                 component.set('v.searchAccountsData', rows);
+                console.log('# search - ', rows);
             }
         });
         $A.enqueueAction(action);
-        //console.log('# search - END');
+        console.log('# search - END');
     },
     
     //stockage en local de la taille des colonnes du tableau
@@ -103,39 +119,79 @@
         }), 0);
     },
     
-    // gestion des actions du tableau
-    searchAccountsHandleRowAction: function (cmp, event, helper) {
-        var action = event.getParam('action');
-        //console.log('action',action);
-        var row = event.getParam('row');
-        switch (action.name) {
-            case 'view_record':
-                helper.viewRecord(cmp,event,row);
-                break;
-            case 'link':
-                helper.linkRecord(cmp,event,row);
-                break;
-            default:
-                helper.viewRecord(cmp,event,row);
-                break;
-        }
+    //For Custom record comparison modal
+    openCustomRecordComparisonModal: function (cmp, event, helper) {
+        let accountIdP = event.getParam("row").Id;
+        cmp.set("v.accountId",accountIdP);
+        cmp.set("v.showCustomRecordComparisonModal",true);
+    },
+    
+    closeCustomRecordComparisonModal: function (cmp, event, helper) {
+        cmp.set("v.showCustomRecordComparisonModal",false);
     },
     
 	/*
 	 * New Account
      */
-    openAccountModal: function(component, event, helper) {
-        var createRecordEvent = $A.get("e.force:createRecord");
-        createRecordEvent.setParams({
-            entityApiName: "Account",
-            recordTypeId: "01258000000cdwdAAA",
-            defaultFieldValues: {
-                Name: "Pre-filled Name"
-            }
+    createAccountModal: function(component, event, helper) {
+        var action = component.get("c.createAccount");
+        var siret = component.get("v.siretExplore");
+        console.log('recTypeId', component.find("selectid").get("v.value"));
+        action.setParams({
+            "siret" : siret,
+            "recordTypeLabel" : component.find("selectid").get("v.value")
         });
-        createRecordEvent.fire();
-    }
-    
-    
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            var accountResponse;
+            var recTypeId;
+            if(state === 'SUCCESS'){
+                accountResponse = response.getReturnValue();
+                //var recordTypeLabel = component.find("selectid").get("v.value");
+                //var recTypeId = component.get("v.accountRecordTypes").get(recordTypeLabel);
+                accountResponse.SIRET__c = accountResponse.Siret; // Replacing the field name to Object's API name
+                recTypeId = accountResponse.RecordTypeId; //Assigning to local variable
+                delete accountResponse.Siret; // Deleting the old name
+                delete accountResponse.RecordTypeId; // Deleting the separate value
+                console.log('accountResponse',  accountResponse);
+
+            }
+            else if(state === 'ERROR'){
+
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                "title": "Error",
+                "message": "Please contact your administrator"
+                });
+                toastEvent.fire();
+            }
+        
+            var createRecordEvent = $A.get("e.force:createRecord");
+            createRecordEvent.setParams({
+                entityApiName: "Account",
+                recordTypeId: recTypeId,
+                defaultFieldValues: accountResponse
+            });
+            createRecordEvent.fire();
+
+
+        });
+        $A.enqueueAction(action);
+    },
+  
+    openAccountModal: function(component, event, helper) {
+        //Get all record types for account
+        var action = component.get("c.fetchRecordTypeValues");
+        action.setCallback(this, function(response) {
+            console.log('accountRecordTypes0', response.getReturnValue());
+            component.set("v.accountRecordTypes", response.getReturnValue());
+            component.set("v.showCreateAccountModal", true);
+        });
+        $A.enqueueAction(action);
+    },
+
+    closeAccountModal: function(component, event, helper) {
+        component.set("v.showCreateAccountModal", false);
+    },
     
 })
