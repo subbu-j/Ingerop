@@ -9,10 +9,9 @@
             $A.getCallback(function(result) {
 
                 //redirect to standard account page corresponding to the SIRET passed in the URL
-                //helper.redirectToAccountRecord(component, event, helper);
+                helper.redirectToAccountRecord(component, event, helper);
 
                 //Search the account name passed in the URL on loading th page
-                console.log('search1:',component.get("v.searchInputText"));
                 if(component.get("v.searchInputText") != null){
                     var action = component.get("c.search");
                     $A.enqueueAction(action);
@@ -35,7 +34,7 @@
         var siretExplore = pageReference.state.c__Siret;
         component.set("v.titreExplore", titreExplore);
         component.set("v.siretExplore", siretExplore);
-        //helper.redirectToAccountRecord(component, event, helper);
+        helper.redirectToAccountRecord(component, event, helper);
         if(titreExplore != null){
             component.set("v.searchInputText", titreExplore);
             var action = component.get("c.search");
@@ -141,9 +140,6 @@
                 });
                 component.set("v.accountRecordTypes", options);
                 component.set("v.showCreateAccountModal", true);
-
-                console.log('accountRecordTypes0', recordTypes);
-                console.log('accountRecordTypes1', options);
             }
         });
         $A.enqueueAction(action);
@@ -153,11 +149,10 @@
         component.set("v.showCreateAccountModal", false);
     },
 
-
+    //Create new account
     createAccountModal: function(component, event, helper) {
         var action = component.get("c.createAccount");
         var siret = component.get("v.siretExplore");
-        console.log('recTypeId', component.get("v.selectedRecordType"));
         action.setParams({
             "siret" : siret,
             "recordTypeLabel" : component.get("v.selectedRecordType")
@@ -171,9 +166,9 @@
                 accountResponse.SIRET__c = accountResponse.Siret; // Replacing the field name to Object's API name
                 recTypeId = accountResponse.RecordTypeId; //Assigning to local variable
                 delete accountResponse.Siret; // Deleting the old name
-                delete accountResponse.RecordTypeId; // Deleting the separate value
-                console.log('accountResponse',  accountResponse);
+                delete accountResponse.RecordTypeId; // Deleting the wrapper field
 
+                //Firing the create record event
                 var createRecordEvent = $A.get("e.force:createRecord");
                 createRecordEvent.setParams({
                     entityApiName: "Account",
@@ -188,7 +183,7 @@
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
                 "title": "Error",
-                "message": "Please contact your administrator"
+                "message": $A.get("$Label.c.LCCTRL_ExploreAcc_Ex_CalloutError")
                 });
                 toastEvent.fire();
             }

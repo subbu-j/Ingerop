@@ -17,7 +17,7 @@
         }));
     },
 
-    
+    // redirect to standard Account record page if an Account found with SIRET
     redirectToAccountRecord : function (component, event, helper) {
         var action = component.get("c.getAccountIdBySiret");
         action.setParams({
@@ -29,13 +29,11 @@
             if(state === 'SUCCESS'){
                 var res = response.getReturnValue();
                 if(res != null){
-                    console.log("res:", res, " - ", JSON.stringify(res));
                     var navEvt = $A.get("e.force:navigateToSObject");
                     navEvt.setParams({
                         "recordId": res
                     });
                     navEvt.fire();
-                    //helper.redirectToAccountRecord(component);
                 }
             }
             else if(state === "ERROR"){
