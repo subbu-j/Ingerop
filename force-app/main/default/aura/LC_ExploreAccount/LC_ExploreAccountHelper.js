@@ -73,13 +73,13 @@
     getsearchAccountsColumns: function () {
         var columnsWidths = this.searchAccountsGetColumnWidths();
         var columns = [
-            {label: "Name", fieldName: "AccountUrl", type: "url", initialWidth: 300, sortable: true, iconName: 'standard:account', typeAttributes: { label: {fieldName: 'Name'}, target: '_blank' }}, 
-            {label: "Alias", fieldName: "Alias__c", type: "text", initialWidth: 100, sortable: true}, 
-            {label: "Parent Account", fieldName: "ParentUrl", type: "url", initialWidth: 300, sortable: true, typeAttributes: { label: {fieldName: 'ParentName'}, target: '_blank' }}, 
-            {label: "SIRET", fieldName: "SIRET__c", type: "text", initialWidth: 150, sortable: true},
-            {label: "Shipping City", fieldName: "ShippingCity", type: "text", initialWidth: 250, sortable: true},
-            {label: "Account Type", fieldName: "AccountType", type: "text", initialWidth: 150, sortable: true}, 
-            {label: "Action", type: "button", initialWidth: 200, typeAttributes: { label: 'Compare with Explore'}}
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_Name") , fieldName: "AccountUrl", type: "url", initialWidth: 300, sortable: true, iconName: 'standard:account', typeAttributes: { label: {fieldName: 'Name'}, target: '_blank' }}, 
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_Alias"), fieldName: "Alias__c", type: "text", initialWidth: 100, sortable: true}, 
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_ParentAccount"), fieldName: "ParentUrl", type: "url", initialWidth: 300, sortable: true, typeAttributes: { label: {fieldName: 'ParentName'}, target: '_blank' }}, 
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_SIRET"), fieldName: "SIRET__c", type: "text", initialWidth: 150, sortable: true},
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_ShippingCity"), fieldName: "ShippingCity", type: "text", initialWidth: 250, sortable: true},
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_AccountType"), fieldName: "AccountType", type: "text", initialWidth: 150, sortable: true}, 
+            {label: $A.get("$Label.c.LC_ExploreAccount_Search_Action"), type: "button", initialWidth: 200, typeAttributes: { label: $A.get("$Label.c.LC_ExploreAccount_Search_Compare")}}
 
         ];
 
@@ -113,15 +113,6 @@
             return [];
         }
         return Array.isArray(widths) ? widths : [];
-    },
-    /*
-    fetchAccountRecordTypes: function(component, event, helper){
-        var action = component.get("c.fetchRecordTypeValues");
-        action.setCallback(this, function(response) {
-            console.log('accountRecordTypes0', response.getReturnValue());
-            component.set("v.accountRecordTypes", response.getReturnValue());
-        });
-        $A.enqueueAction(action);
-    }*/
+    }
     
 })

@@ -6,17 +6,8 @@
     <aura:attribute name="pageReference" type="Object"/>
     
     <!-- attributs paramètres Explore -->
-    <aura:attribute name="idExplore" type="String" />
-    <aura:attribute name="typeMarcheExplore" type="String" />
-    <aura:attribute name="typeMarcheLabel" type="String" />
     <aura:attribute name="titreExplore" type="String" />
     <aura:attribute name="siretExplore" type="String" />
-    <aura:attribute name="exploreUrl" type="String" />
-
-    <aura:attribute name="annonceMarchePublicData" type="Object" default="" />
-    <aura:attribute name="annonceMaitreOuvrageData" type="Object" default="" />
-    <aura:attribute name="idDonneurOrdre" type="String" default="" />
-    
 
     <!-- attributs liste 'Résultats des comptes trouvés' (search accounts) -->
     <aura:attribute name="searchAccountsColumns" type="List"/>
@@ -28,12 +19,6 @@
     <aura:attribute name="searchAccountsDefaultSortDirection" type="String"/>
     <aura:attribute name="searchInputText" type="String"/>
     
-    
-    <!-- attributs 'Créer une nouvelle opération' -->
-    <aura:dependency resource="markup://c:ModalWindow" />
-    <aura:attribute name="modalMessage" type="String" default="Default Message"/>
-    <aura:attribute name="modalTitle" type="String" default="Header Message"/>
-    
     <!-- For Custom record comparison modal -->
     <aura:attribute name="showCustomRecordComparisonModal" type="Boolean" default="false" />
 	<aura:attribute name="accountId" type="Id" />
@@ -43,12 +28,6 @@
     <aura:attribute name="accountRecordTypes" type="List" />
     <aura:attribute name="selectedRecordType" type="String" />
     <aura:attribute name="showCreateAccountModal" type="boolean" default="false" />
-
-
-    <aura:attribute name="options1" type="List" default="['1','2','3']"/>
-    <aura:attribute name="options" type="List" default="[{'label': 'Select--', 'value': 'option1'}]"/>
-    <aura:attribute name="value" type="String" default="option1"/>
-
 
     <lightning:notificationsLibrary aura:id="notificationsLibrary"/>
     
@@ -66,21 +45,21 @@
                     <div class="slds-media__figure">
                         <span class="slds-icon_container slds-icon-standard-account" title="account">
                             <lightning:icon iconName="custom:custom68" size="small" alternativeText="" />
-                            <span class="slds-assistive-text">Compte Explore </span>
+                            <span class="slds-assistive-text">{!$Label.c.LC_ExploreAccount_Header}</span>
                         </span>
                     </div>
                     <div class="slds-media__body">
                         <div class="slds-page-header__name">
                             <div class="slds-page-header__name-title">
                                 <h1>
-                                    <span class="slds-page-header__title slds-truncate" title="{!v.siretExplore}">Compte Explore</span>
+                                    <span class="slds-page-header__title slds-truncate" title="{!v.siretExplore}">{!$Label.c.LC_ExploreAccount_Header}</span>
                                 </h1>
                             </div>
                         </div>
                         
                         <div><br/></div>
-                        <p class="slds-page-header__name-meta"><b>Titre : </b>{!v.titreExplore}</p>
-                        <p class="slds-page-header__name-meta"><b>SIRET : </b>{!v.siretExplore}</p>
+                        <p class="slds-page-header__name-meta"><b>{!$Label.c.LC_ExploreAccount_Title} : </b>{!v.titreExplore}</p>
+                        <p class="slds-page-header__name-meta"><b>{!$Label.c.LC_ExploreAccount_Search_SIRET} : </b>{!v.siretExplore}</p>
                     </div>
                 </div>
             </div>
@@ -94,12 +73,12 @@
 
 
     <!-- RECHERCHER D'AUTRES COMPTES SALESFORCE --> 
-    <lightning:card title="Rechercher d'autres comptes Salesforce" class="slds-card_boundary my-card" iconName="custom:custom37">
+    <lightning:card title="{!$Label.c.LC_ExploreAccount_SearchHeader}" class="slds-card_boundary my-card" iconName="standard:account">
 
         <aura:set attribute="title">
             <h2>
                 <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
-                    Rechercher d'autres comptes Salesforce
+                    {!$Label.c.LC_ExploreAccount_SearchHeader}
                 </span>
             </h2>
         </aura:set>
@@ -109,10 +88,8 @@
             <lightning:buttonIcon iconName="utility:refresh" variant="border-filled" alternativeText="Réinitialiser la taille des colonnes" onclick="{! c.searchAccountsResetColumns }"/>
         </aura:set>
     
-        <!--<lightning:input name="search_input" id="" label="" placeholder="Recherche d'une opération par son nom..."/>-->
-        <!-- <input type="text" id="searchtext" placeholder="Recherche d'une compte par son nom..." class="input uiInput uiInputText uiInput- default uiInput- input"/> -->
-        <lightning:input type="text" aura:id="searchtext" value="{!v.searchInputText}" placeholder="Recherche d'une compte par son nom..."/>
-        <lightning:button label="Rechercher"  iconName="utility:search" iconPosition="left" onclick="{!c.search}" />
+        <lightning:input type="text" aura:id="searchtext" value="{!v.searchInputText}" placeholder="{!$Label.c.LC_ExploreAccount_SearchPlaceHolder}"/>
+        <lightning:button label="{!$Label.c.LC_ExploreAccount_Search}"  iconName="utility:search" iconPosition="left" onclick="{!c.search}" />
 
 
         <lightning:datatable keyField="Id" 
@@ -136,64 +113,53 @@
                              />
         
     </lightning:card>
-	<!-- LISTE DE RESULTATS OPERATIONS --> 
+	<!-- RECHERCHER D'AUTRES COMPTES SALESFORCE --> 
     
+
     <!-- CREER UN NOUVEAU COMPTE --> 
-    <lightning:card title="Créer une nouvelle opération" class="slds-card_boundary my-card" iconName="custom:custom83">
+    <lightning:card title="{!$Label.c.LC_ExploreAccount_CreateAccountPanel}" class="slds-card_boundary my-card" iconName="custom:custom83">
         <aura:set attribute="title">
             <h2>
                 <span class="slds-card__header-link slds-text-heading--small slds-truncate slds-m-right--xx-small">
-                    Créer un nouveau compte
+                    {!$Label.c.LC_ExploreAccount_CreateAccountPanel}
                 </span>
             </h2>
         </aura:set>
 
         <aura:set attribute="actions">
-            <lightning:button label="Créer un compte" onclick="{!c.openAccountModal}" />
+            <lightning:button label="{!$Label.c.LC_ExploreAccount_CreateAccount}" onclick="{!c.openAccountModal}" />
         </aura:set>
-
-    	<!-- <lightning:button label="Créer un compte Autre" onclick="{!c.openAccountModal}" />
-        <lightning:button label="Créer un compte Client" onclick="{!c.openAccountModal}" />
-        <lightning:button label="Créer un compte Entreprise" onclick="{!c.openAccountModal}" />
-        <lightning:button label="Créer un compte Partenaire" onclick="{!c.openAccountModal}" /> -->
     </lightning:card>
-    <!-- CREER UNE NOUVELLE OPERATION --> 
-    
-
+    <!-- CREER UNE NOUVELLE COMPTE --> 
 
 
     <!-- ACCOUNT RECORD TYPE SELECTION MODAL -->
-<!-- Model Box Start -->    
     <aura:if isTrue="{!v.showCreateAccountModal}">
         <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
             <div class="slds-modal__container">
                 <div class="slds-modal__header">
-                    <h2 id="header43" class="slds-text-heading--medium">New Account</h2>
+                    <h2 id="header43" class="slds-text-heading--medium">{!$Label.c.LC_ExploreAccount_NewAccountModal}</h2>
                 </div>
-
                 <div class="slds-modal__content slds-p-around--medium">
                     <div class="slds-grid slds-wrap">
                         <div class="slds-m-left_xx-large slds-p-left_xx-large">
                             <lightning:radioGroup name="recordTypeSelection"
-                                                label="Select a Record Type"
+                                                label="{!$Label.c.LC_ExploreAccount_RecordType}"
                                                 options="{!v.accountRecordTypes}"
                                                 value="{!v.selectedRecordType}"
                                                 type="radio"/>
                         </div>&nbsp;
                     </div>                   
                 </div>
-                
                 <div class="slds-modal__footer">
-                    <lightning:button class="slds-button slds-button--neutral" onclick="{!c.closeAccountModal}">Cancel</lightning:button>
-                    <lightning:button class="slds-button slds-button--brand" onclick="{!c.createAccountModal}">Next</lightning:button>
+                    <lightning:button class="slds-button slds-button--neutral" onclick="{!c.closeAccountModal}">{!$Label.c.Annuler}</lightning:button>
+                    <lightning:button class="slds-button slds-button--brand" onclick="{!c.createAccountModal}">{!$Label.c.Next}</lightning:button>
                 </div>
             </div>
         </div>
         <div class="slds-backdrop slds-backdrop--open"></div>
     </aura:if>
-
     <!-- ACCOUNT RECORD TYPE SELECTION MODAL -->
-
 
 
 

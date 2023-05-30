@@ -1,14 +1,14 @@
 ({
     doInit : function(component, event, helper) { 
         
-        // chargement du composant lightning avec la définition des colonnes des 3 tableaux et des données associées
+        // load the lightning component with the definition of the table columns and the associated data
 
         //console.log('# doInit - START');
         helper.setParams(component)
         .then(
             $A.getCallback(function(result) {
 
-                //redirect to standard account page corresponding to the SIRET
+                //redirect to standard account page corresponding to the SIRET passed in the URL
                 //helper.redirectToAccountRecord(component, event, helper);
 
                 //Search the account name passed in the URL on loading th page
@@ -18,7 +18,7 @@
                     $A.enqueueAction(action);
                 }
 
-                // datatable 'Résultats d'opérations trouvées
+                // datatable 'Results of Accounts Found'
                 component.set('v.searchAccountsColumns', helper.getsearchAccountsColumns());
                 
             })
@@ -43,20 +43,14 @@
         }
     },
     
-    
-    
-    
+
     
     // RECHERCHE ACCOUNTS
     
-    // recherche du texte saisi sur tous les champs de l'objet Account
+    // search for text entered on all Name and Alias fields of the Account object
     search : function(component, event, helper) {
 
-        console.log('search2:',searchElement);
-        //var searchElement = document.getElementById("searchtext");
         var searchElement = component.get("v.searchInputText");
-        console.log('search3:',searchElement);
-
         var searchValue = (searchElement) ? searchElement : '';
         
         var action = component.get("c.getAccountsDataSearch");
@@ -88,11 +82,9 @@
                     }
                 }
                 component.set('v.searchAccountsData', rows);
-                console.log('# search - ', rows);
             }
         });
         $A.enqueueAction(action);
-        console.log('# search - END');
     },
     
     //stockage en local de la taille des colonnes du tableau
@@ -119,6 +111,7 @@
         }), 0);
     },
     
+    
     //For Custom record comparison modal
     openCustomRecordComparisonModal: function (cmp, event, helper) {
         let accountIdP = event.getParam("row").Id;
@@ -130,9 +123,37 @@
         cmp.set("v.showCustomRecordComparisonModal",false);
     },
     
+
+
 	/*
-	 * New Account
+	 * For new Account creation modal
      */
+    openAccountModal: function(component, event, helper) {
+        //Get all record types for account
+        var action = component.get("c.fetchRecordTypeValues");
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if(state === 'SUCCESS'){
+                var recordTypes = response.getReturnValue();
+                var options = [];
+                recordTypes.forEach(function(recordType) {
+                    options.push({label: recordType, value: recordType});
+                });
+                component.set("v.accountRecordTypes", options);
+                component.set("v.showCreateAccountModal", true);
+
+                console.log('accountRecordTypes0', recordTypes);
+                console.log('accountRecordTypes1', options);
+            }
+        });
+        $A.enqueueAction(action);
+    },
+
+    closeAccountModal: function(component, event, helper) {
+        component.set("v.showCreateAccountModal", false);
+    },
+
+
     createAccountModal: function(component, event, helper) {
         var action = component.get("c.createAccount");
         var siret = component.get("v.siretExplore");
@@ -174,31 +195,6 @@
 
         });
         $A.enqueueAction(action);
-    },
-  
-    openAccountModal: function(component, event, helper) {
-        //Get all record types for account
-        var action = component.get("c.fetchRecordTypeValues");
-        action.setCallback(this, function(response) {
-            var state = response.getState();
-            if(state === 'SUCCESS'){
-                var recordTypes = response.getReturnValue();
-                var options = [];
-                recordTypes.forEach(function(recordType) {
-                    options.push({label: recordType, value: recordType});
-                });
-                component.set("v.accountRecordTypes", options);
-                component.set("v.showCreateAccountModal", true);
-
-                console.log('accountRecordTypes0', recordTypes);
-                console.log('accountRecordTypes1', options);
-            }
-        });
-        $A.enqueueAction(action);
-    },
-
-    closeAccountModal: function(component, event, helper) {
-        component.set("v.showCreateAccountModal", false);
     }
     
 })
