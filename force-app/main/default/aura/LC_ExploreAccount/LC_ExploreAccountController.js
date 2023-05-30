@@ -136,10 +136,10 @@
     createAccountModal: function(component, event, helper) {
         var action = component.get("c.createAccount");
         var siret = component.get("v.siretExplore");
-        console.log('recTypeId', component.find("selectid").get("v.value"));
+        console.log('recTypeId', component.get("v.selectedRecordType"));
         action.setParams({
             "siret" : siret,
-            "recordTypeLabel" : component.find("selectid").get("v.value")
+            "recordTypeLabel" : component.get("v.selectedRecordType")
         });
         action.setCallback(this, function(response){
             var state = response.getState();
@@ -147,13 +147,19 @@
             var recTypeId;
             if(state === 'SUCCESS'){
                 accountResponse = response.getReturnValue();
-                //var recordTypeLabel = component.find("selectid").get("v.value");
-                //var recTypeId = component.get("v.accountRecordTypes").get(recordTypeLabel);
                 accountResponse.SIRET__c = accountResponse.Siret; // Replacing the field name to Object's API name
                 recTypeId = accountResponse.RecordTypeId; //Assigning to local variable
                 delete accountResponse.Siret; // Deleting the old name
                 delete accountResponse.RecordTypeId; // Deleting the separate value
                 console.log('accountResponse',  accountResponse);
+
+                var createRecordEvent = $A.get("e.force:createRecord");
+                createRecordEvent.setParams({
+                    entityApiName: "Account",
+                    recordTypeId: recTypeId,
+                    defaultFieldValues: accountResponse
+                });
+                createRecordEvent.fire();
 
             }
             else if(state === 'ERROR'){
@@ -165,15 +171,6 @@
                 });
                 toastEvent.fire();
             }
-        
-            var createRecordEvent = $A.get("e.force:createRecord");
-            createRecordEvent.setParams({
-                entityApiName: "Account",
-                recordTypeId: recTypeId,
-                defaultFieldValues: accountResponse
-            });
-            createRecordEvent.fire();
-
 
         });
         $A.enqueueAction(action);
@@ -183,15 +180,25 @@
         //Get all record types for account
         var action = component.get("c.fetchRecordTypeValues");
         action.setCallback(this, function(response) {
-            console.log('accountRecordTypes0', response.getReturnValue());
-            component.set("v.accountRecordTypes", response.getReturnValue());
-            component.set("v.showCreateAccountModal", true);
+            var state = response.getState();
+            if(state === 'SUCCESS'){
+                var recordTypes = response.getReturnValue();
+                var options = [];
+                recordTypes.forEach(function(recordType) {
+                    options.push({label: recordType, value: recordType});
+                });
+                component.set("v.accountRecordTypes", options);
+                component.set("v.showCreateAccountModal", true);
+
+                console.log('accountRecordTypes0', recordTypes);
+                console.log('accountRecordTypes1', options);
+            }
         });
         $A.enqueueAction(action);
     },
 
     closeAccountModal: function(component, event, helper) {
         component.set("v.showCreateAccountModal", false);
-    },
+    }
     
 })

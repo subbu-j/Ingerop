@@ -40,8 +40,14 @@
     <aura:handler name="closeModalEventParent" event="c:LC_EV_ExploreAccountCloseModal" action="{!c.closeCustomRecordComparisonModal}"/>
     
     <!-- For new account record type selection modal -->
-    <aura:attribute name="accountRecordTypes" type="String[]" />
+    <aura:attribute name="accountRecordTypes" type="List" />
+    <aura:attribute name="selectedRecordType" type="String" />
     <aura:attribute name="showCreateAccountModal" type="boolean" default="false" />
+
+
+    <aura:attribute name="options1" type="List" default="['1','2','3']"/>
+    <aura:attribute name="options" type="List" default="[{'label': 'Select--', 'value': 'option1'}]"/>
+    <aura:attribute name="value" type="String" default="option1"/>
 
 
     <lightning:notificationsLibrary aura:id="notificationsLibrary"/>
@@ -141,11 +147,15 @@
                 </span>
             </h2>
         </aura:set>
-        <lightning:button label="Créer un compte" onclick="{!c.openAccountModal}" />
-    	<lightning:button label="Créer un compte Autre" onclick="{!c.openAccountModal}" />
+
+        <aura:set attribute="actions">
+            <lightning:button label="Créer un compte" onclick="{!c.openAccountModal}" />
+        </aura:set>
+
+    	<!-- <lightning:button label="Créer un compte Autre" onclick="{!c.openAccountModal}" />
         <lightning:button label="Créer un compte Client" onclick="{!c.openAccountModal}" />
         <lightning:button label="Créer un compte Entreprise" onclick="{!c.openAccountModal}" />
-        <lightning:button label="Créer un compte Partenaire" onclick="{!c.openAccountModal}" />
+        <lightning:button label="Créer un compte Partenaire" onclick="{!c.openAccountModal}" /> -->
     </lightning:card>
     <!-- CREER UNE NOUVELLE OPERATION --> 
     
@@ -158,24 +168,18 @@
         <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
             <div class="slds-modal__container">
                 <div class="slds-modal__header">
-                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeAccountModal}">
-                        X<span class="slds-assistive-text">Cancel</span>
-                    </button>
                     <h2 id="header43" class="slds-text-heading--medium">New Account</h2>
                 </div>
-                
+
                 <div class="slds-modal__content slds-p-around--medium">
                     <div class="slds-grid slds-wrap">
-                        <div class="slds-size--1-of-2 slds-large-size--1-of-2">
-                             <div class="slds-align--absolute-center">Select a Record Type</div>                            
-                        </div>
-                        <div class="slds-size--1-of-2 slds-large-size--1-of-2">
-                            <lightning:select name="select" aura:id="selectid">
-                                <aura:iteration items="{!v.accountRecordTypes}" var="account">
-                                        <option text="{!account}" value="{!account}"></option>
-                                    </aura:iteration>
-                            </lightning:select>
-                        </div>&nbsp; &nbsp;
+                        <div class="slds-m-left_xx-large slds-p-left_xx-large">
+                            <lightning:radioGroup name="recordTypeSelection"
+                                                label="Select a Record Type"
+                                                options="{!v.accountRecordTypes}"
+                                                value="{!v.selectedRecordType}"
+                                                type="radio"/>
+                        </div>&nbsp;
                     </div>                   
                 </div>
                 

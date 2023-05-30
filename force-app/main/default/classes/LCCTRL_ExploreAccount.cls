@@ -162,9 +162,10 @@ public with sharing class LCCTRL_ExploreAccount {
         if (String.isBlank(siret)){
             throw new AuraHandledException(Label.AP_CustRecCompCtrl_Ex_EmptySIRET);
         }
-        Id recid = Schema.SObjectType.Account.getRecordTypeInfosByName().get(recordTypeLabel).getRecordTypeId();        
 SYSTEM.DEBUG('recid'+ recid);
         try{
+            Id recid = Schema.SObjectType.Account.getRecordTypeInfosByName().get(recordTypeLabel).getRecordTypeId();        
+
             String jsonExplore = Test.isRunningTest() ? TestDataFactory.JSON_RESULT_CRCC : WS_Explore.getSiretData(siret);
             Explore_Siret data = Explore_Siret.parse(jsonExplore);
             ExploreAccountWrapper acc = new ExploreAccountWrapper();
