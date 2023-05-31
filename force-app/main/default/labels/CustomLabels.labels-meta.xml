@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AP_ApexUtil_Ex_CastField</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_ApexUtil_Ex_CastField</shortDescription>
+        <value>Casted type [ {{SfFieldType}} ] not supported for field [{{sfFieldAPIName}}]</value>
+    </labels>
+    <labels>
+        <fullName>AP_ApexUtil_Ex_sObjectNotFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_ApexUtil_Ex_sObjectNotFound</shortDescription>
+        <value>Type provided: {{sObjectAPIName}} doesn&apos;t map to an sobject token in this org.</value>
+    </labels>
+    <labels>
+        <fullName>AP_CastJSONToSObject_Delimiter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CastJSONToSObject_Delimiter</shortDescription>
+        <value>-&gt;</value>
+    </labels>
+    <labels>
+        <fullName>AP_CastJSONToSObject_Ex_JsonNullOrBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CastJSONToSObject_Ex_JsonNullOrBlank</shortDescription>
+        <value>Provided JSON is null or blank</value>
+    </labels>
+    <labels>
+        <fullName>AP_CastJSONToSObject_Ex_NoMetadata</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CastJSONToSObject_Ex_NoMetadata</shortDescription>
+        <value>No Custom Metadata records assigned for the Salesforce object {{sObjectToCastAPIName}}</value>
+    </labels>
+    <labels>
+        <fullName>AP_CustRecCompCtrl_Ex_EmptySIRET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CustRecCompCtrl_Ex_EmptySIRET</shortDescription>
+        <value>SIRET must be filled first</value>
+    </labels>
+    <labels>
+        <fullName>AP_CustRecCompCtrl_Ex_PrimaryAccountNotFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CustRecCompCtrl_Ex_PrimaryAccountNotFound</shortDescription>
+        <value>Error when retrieving the primary Account</value>
+    </labels>
+    <labels>
+        <fullName>AP_CustRecCompWrapper_Empty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CustRecCompWrapper_Empty</shortDescription>
+        <value>[EMPTY]</value>
+    </labels>
+    <labels>
+        <fullName>AP_CustRecCompWrapper_Ex_sObjectDifferent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CustRecCompWrapper_Ex_sObjectDifferent</shortDescription>
+        <value>sObjects Type given are different [{{primaryObjectAPIName}}] [{{secondaryObjectAPIName}}]</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_BlankOrEmptyDelimiter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_BlankOrEmptyDelimiter</shortDescription>
+        <value>---</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_Explore</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_Explore</shortDescription>
+        <value>Explore Account</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_GenericErrorInit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_GenericErrorInit</shortDescription>
+        <value>An error occured when intializing the comparison modal.</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_GenericErrorSave</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_GenericErrorSave</shortDescription>
+        <value>An error occured during the saving of the data selected</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_GenericSuccessSave</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_GenericSuccessSave</shortDescription>
+        <value>The selected values were successfully saved</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_Header</shortDescription>
+        <value>Salesforce - Explore record comparison and update</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_Salesforce</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_Salesforce</shortDescription>
+        <value>Salesforce Account</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_SelectAllFields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_SelectAllFields</shortDescription>
+        <value>All fields must have a value selected to save the changes</value>
+    </labels>
+    <labels>
+        <fullName>AURA_CustomRecorCompModal_SubTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AURA_CustomRecorCompModal_SubTitle</shortDescription>
+        <value>This modal allow you to retrieve Explore&apos;s data for the Salesforce account, compare, select and save them.</value>
+    </labels>
+    <labels>
+        <fullName>Close</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ExplorePageLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExplorePageLink</shortDescription>
+        <value>https://extranet.explore.fr/DotNet/AffichageSociete.aspx?siret=</value>
+    </labels>
+    <labels>
+        <fullName>ExplorePageMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExplorePageMessage</shortDescription>
+        <value>SIRET is not filled</value>
+    </labels>
+    <labels>
+        <fullName>LCCTRL_ExploreAcc_Ex_CalloutError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LCCTRL_ExploreAcc_Ex_CalloutError</shortDescription>
+        <value>An error occurred while retrieving data from Explore</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_CreateAccount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_CreateAccount</shortDescription>
+        <value>Create Account</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_CreateAccountPanel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_CreateAccountPanel</shortDescription>
+        <value>Create a new Account</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Header</shortDescription>
+        <value>Explore Account</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_NewAccountModal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_NewAccountModal</shortDescription>
+        <value>New Account</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_RecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_RecordType</shortDescription>
+        <value>Select a Record Type</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_SearchHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_SearchHeader</shortDescription>
+        <value>Search Salesforce Accounts</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_SearchPlaceHolder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_SearchPlaceHolder</shortDescription>
+        <value>Searching for an account by name or alias...</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_AccountType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_AccountType</shortDescription>
+        <value>Account Type</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_Action</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_Action</shortDescription>
+        <value>Action</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_Alias</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_Alias</shortDescription>
+        <value>Alias</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_Compare</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_Compare</shortDescription>
+        <value>Comparer avec Explore</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_ParentAccount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_ParentAccount</shortDescription>
+        <value>Parent Account</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_SIRET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_SIRET</shortDescription>
+        <value>SIRET</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Search_ShippingCity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Search_ShippingCity</shortDescription>
+        <value>Shipping City</value>
+    </labels>
+    <labels>
+        <fullName>LC_ExploreAccount_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LC_ExploreAccount_Title</shortDescription>
+        <value>Title</value>
+    </labels>
+    <labels>
+        <fullName>Next</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+</CustomLabels>

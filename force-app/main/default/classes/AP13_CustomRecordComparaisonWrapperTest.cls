@@ -38,7 +38,7 @@ public class AP13_CustomRecordComparaisonWrapperTest {
         try{
             crcw.buildWrapper();
         }catch(AP13_CustomRecordComparaisonWrapper.CustomRecordComparaisonWrapperException ex){
-			System.assertEquals('sObjects Type given are different [Account] [Opportunity]', ex.getMessage(), 'Wrong Exception message');            
+			System.assertEquals(Label.AP_CustRecCompWrapper_Ex_sObjectDifferent.replace('{{primaryObjectAPIName}}','Account').replace('{{secondaryObjectAPIName}}','Opportunity'), ex.getMessage(), 'Wrong Exception message');            
         }
 
     }

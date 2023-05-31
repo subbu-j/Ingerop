@@ -19,14 +19,14 @@ private class AP15_CastJSONToSObjectTest {
             TestDataFactory.TEST_returnEmpty = true;
         	castJSONToSObject = new AP15_CastJSONToSObject(sObjectToCastAPIName, jsonInput);
         }catch(AP15_CastJSONToSObject.CastJSONToSObjectException ex){
-            System.assertEquals('No Custom Metadata records assigned for the Salesforce object Account', ex.getMessage(), 'A CastJSONToSObjectException should have been raised');
+            System.assertEquals(Label.AP_CastJSONToSObject_Ex_NoMetadata.replace('{{sObjectToCastAPIName}}',sObjectToCastAPIName), ex.getMessage(), 'A CastJSONToSObjectException should have been raised');
         }
         //No json
         try{
             jsonInput = '';
         	castJSONToSObject = new AP15_CastJSONToSObject(sObjectToCastAPIName, jsonInput);
         }catch(AP15_CastJSONToSObject.CastJSONToSObjectException ex){
-            System.assertEquals('Provided JSON is null or blank', ex.getMessage(), 'An CastJSONToSObjectException should have been raised');
+            System.assertEquals(Label.AP_CastJSONToSObject_Ex_JsonNullOrBlank, ex.getMessage(), 'An CastJSONToSObjectException should have been raised');
         }
     }
     

@@ -1,13 +1,18 @@
 <aura:component controller="AP14_CustomRecordComparaisonController" implements="flexipage:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,force:hasRecordId" access="global" >
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <aura:attribute name="custCompareRecordsWrapperDisplayed" type="AP13_CustomRecordComparaisonWrapper"/>
-    <aura:attribute name="custCompareRecordsWrapperUpdated" type="AP13_CustomRecordComparaisonWrapper"/>
+    <aura:attribute name="custCompareRecordsWrapperDisplayed" type="AP13_CustomRecordComparaisonWrapper" access="private"/>
+    <aura:attribute name="custCompareRecordsWrapperUpdated" type="AP13_CustomRecordComparaisonWrapper" access="private"/>
+    <aura:attribute name="mapCheckSelectedValues" type="Map" access="private"/>
+    <aura:attribute name="recordIdInput" type="Id" required="false" access="public"/>
+    <aura:attribute name="isQuickAction" type="Boolean" required="false" access="private"/>
+    <aura:registerEvent name="closeModalEvent" type="c:LC_EV_ExploreAccountRecordCompModal"/>
     
 	<aura:html tag="style">
         
         .slds-modal__content { 
             height: 60% !important; 
             max-height: 100% !important;
+        	margin: 0px;
     	}
         .slds-modal__container{ 
             min-width: 80% !important; 
@@ -19,31 +24,30 @@
     </aura:html>
 	
         <div class="slds-modal__header c-Header" >
-          <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Modal header</h1>
-          <p class="slds-m-top_x-small">Here’s a tagline if you need it. It is allowed to extend across mulitple lines, so I’m making up content to show that to you. It is allowed to
-            <a href="#">contain links or be a link</a>.</p>
+          <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{!$Label.c.AURA_CustomRecorCompModal_Header}</h1>
+          <p class="slds-m-top_x-small">{!$Label.c.AURA_CustomRecorCompModal_SubTitle}</p>
         </div>
         
         <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative" aura:id="modalbody">
-            <table>
+            <table class="recordTable-cust" aura:id="recordTable">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>Salesforce Account (make CL)</th>
-                        <th>Explore Account (make CL)</th>
+                        <th class="th-cust"></th>
+                        <th class="th-cust">{!$Label.c.AURA_CustomRecorCompModal_Salesforce}</th>
+                        <th class="th-cust">{!$Label.c.AURA_CustomRecorCompModal_Explore}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <aura:iteration items="{!v.custCompareRecordsWrapperDisplayed.lstCustomRecordComparaisonRow}" var="row">
-                        <tr>
-                            <td>{!row.fieldLabel}</td>
+                        <tr class="row-cust">
+                            <td class="fieldLabel-cust td-cust">{!row.fieldLabel}</td>
                                 <aura:iteration items="{!row.columns}" var="column">
-                                    <td>
-                                        <input type="radio" name="{!'rowRadio-' + row.fieldAPIName}" value="{!column.value}" checked="false" onclick="{!c.checkboxSelect}" data-field-api-name="{!row.fieldAPIName}" data-value="{!column.value}" />
+                                    <td class="td-cust" onmouseover="{!c.onCellMouseOver}" onmouseout="{!c.onCellMouseOut}" onclick="{!c.checkboxSelect}" data-field-api-name="{!row.fieldAPIName}" data-value="{!column.value}">
+                                        <input type="radio" class="radio-cust" name="{!'rowRadio-' + row.fieldAPIName}" value="{!column.value}" checked="false" />
                                         <aura:if isTrue="{!column.value == $Label.c.AURA_CustomRecorCompModal_BlankOrEmptyDelimiter}">
-                                            {!$Label.c.AP_CustRecCompWrapper_Empty}
+                                            <span class="span-value-cust">{!$Label.c.AP_CustRecCompWrapper_Empty}</span>
                                             <aura:set attribute="else">
-                                            {!column.value}
+                                            <span class="span-value-cust">{!column.value}</span>
                                             </aura:set>
                                         </aura:if> 
                                     </td>
@@ -55,9 +59,9 @@
         </div>
         
         
-        <div class="slds-modal__footer c-Footer">
-          <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}" aria-label="Cancel and close">Cancel</button>
-          <button class="slds-button slds-button_brand" onclick="{!c.submit}">Save</button>
+        <div class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}" aria-label="Cancel and close">{!$Label.c.Close}</button>
+          <button class="slds-button slds-button_brand" onclick="{!c.submit}">{!$Label.c.Save}</button>
         </div>
     
 </aura:component>

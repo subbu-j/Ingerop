@@ -1,0 +1,40 @@
+.THIS .recordTable-cust{
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.THIS .row-cust{
+    border-bottom: solid rgb(229, 229, 229) 2px; 
+}
+.THIS .td-cust{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.THIS .recordTable-cust{
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.THIS .span-value-cust{
+    vertical-align: middle;
+    margin-left: 1em;
+}
+.THIS .radio-cust{
+    vertical-align: middle;
+}
+.THIS .th-cust{
+    vertical-align: middle;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+}
+.THIS .table-cell-hover {
+  background-color: #e0e0e0; /* Replace with your desired hover color */
+}
+.THIS .footer-cust{
+  position: sticky;
+  bottom: 0;
+}
+.THIS .fieldLabel-cust{
+  	color: var(--lwc-colorTextLabel,rgb(68, 68, 68));
+    font-size: inherit;
+    font-weight: var(--lwc-fontWeightRegular,400);
+    text-transform: uppercase;
+}

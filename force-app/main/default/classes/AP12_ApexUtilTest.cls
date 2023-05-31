@@ -47,7 +47,7 @@ public class AP12_ApexUtilTest {
             AP12_ApexUtil.castValueForField(testOpportunity, 'InvalidType', 'InvalidField', 'Value');
             System.assert(false, 'Expected exception was not thrown.');
         } catch (AP12_ApexUtil.ApexUtilException ex) {
-            System.assertEquals('Casted type [ InvalidType ] not supported for field [InvalidField]', ex.getMessage());
+            System.assertEquals(Label.AP_ApexUtil_Ex_CastField.replace('{{SfFieldType}}','InvalidType').replace('{{sfFieldAPIName}}','InvalidField'), ex.getMessage());
         }
         
     }
@@ -67,7 +67,7 @@ public class AP12_ApexUtilTest {
             sObject testSObject2 = AP12_ApexUtil.getInstanceOfSObjectByAPIName('Invalid_Object');
             System.assert(false, 'Expected exception was not thrown.');
         } catch (AP12_ApexUtil.ApexUtilException ex) {
-            System.assertEquals('Type provided: Invalid_Object doesn\'t map to an sobject token in this org.', ex.getMessage());
+            System.assertEquals(Label.AP_ApexUtil_Ex_sObjectNotFound.replace('{{sObjectAPIName}}','Invalid_Object'), ex.getMessage());
         }
         
     }

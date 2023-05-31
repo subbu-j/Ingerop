@@ -56,6 +56,7 @@ public class AP13_CustomRecordComparaisonWrapper {
         CustomRecordComparaisonRow crcr;
         CustomRecordComparaisonColumn crcc;
         lstCustomRecordComparaisonRow = new List<CustomRecordComparaisonRow>();
+        String tmpValue;
         for(String fieldAPIName: lstFieldToCompareAPIName){
             if(sObjectFields.get(fieldAPIName) != null){
                 crcr = new CustomRecordComparaisonRow();
@@ -67,11 +68,13 @@ public class AP13_CustomRecordComparaisonWrapper {
                 crcr.selectedValue = String.valueOf(BLANK_OR_NULL_DELIMITER);
                 
                 crcc = new CustomRecordComparaisonColumn();
-                crcc.value = primarySObject.get(fieldAPIName) == null ? BLANK_OR_NULL_DELIMITER : String.valueOf(primarySObject.get(fieldAPIName));
+                tmpValue = String.valueOf(primarySObject.get(fieldAPIName));
+                crcc.value = String.isBlank(tmpValue) ? BLANK_OR_NULL_DELIMITER : tmpValue;
                 crcr.columns.add(crcc);
                 
                 crcc = new CustomRecordComparaisonColumn();
-                crcc.value = secondarySObject.get(fieldAPIName) == null ? BLANK_OR_NULL_DELIMITER : String.valueOf(secondarySObject.get(fieldAPIName));
+                tmpValue = String.valueOf(secondarySObject.get(fieldAPIName));
+                crcc.value = String.isBlank(tmpValue) ? BLANK_OR_NULL_DELIMITER : tmpValue;
                 crcr.columns.add(crcc);
                     
                 lstCustomRecordComparaisonRow.add(crcr);
