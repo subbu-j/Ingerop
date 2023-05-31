@@ -236,7 +236,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>LC_ExploreAccount_Search_Compare</shortDescription>
-        <value>Comparer avec Explore</value>
+        <value>Compare with Explore</value>
     </labels>
     <labels>
         <fullName>LC_ExploreAccount_Search_Name</fullName>

@@ -89,6 +89,10 @@
 		<name>CustomMetadata</name>
 	</types>
 	<types>
+		<members>CustomRecordComparaison__mdt</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
 		<members>Account-Autre</members>
 		<members>Account-Client</members>
 		<members>Account-Entreprise</members>
@@ -99,6 +103,10 @@
 	<types>
 		<members>Account.SourcingExplore</members>
 		<name>QuickAction</name>
+	</types>
+	<types>
+		<members>fr</members>
+		<name>Translations</name>
 	</types>
 	<version>58.0</version>
 </Package>

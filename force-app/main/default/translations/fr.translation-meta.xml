@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- AP_ApexUtil_Ex_CastField --></label>
+        <name>AP_ApexUtil_Ex_CastField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AP_ApexUtil_Ex_sObjectNotFound --></label>
+        <name>AP_ApexUtil_Ex_sObjectNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AP_CastJSONToSObject_Delimiter --></label>
+        <name>AP_CastJSONToSObject_Delimiter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AP_CastJSONToSObject_Ex_JsonNullOrBlank --></label>
+        <name>AP_CastJSONToSObject_Ex_JsonNullOrBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AP_CastJSONToSObject_Ex_NoMetadata --></label>
+        <name>AP_CastJSONToSObject_Ex_NoMetadata</name>
+    </customLabels>
+    <customLabels>
+        <label>Le SIRET doit être renseigné.</label>
+        <name>AP_CustRecCompCtrl_Ex_EmptySIRET</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AP_CustRecCompCtrl_Ex_PrimaryAccountNotFound --></label>
+        <name>AP_CustRecCompCtrl_Ex_PrimaryAccountNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label>[VIDE]</label>
+        <name>AP_CustRecCompWrapper_Empty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AP_CustRecCompWrapper_Ex_sObjectDifferent --></label>
+        <name>AP_CustRecCompWrapper_Ex_sObjectDifferent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AURA_CustomRecorCompModal_BlankOrEmptyDelimiter --></label>
+        <name>AURA_CustomRecorCompModal_BlankOrEmptyDelimiter</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations du Compte Explore</label>
+        <name>AURA_CustomRecorCompModal_Explore</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur est survenue lors de l&apos;initialisation du composant.</label>
+        <name>AURA_CustomRecorCompModal_GenericErrorInit</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur est survenue lors de l&apos;enregistrement des informations.</label>
+        <name>AURA_CustomRecorCompModal_GenericErrorSave</name>
+    </customLabels>
+    <customLabels>
+        <label>Le compte Salesforce a été mis à jour.</label>
+        <name>AURA_CustomRecorCompModal_GenericSuccessSave</name>
+    </customLabels>
+    <customLabels>
+        <label>Mis à jour du compte Salesforce avec les informations d&apos;Explore</label>
+        <name>AURA_CustomRecorCompModal_Header</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations du compte Salesforce</label>
+        <name>AURA_CustomRecorCompModal_Salesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>Chaque valeur de champ doit être sélectionnée avant de sauvegarder.</label>
+        <name>AURA_CustomRecorCompModal_SelectAllFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Cette fonctionnalité vous permet de comparer les informations d&apos;un compte Salesforce avec les informations d&apos;un compte Explore. Vous pouvez sélectionner et sauvegarder les informations à conserver et ainsi mettre à jour le compte Salesforce.</label>
+        <name>AURA_CustomRecorCompModal_SubTitle</name>
+    </customLabels>
+    <customLabels>
+        <label>Fermer</label>
+        <name>Close</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ExplorePageLink --></label>
+        <name>ExplorePageLink</name>
+    </customLabels>
+    <customLabels>
+        <label>Le SIRET n&apos;est pas renseigné.</label>
+        <name>ExplorePageMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur est survenue lors de la récupération des données Explore</label>
+        <name>LCCTRL_ExploreAcc_Ex_CalloutError</name>
+    </customLabels>
+    <customLabels>
+        <label>Créer compte</label>
+        <name>LC_ExploreAccount_CreateAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>Créer un nouveau compte</label>
+        <name>LC_ExploreAccount_CreateAccountPanel</name>
+    </customLabels>
+    <customLabels>
+        <label>Compte Explore</label>
+        <name>LC_ExploreAccount_Header</name>
+    </customLabels>
+    <customLabels>
+        <label>Nouveau compte</label>
+        <name>LC_ExploreAccount_NewAccountModal</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner un type d&apos;enregistrement</label>
+        <name>LC_ExploreAccount_RecordType</name>
+    </customLabels>
+    <customLabels>
+        <label>Rechercher</label>
+        <name>LC_ExploreAccount_Search</name>
+    </customLabels>
+    <customLabels>
+        <label>Rechercher des comptes Salesforce</label>
+        <name>LC_ExploreAccount_SearchHeader</name>
+    </customLabels>
+    <customLabels>
+        <label>Rechercher un compte par nom ou alias</label>
+        <name>LC_ExploreAccount_SearchPlaceHolder</name>
+    </customLabels>
+    <customLabels>
+        <label>Type de compte</label>
+        <name>LC_ExploreAccount_Search_AccountType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LC_ExploreAccount_Search_Action --></label>
+        <name>LC_ExploreAccount_Search_Action</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LC_ExploreAccount_Search_Alias --></label>
+        <name>LC_ExploreAccount_Search_Alias</name>
+    </customLabels>
+    <customLabels>
+        <label>Comparer avec Explore</label>
+        <name>LC_ExploreAccount_Search_Compare</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom</label>
+        <name>LC_ExploreAccount_Search_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Compte parent</label>
+        <name>LC_ExploreAccount_Search_ParentAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LC_ExploreAccount_Search_SIRET --></label>
+        <name>LC_ExploreAccount_Search_SIRET</name>
+    </customLabels>
+    <customLabels>
+        <label>Ville de livraison</label>
+        <name>LC_ExploreAccount_Search_ShippingCity</name>
+    </customLabels>
+    <customLabels>
+        <label>Titre</label>
+        <name>LC_ExploreAccount_Title</name>
+    </customLabels>
+    <customLabels>
+        <label>Suivant</label>
+        <name>Next</name>
+    </customLabels>
+    <customLabels>
+        <label>Enregistrer</label>
+        <name>Save</name>
+    </customLabels>
+</Translations>
