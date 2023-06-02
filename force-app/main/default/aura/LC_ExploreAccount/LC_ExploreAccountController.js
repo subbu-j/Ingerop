@@ -182,8 +182,9 @@
 
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
-                "title": "Error",
-                "message": $A.get("$Label.c.LCCTRL_ExploreAcc_Ex_CalloutError")
+                title: "Error",
+                message: $A.get("$Label.c.LCCTRL_ExploreAcc_Ex_CalloutError"),
+                type: "Error"
                 });
                 toastEvent.fire();
             }

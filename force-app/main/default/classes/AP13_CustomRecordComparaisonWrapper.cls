@@ -37,7 +37,7 @@ public class AP13_CustomRecordComparaisonWrapper {
     
     /**
      * Builds the wrapper by populating the fields to compare and their details.
-     * @throws AP13_CustomRecordComparaisonWrapper If the soObject given in the Constructors are different
+     * @throws AP13_CustomRecordComparaisonWrapper If the soObject given in the Constructors are different or having the identical field values
 	*/
     public void buildWrapper(){
         String primaryObjectAPIName = primarySObject.getSObjectType().getDescribe().getName();
@@ -68,17 +68,24 @@ public class AP13_CustomRecordComparaisonWrapper {
                 crcr.selectedValue = String.valueOf(BLANK_OR_NULL_DELIMITER);
                 
                 crcc = new CustomRecordComparaisonColumn();
-                tmpValue = String.valueOf(primarySObject.get(fieldAPIName));
-                crcc.value = String.isBlank(tmpValue) ? BLANK_OR_NULL_DELIMITER : tmpValue;
+                tmpValue = String.valueOf(secondarySObject.get(fieldAPIName));
+                crcc.value = String.isBlank(tmpValue) ? BLANK_OR_NULL_DELIMITER : (crcr.fieldType == 'DOUBLE' ? String.valueOf(Double.valueOf(tmpValue)) : tmpValue); //Type casting to ignore trialing zeros
                 crcr.columns.add(crcc);
                 
                 crcc = new CustomRecordComparaisonColumn();
-                tmpValue = String.valueOf(secondarySObject.get(fieldAPIName));
-                crcc.value = String.isBlank(tmpValue) ? BLANK_OR_NULL_DELIMITER : tmpValue;
+                tmpValue = String.valueOf(primarySObject.get(fieldAPIName));
+                crcc.value = String.isBlank(tmpValue) ? BLANK_OR_NULL_DELIMITER : (crcr.fieldType == 'DOUBLE' ? String.valueOf(Double.valueOf(tmpValue)) : tmpValue); //Type casting to ignore trialing zeros
                 crcr.columns.add(crcc);
                     
-                lstCustomRecordComparaisonRow.add(crcr);
+                //Do not display the row on the modal, if both SObject field values are exactly the same
+                if(crcr.columns[0].value != crcr.columns[1].value){
+                    lstCustomRecordComparaisonRow.add(crcr);
+                }
             }
+        }
+
+        if(lstCustomRecordComparaisonRow == null || lstCustomRecordComparaisonRow.size() == 0){
+            throw new CustomRecordComparaisonWrapperException(Label.AP_CustRecCompWrapper_Ex_DataIdentical);
         }
     }
     

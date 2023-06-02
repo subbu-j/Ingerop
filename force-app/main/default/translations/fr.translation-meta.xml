@@ -33,6 +33,10 @@
         <name>AP_CustRecCompWrapper_Empty</name>
     </customLabels>
     <customLabels>
+        <label>Les données du compte Salesforce et Explore sont identiques</label>
+        <name>AP_CustRecCompWrapper_Ex_DataIdentical</name>
+    </customLabels>
+    <customLabels>
         <label><!-- AP_CustRecCompWrapper_Ex_sObjectDifferent --></label>
         <name>AP_CustRecCompWrapper_Ex_sObjectDifferent</name>
     </customLabels>

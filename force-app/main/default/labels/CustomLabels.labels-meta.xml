@@ -57,6 +57,13 @@
         <value>[EMPTY]</value>
     </labels>
     <labels>
+        <fullName>AP_CustRecCompWrapper_Ex_DataIdentical</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CustRecCompWrapper_Ex_DataIdentical</shortDescription>
+        <value>Salesforce and Explore data are identical</value>
+    </labels>
+    <labels>
         <fullName>AP_CustRecCompWrapper_Ex_sObjectDifferent</fullName>
         <language>en_US</language>
         <protected>false</protected>

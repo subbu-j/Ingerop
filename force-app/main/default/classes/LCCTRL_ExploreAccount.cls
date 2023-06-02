@@ -52,7 +52,7 @@ public with sharing class LCCTRL_ExploreAccount {
         List<Schema.RecordTypeInfo> recordTypes = Account.SObjectType.getDescribe().getRecordTypeInfos();    
         Map<Id, String> recordTypeMap = new Map<Id, String>();
         for(RecordTypeInfo rt : recordTypes){
-            if(rt.getName() != 'Master'){
+            if(!rt.isMaster()){
                 recordTypeMap.put(rt.getRecordTypeId(), rt.getName());
             }
         }        

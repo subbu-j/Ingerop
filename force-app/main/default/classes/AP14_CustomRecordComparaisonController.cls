@@ -11,10 +11,12 @@ public class AP14_CustomRecordComparaisonController {
     /**
      * Initializes the comparison process for a primary record that will be compared to another one fetched.
      * @param primaryRecordId The ID of the primary record.
+     * @param urlSiret The unique identifier of the secondary record.
+     * @param isQuickAction To check if the CRC modal is called from quick action button.
      * @return AP13_CustomRecordComparaisonWrapper The wrapper object containing the comparison data.
 	*/
     @AuraEnabled
-    public static AP13_CustomRecordComparaisonWrapper init(Id primaryRecordId){
+    public static AP13_CustomRecordComparaisonWrapper init(Id primaryRecordId, String urlSiret, Boolean isQuickAction){
     	List<Account> lstAccToCompare = new List<Account>();
         
         // Identify the sObject API Name to compare with
@@ -24,11 +26,20 @@ public class AP14_CustomRecordComparaisonController {
 
         // Retrieve the primary record
         List<Account> lstAccount = Database.query('SELECT ' + String.join(lstFieldsToDisplay,',') + ' FROM '+ sObjectAPIName +' WHERE Id = \'' + primaryRecordId + '\'');
-        checkPrimaryAccount(lstAccount);
+        checkPrimaryAccount(lstAccount, urlSiret);
         lstAccToCompare.add(lstAccount[0]);
-        // Retrieve the json from Explore
-        String jsonExplore = Test.isRunningTest() ? TestDataFactory.JSON_RESULT_CRCC : WS_Explore.getSiretData(lstAccount[0].SIRET__c);
+        String jsonExplore;
+        if(isQuickAction){
+            // Retrieve the json from Explore if called from QuickAction
+            jsonExplore = Test.isRunningTest() ? TestDataFactory.JSON_RESULT_CRCC : WS_Explore.getSiretData(lstAccount[0].SIRET__c);
+        } else if(String.isNotBlank(urlSiret)){
+            // Retrieve the json from Explore using SIRET passed in Custom Page URL
+            jsonExplore = Test.isRunningTest() ? TestDataFactory.JSON_RESULT_CRCC : WS_Explore.getSiretData(urlSiret);
+        } 
         // Cast Json dynamically
+        if(String.isBlank(jsonExplore)){
+            Throw new CustomRecordComparaisonControllerException(Label.AP_CustRecCompCtrl_Ex_EmptyJSON);
+        }
         AP15_CastJSONToSObject cjtso = new AP15_CastJSONToSObject(sObjectAPIName, jsonExplore);
         lstAccToCompare.add((Account) cjtso.generateCast());
 
@@ -58,10 +69,10 @@ public class AP14_CustomRecordComparaisonController {
      * @throws CustomRecordComparaisonControllerException if the primary account retrieval fails or SIRET field is blank.
 	*/
     @testVisible
-    private static void checkPrimaryAccount(List<Account> lstAccount){
+    private static void checkPrimaryAccount(List<Account> lstAccount, String urlSiret){
         if(lstAccount.size() != 1)
             Throw new CustomRecordComparaisonControllerException(Label.AP_CustRecCompCtrl_Ex_PrimaryAccountNotFound);
-        if(String.isBlank(lstAccount[0].SIRET__c))
+        if(String.isBlank(lstAccount[0].SIRET__c) && String.isBlank(urlSiret))
             Throw new CustomRecordComparaisonControllerException(Label.AP_CustRecCompCtrl_Ex_EmptySIRET);
     }
     

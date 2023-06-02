@@ -1,10 +1,11 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global" >
     <aura:attribute name="recordId" type="Id" required="true" />
+    <aura:attribute name="siretUrl" type="String" required="true" />
 	<aura:handler name="closeModalEvent" event="c:LC_EV_ExploreAccountRecordCompModal" action="{!c.closeModal}"/>
     <aura:registerEvent name="closeModalEventParent" type="c:LC_EV_ExploreAccountCloseModal"/>
     <div class="slds-modal slds-fade-in-open">
         <div class="slds-modal__container">
-            <c:CustomRecordComparaison recordIdInput="{!v.recordId}" />
+            <c:CustomRecordComparaison recordIdInput="{!v.recordId}" siretUrlInput="{!v.siretUrl}"/>
         </div>
     </div>
     <div class="slds-backdrop slds-backdrop_open"></div>

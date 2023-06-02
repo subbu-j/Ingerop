@@ -165,7 +165,7 @@
 
     <!-- Custom Record Comparison modal -->
     <aura:if isTrue="{!v.showCustomRecordComparisonModal}">
-        <c:LC_ExploreAccountRecordCompModal recordId="{!v.accountId}" />
+        <c:LC_ExploreAccountRecordCompModal recordId="{!v.accountId}" siretUrl="{!v.siretExplore}" />
     </aura:if>
     <!-- Custom Record Comparison modal -->
     <br/>

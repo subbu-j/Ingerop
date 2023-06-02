@@ -4,6 +4,7 @@
     <aura:attribute name="custCompareRecordsWrapperUpdated" type="AP13_CustomRecordComparaisonWrapper" access="private"/>
     <aura:attribute name="mapCheckSelectedValues" type="Map" access="private"/>
     <aura:attribute name="recordIdInput" type="Id" required="false" access="public"/>
+    <aura:attribute name="siretUrlInput" type="String" required="false" access="public"/>
     <aura:attribute name="isQuickAction" type="Boolean" required="false" access="private"/>
     <aura:registerEvent name="closeModalEvent" type="c:LC_EV_ExploreAccountRecordCompModal"/>
     
@@ -33,8 +34,8 @@
                 <thead>
                     <tr>
                         <th class="th-cust"></th>
-                        <th class="th-cust">{!$Label.c.AURA_CustomRecorCompModal_Salesforce}</th>
                         <th class="th-cust">{!$Label.c.AURA_CustomRecorCompModal_Explore}</th>
+                        <th class="th-cust">{!$Label.c.AURA_CustomRecorCompModal_Salesforce}</th>
                     </tr>
                 </thead>
                 <tbody>

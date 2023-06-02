@@ -5,7 +5,9 @@
         // Call the Apex class method 'init' and pass the Account Id as a parameter
         let action = component.get("c.init");
         action.setParams({
-            primaryRecordId: recordIdPrimary
+            primaryRecordId: recordIdPrimary,
+            urlSiret: component.get("v.siretUrlInput"),
+            isQuickAction: isQuickAction
         });
         
         action.setCallback(this, function(response){
@@ -16,8 +18,10 @@
                 this.setChecksOnSelectedValues(component, event, helper);
             }else if (state === "ERROR") {
                 let errorMessage = '';
-                if(response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptySIRET")))
-                    errorMessage = $A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptySIRET");
+                if(response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptySIRET"))
+                   || response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptyJSON"))
+                   || response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompWrapper_Ex_DataIdentical")))
+                    errorMessage = response.getError()[0].message;
                 else errorMessage = $A.get("$Label.c.AURA_CustomRecorCompModal_GenericErrorInit");
                 this.showToast(component, event, helper, errorMessage, "error");
             }
@@ -85,5 +89,18 @@
             type: type
         });
         toastEvent.fire();
+
+        let isQuickAction = component.get("v.isQuickAction");
+        if(isQuickAction){
+            let dismissActionPanel = $A.get("e.force:closeQuickAction");
+            dismissActionPanel.fire();
+        }
+        else{
+            let customEvent = component.getEvent("closeModalEvent");
+        	customEvent.setParams({
+            	"close": true
+        	});
+        	customEvent.fire();
+        }
     }
 })
