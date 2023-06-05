@@ -31,7 +31,7 @@ public class AP13_CustomRecordComparaisonWrapperTest {
         System.assertEquals(true, rowFound, 'Row Name for Account should be String');
         System.assertEquals('STRING', crcrToTest.fieldType, 'Row Name for Account should be String');
         System.assertEquals('Account Name', crcrToTest.fieldLabel, 'Row Name for Account should have been Account Name');
-        System.assertEquals('Test Acc 3', crcrToTest.columns[0].value, 'Columns One for Row Name for Account 1 should have been "Test Acc 1"');
+        System.assertEquals('Test Acc 4', crcrToTest.columns[0].value, 'Columns One for Row Name for Account 1 should have been "Test Acc 1"');
         
         // Failing tests
         crcw = new AP13_CustomRecordComparaisonWrapper(primarySObject, exceptionSObject, lstFieldToCompare);

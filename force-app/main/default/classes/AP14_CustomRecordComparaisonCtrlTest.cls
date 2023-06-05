@@ -10,12 +10,15 @@ public class AP14_CustomRecordComparaisonCtrlTest {
         
         // Call the init method
         Test.startTest();
-        AP13_CustomRecordComparaisonWrapper result = AP14_CustomRecordComparaisonController.init(testAccount.Id);
+        AP13_CustomRecordComparaisonWrapper result = AP14_CustomRecordComparaisonController.init(testAccount.Id, '1234512345', true);
         Test.stopTest();
         
         // Perform assertions
         Assert.areNotEqual(0, result.lstCustomRecordComparaisonRow.size(), 'At least one field comparison row should have been created');
         System.assertEquals(testAccount.Id, result.primarySObjectId, 'Incorrect primary account in the wrapper');
+        
+        AP13_CustomRecordComparaisonWrapper result1 = AP14_CustomRecordComparaisonController.init(testAccount.Id, '1234512345', false);
+        System.assertEquals(testAccount.Id, result1.primarySObjectId, 'Incorrect primary account in the wrapper');
     }
     
     @isTest
@@ -27,7 +30,7 @@ public class AP14_CustomRecordComparaisonCtrlTest {
         
         // Call the init method
         Test.startTest();
-        AP13_CustomRecordComparaisonWrapper result = AP14_CustomRecordComparaisonController.init(testAccount.Id);
+        AP13_CustomRecordComparaisonWrapper result = AP14_CustomRecordComparaisonController.init(testAccount.Id, '1234512345', true);
 
         for(AP13_CustomRecordComparaisonWrapper.CustomRecordComparaisonRow currCRCR:result.lstCustomRecordComparaisonRow){
             currCRCR.selectedValue = currCRCR.fieldType == 'String' ? '987654321' : currCRCR.fieldType == 'Decimal' ? String.valueOf(3.141592) : String.valueOf(3);
@@ -50,13 +53,13 @@ public class AP14_CustomRecordComparaisonCtrlTest {
         List<Account> lstAccount = new List<Account>();
         
         try {
-            AP14_CustomRecordComparaisonController.checkPrimaryAccount(lstAccount);
+            AP14_CustomRecordComparaisonController.checkPrimaryAccount(lstAccount, '1234512345');
         } catch (AP14_CustomRecordComparaisonController.CustomRecordComparaisonControllerException ex) {
             Assert.areEqual(Label.AP_CustRecCompCtrl_Ex_PrimaryAccountNotFound, ex.getMessage(), 'A CustomRecordComparaisonControllerException should have been raised');
         }
         lstAccount.add(testAccount);
         try {
-            AP14_CustomRecordComparaisonController.checkPrimaryAccount(lstAccount);
+            AP14_CustomRecordComparaisonController.checkPrimaryAccount(lstAccount, null);
         } catch (AP14_CustomRecordComparaisonController.CustomRecordComparaisonControllerException ex) {
             Assert.areEqual(Label.AP_CustRecCompCtrl_Ex_EmptySIRET, ex.getMessage(), 'A CustomRecordComparaisonControllerException should have been raised');
         }

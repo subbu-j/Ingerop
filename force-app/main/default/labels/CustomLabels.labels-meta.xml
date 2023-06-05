@@ -36,6 +36,13 @@
         <value>No Custom Metadata records assigned for the Salesforce object {{sObjectToCastAPIName}}</value>
     </labels>
     <labels>
+        <fullName>AP_CustRecCompCtrl_Ex_EmptyJSON</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_CustRecCompCtrl_Ex_EmptyJSON</shortDescription>
+        <value>An error occurred during the data retrieving from Explore (SIRET may be unknown in Explore database)</value>
+    </labels>
+    <labels>
         <fullName>AP_CustRecCompCtrl_Ex_EmptySIRET</fullName>
         <language>en_US</language>
         <protected>false</protected>

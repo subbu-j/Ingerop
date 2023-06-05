@@ -21,6 +21,10 @@
         <name>AP_CastJSONToSObject_Ex_NoMetadata</name>
     </customLabels>
     <customLabels>
+        <label>Une erreur est survenue à la récupération des données depuis Explore (le SIRET peut ne pas être connu de la base Explore)</label>
+        <name>AP_CustRecCompCtrl_Ex_EmptyJSON</name>
+    </customLabels>
+    <customLabels>
         <label>Le SIRET doit être renseigné.</label>
         <name>AP_CustRecCompCtrl_Ex_EmptySIRET</name>
     </customLabels>
