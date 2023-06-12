@@ -85,6 +85,10 @@
         <name>Close</name>
     </customLabels>
     <customLabels>
+        <label>Erreur</label>
+        <name>Error</name>
+    </customLabels>
+    <customLabels>
         <label><!-- ExplorePageLink --></label>
         <name>ExplorePageLink</name>
     </customLabels>
@@ -171,5 +175,13 @@
     <customLabels>
         <label>Enregistrer</label>
         <name>Save</name>
+    </customLabels>
+    <customLabels>
+        <label>Succès</label>
+        <name>Success</name>
+    </customLabels>
+    <customLabels>
+        <label>Alerte</label>
+        <name>Warning</name>
     </customLabels>
 </Translations>

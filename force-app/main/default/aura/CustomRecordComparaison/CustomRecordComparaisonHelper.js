@@ -17,13 +17,7 @@
                 component.set("v.custCompareRecordsWrapperUpdated", response.getReturnValue());
                 this.setChecksOnSelectedValues(component, event, helper);
             }else if (state === "ERROR") {
-                let errorMessage = '';
-                if(response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptySIRET"))
-                   || response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptyJSON"))
-                   || response.getError()[0].message.includes($A.get("$Label.c.AP_CustRecCompWrapper_Ex_DataIdentical")))
-                    errorMessage = response.getError()[0].message;
-                else errorMessage = $A.get("$Label.c.AURA_CustomRecorCompModal_GenericErrorInit");
-                this.showToast(component, event, helper, errorMessage, "error");
+                this.handleError(component, event, helper, response.getError()[0].message);
             }
         });
         
@@ -80,27 +74,46 @@
             navEvt.fire();
         }
     },
+
+    handleError: function(component, event, helper, stringError){
+        let errorMessage = '';
+        let errorType = 'error';
+        if(stringError.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptySIRET"))){
+            errorMessage = stringError;
+            errorType = 'warning';
+        }
+        else if(stringError.includes($A.get("$Label.c.AP_CustRecCompWrapper_Ex_DataIdentical"))){
+            errorMessage = stringError;
+            errorType = 'success';
+        }
+        else if(stringError.includes($A.get("$Label.c.AP_CustRecCompCtrl_Ex_EmptyJSON")))
+            errorMessage = stringError;
+        else errorMessage = $A.get("$Label.c.AURA_CustomRecorCompModal_GenericErrorInit");
+        this.showToast(component, event, helper, errorMessage, errorType);
+    },
     
     showToast: function(component, event, helper, message, type) {
         let toastEvent = $A.get("e.force:showToast");
         toastEvent.setParams({
-            title: type.charAt(0).toUpperCase() + type.slice(1),
+            title: $A.getReference("$Label.c." + type.charAt(0).toUpperCase() + type.slice(1)),
             message: message,
             type: type
         });
         toastEvent.fire();
 
-        let isQuickAction = component.get("v.isQuickAction");
-        if(isQuickAction){
-            let dismissActionPanel = $A.get("e.force:closeQuickAction");
-            dismissActionPanel.fire();
-        }
-        else{
-            let customEvent = component.getEvent("closeModalEvent");
-        	customEvent.setParams({
-            	"close": true
-        	});
-        	customEvent.fire();
+        if(type != 'error'){
+            let isQuickAction = component.get("v.isQuickAction");
+            if(isQuickAction){
+                let dismissActionPanel = $A.get("e.force:closeQuickAction");
+                dismissActionPanel.fire();
+            }
+            else{
+                let customEvent = component.getEvent("closeModalEvent");
+                customEvent.setParams({
+                    "close": true
+                });
+                customEvent.fire();
+            }
         }
     }
 })

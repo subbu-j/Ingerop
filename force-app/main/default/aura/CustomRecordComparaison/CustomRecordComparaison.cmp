@@ -6,6 +6,7 @@
     <aura:attribute name="recordIdInput" type="Id" required="false" access="public"/>
     <aura:attribute name="siretUrlInput" type="String" required="false" access="public"/>
     <aura:attribute name="isQuickAction" type="Boolean" required="false" access="private"/>
+    <aura:attribute name="tmpDynamicLabel" type="String" required="false" access="private"/>
     <aura:registerEvent name="closeModalEvent" type="c:LC_EV_ExploreAccountRecordCompModal"/>
     
 	<aura:html tag="style">

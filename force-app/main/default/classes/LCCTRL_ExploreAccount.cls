@@ -2,8 +2,8 @@
  * @description       : This is a controller class for LC_ExploreAccount Lightning component that provides functionalities for getting Account data.
  * @author            : subramanyam.jagadeesan@springfive.com
  * @group             : 
- * @last modified on  : 2023-05-30
- * @last modified by  : subramanyam.jagadeesan@springfive.com
+ * @last modified on  : 2023-06-08
+ * @last modified by  : emmanuel.javay@springfive.com
 **/
 
 public with sharing class LCCTRL_ExploreAccount {
@@ -82,7 +82,7 @@ public with sharing class LCCTRL_ExploreAccount {
             if (data != null){
                 acc.Name = data.NOTICE80.L1_NOMEN;
                 acc.Siret = data.NOTICE80.SIRET;
-                acc.Description = data.NOTICE80.LIBNJ;
+                acc.Description = data.NOTICE80.LIBAPET;
                 acc.ShippingStreet = data.NOTICE80.L4_VOIE;
                 acc.ShippingPostalCode = data.NOTICE80.CODPOS;
                 acc.ShippingCity = data.NOTICE80.LIBCOM;

@@ -4,6 +4,10 @@
         let isQuickAction = component.get("v.recordIdInput") ? false : true;
         component.set("v.isQuickAction",isQuickAction);
         helper.init(component, event, helper, isQuickAction);
+        // Do not delete the below comment (breaks dynamic label display for toast)
+        // $Label.c.Success
+		// $Label.c.Error
+		// $Label.c.Warning
 	},
     
     checkboxSelect: function(component, event, helper) {
